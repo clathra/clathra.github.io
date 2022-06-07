@@ -51,7 +51,7 @@ h1 {
 	font-size: 2.5rem;
 	line-height: 3.25rem;
 	letter-spacing: -0.4px;
-	font-family: "Orbitron";
+	font-family: 'Orbitron', sans-serif;
 }
 
 h2 {
@@ -60,7 +60,7 @@ h2 {
 	font-size: 2rem;
 	line-height: 2.625rem;
 	letter-spacing: -0.4px;
-	font-family: "Orbitron";
+	font-family: 'Orbitron', sans-serif;
 }
 
 h3 {
@@ -69,7 +69,7 @@ h3 {
 	font-size: 1.75rem;
 	line-height: 2.25rem;
 	letter-spacing: -0.2px;
-	font-family: "Orbitron";
+	font-family: 'Orbitron', sans-serif;
 }
 
 h4 {
