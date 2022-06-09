@@ -236,12 +236,12 @@ a:hover {
 }
 
 .btn-outline-lg {
-	display: inline-block;
+	display: block;
 	padding: 1.625rem 2.625rem 1.625rem 2.625rem;
-	border: 1px solid #5e6576;
-	border-radius: 30px;
+	border: 1px solid #425FBC;
+	border-radius: 5px;
 	background-color: transparent;
-	color: #5e6576;
+	color: #425FBC;
 	font-weight: 600;
 	font-size: 0.875rem;
 	line-height: 0;
@@ -250,7 +250,7 @@ a:hover {
 }
 
 .btn-outline-lg:hover {
-	background-color: #5e6576;
+	background-color: #425FBC;
 	color: #ffffff;
 	text-decoration: none;
 }
@@ -1309,6 +1309,7 @@ select {
 	}
 
 	.header .btn-solid-lg,
+	.header .btn-outline-lg,
 	.header .quote {
 		display: inline-block;
 	}
