@@ -1397,7 +1397,7 @@ select {
 
 	.filter .element-item {
 		display: inline-block;
-		width: 351px;
+		/*width: 351px;*/
 		margin-right: 0.625rem;
 		margin-left: 0.625rem;
 		vertical-align: top;
