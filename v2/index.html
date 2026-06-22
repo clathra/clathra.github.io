@@ -322,7 +322,13 @@ section{position:relative;padding:118px 0}
 .deck-dots b.on{background:#fff;width:18px;border-radius:4px}
 
 /* 6 stamp / seal */
-.frame.seal{aspect-ratio:4/3;background:#f6f3ea;display:grid;place-items:center;position:relative}
+.frame.seal{aspect-ratio:1/1;background:#f6f3ea;display:grid;place-items:center;position:relative}
+/* blog-writing editorial card + copywriting placeholder (row 3) */
+.oc-quote{font-family:'Bricolage Grotesque';font-weight:600;font-size:1.18rem;line-height:1.2;letter-spacing:-.01em;color:var(--ink)}
+.frame.copyph{aspect-ratio:1/1;border:1.5px dashed #cfd8e1;background:var(--bg-soft);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:11px;padding:24px}
+.frame.copyph .cw-ico{width:40px;height:40px;color:var(--teal)}
+.frame.copyph .cw-t{font-family:'Bricolage Grotesque';font-weight:600;font-size:1.05rem;color:var(--ink)}
+.frame.copyph .cw-n{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--slate)}
 .seal::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 38%,transparent,rgba(0,0,0,.05));pointer-events:none}
 .seal svg{width:64%;max-width:220px;transform:rotate(-7deg);color:#0a5e49;opacity:.9}
 
@@ -614,49 +620,35 @@ footer{padding:56px 0 40px}
         <figcaption class="cap"><h4>Navarca Ship Management — company seal</h4><div class="medium">Branding · Stationery</div><span class="tech">Company seal artwork</span></figcaption>
       </figure>
 
-      <!-- 7 · AUDIT — outcome card -->
-      <figure class="sw c3 reveal">
-        <div class="frame outcome">
-          <span class="oc-chip">Website audit</span>
-          <div><div class="oc-num">14</div><div class="oc-label">conversion &amp; accessibility gaps found, ranked into a fix roadmap</div></div>
-          <div class="oc-foot">Halcyon Shipping</div>
-        </div>
-        <figcaption class="cap"><h4>Halcyon Shipping — web audit</h4><div class="medium">Strategy · Audit</div><span class="tech">Outcome card · no screenshot</span></figcaption>
-      </figure>
-
-      <!-- 8 · MARKET RESEARCH — key-finding card -->
-      <figure class="sw c3 reveal">
-        <div class="frame outcome">
-          <span class="oc-chip">Market research</span>
-          <div><div class="oc-num"><em>62%</em></div><div class="oc-label">of operators plan to outsource offshore-wind O&amp;M by 2027</div></div>
-          <div class="oc-spark"><svg viewBox="0 0 120 30" preserveAspectRatio="none"><polyline points="0,25 20,22 40,23 60,15 80,11 100,6 120,3" fill="none" stroke="#059976" stroke-width="2.4"/></svg></div>
-          <div class="oc-foot">Sector study · n=418</div>
-        </div>
-        <figcaption class="cap"><h4>Offshore-wind O&amp;M — demand study</h4><div class="medium">Strategy · Research</div><span class="tech">Key-finding card</span></figcaption>
-      </figure>
-
-      <!-- 9 · EMAIL OUTREACH — result card (dark) -->
+      <!-- EMAIL MARKETING — stat card (dark) -->
       <figure class="sw c3 reveal">
         <div class="frame outcome dark">
-          <span class="oc-chip">Email outreach</span>
-          <div><div class="oc-num"><em>18%</em></div><div class="oc-label">reply rate from cold outreach to fleet &amp; technical managers</div></div>
-          <div class="oc-foot">320 sent · 57 replies</div>
+          <span class="oc-chip">Email marketing</span>
+          <div><div class="oc-num"><em>2.8&times;</em></div><div class="oc-label">open &amp; click rates vs. sector benchmark, from segmented campaigns</div></div>
+          <div class="oc-spark"><svg viewBox="0 0 120 30" preserveAspectRatio="none"><polyline points="0,26 24,22 48,23 72,14 96,9 120,4" fill="none" stroke="#059976" stroke-width="2.4"/></svg></div>
+          <div class="oc-foot">Strategy · design · copy</div>
         </div>
-        <figcaption class="cap"><h4>Fleet-manager outreach campaign</h4><div class="medium">Marketing · Email</div><span class="tech">Result card</span></figcaption>
+        <figcaption class="cap"><h4>Email marketing</h4><div class="medium">Marketing · Email</div><span class="tech">Campaign result</span></figcaption>
       </figure>
 
-      <!-- 10 · BLOG — article card -->
-      <figure class="sw c12 reveal">
-        <div class="frame article">
-          <div class="art-body">
-            <div class="art-cat">Insight · Content</div>
-            <div class="art-h">Why most maritime websites fail the five-second test</div>
-            <p class="art-x">Buyers in shipping scan for proof of competence before anything else. We break down the three signals that decide whether a technical visitor stays or leaves.</p>
-            <div class="art-meta">8 min read · written &amp; designed by Clathra</div>
-          </div>
-          <div class="art-thumb"><svg class="at-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><circle cx="12" cy="5" r="2"/><path d="M12 7v13M6 12H4a8 8 0 0 0 16 0h-2"/></svg></div>
+      <!-- BLOG WRITING — editorial card -->
+      <figure class="sw c3 reveal">
+        <div class="frame outcome">
+          <span class="oc-chip">Blog writing</span>
+          <div class="oc-quote">Long-form articles that rank &mdash; and read like an engineer wrote them.</div>
+          <div class="oc-foot">SEO-led · ghostwritten</div>
         </div>
-        <figcaption class="cap"><h4>Clathra Journal — long-form articles</h4><div class="medium">Content · Editorial</div><span class="tech">Article card with excerpt</span></figcaption>
+        <figcaption class="cap"><h4>Blog &amp; article writing</h4><div class="medium">Content · Editorial</div><span class="tech">Editorial card</span></figcaption>
+      </figure>
+
+      <!-- COPYWRITING — awaiting website screenshots -->
+      <figure class="sw c3 reveal">
+        <div class="frame copyph">
+          <svg class="cw-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h9M4 17h6"/><path d="m15.5 16.5 4.5-4.5 2 2-4.5 4.5H15.5z"/></svg>
+          <span class="cw-t">Website copywriting</span>
+          <span class="cw-n">Screenshots coming</span>
+        </div>
+        <figcaption class="cap"><h4>Copywriting</h4><div class="medium">Content · Web copy</div><span class="tech">Awaiting screenshots</span></figcaption>
       </figure>
 
     </div>
