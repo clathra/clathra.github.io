@@ -361,10 +361,11 @@ section{position:relative;padding:118px 0}
 .frame.ident:hover img{animation-play-state:paused}
 @keyframes identcf{0%,40%{opacity:1}50%,90%{opacity:0}100%{opacity:1}}
 
-/* brochure — clickable to open the full PDF */
-.frame.print a{position:absolute;inset:0;display:block}
-.pdf-hint{position:absolute;right:12px;bottom:12px;z-index:3;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:#fff;background:rgba(14,23,38,.62);backdrop-filter:blur(4px);padding:5px 9px;border-radius:7px;transition:background .25s}
-.frame.print a:hover .pdf-hint{background:var(--teal-deep)}
+/* brochure — gentle zoom on hover */
+.frame.print img{transition:transform .55s var(--ease)}
+.frame.print:hover img{transform:scale(1.04)}
+/* company seal — real stamp artwork on the paper stage */
+.frame.seal img{width:68%;max-width:230px;transform:rotate(-6deg);opacity:.94}
 
 /* exhibition stand — slow horizontal pan across a long stand */
 .frame.expo{aspect-ratio:4/3;background:#0e1726}
@@ -576,12 +577,9 @@ footer{padding:56px 0 40px}
       <!-- 3 · BROCHURE — angled print mockup -->
       <figure class="sw c4 reveal">
         <div class="frame print">
-          <a href="images/temka-brochure.pdf" target="_blank" rel="noopener" aria-label="Open the full TEMKA Engineering Services brochure (PDF)">
-            <img src="images/temka-brochure.webp" alt="TEMKA Engineering Services capability brochure by Clathra" style="width:100%;height:100%;object-fit:cover;display:block">
-            <span class="pdf-hint">Open PDF ↗</span>
-          </a>
+          <img src="images/temka-brochure.webp" alt="TEMKA Engineering Services capability brochure by Clathra" style="width:100%;height:100%;object-fit:cover;display:block">
         </div>
-        <figcaption class="cap"><h4>TEMKA Engineering — capability brochure</h4><div class="medium">Print · Editorial</div><span class="tech">Opens the full brochure (PDF)</span></figcaption>
+        <figcaption class="cap"><h4>TEMKA Engineering — capability brochure</h4><div class="medium">Print · Editorial</div><span class="tech">Opened-brochure mockup</span></figcaption>
       </figure>
 
       <!-- 4 · LOGO — brand stage -->
@@ -610,20 +608,9 @@ footer{padding:56px 0 40px}
       <!-- 6 · STAMP — embossed seal -->
       <figure class="sw c3 reveal">
         <div class="frame seal">
-          <svg viewBox="0 0 200 200" fill="none">
-            <defs>
-              <path id="arcTop" d="M40 100a60 60 0 0 1 120 0"/>
-              <path id="arcBot" d="M46 100a54 54 0 0 0 108 0"/>
-            </defs>
-            <circle cx="100" cy="100" r="72" stroke="currentColor" stroke-width="2"/>
-            <circle cx="100" cy="100" r="60" stroke="currentColor" stroke-width="1"/>
-            <text font-family="'Space Mono',monospace" font-size="12.5" letter-spacing="3" fill="currentColor"><textPath href="#arcTop" startOffset="50%" text-anchor="middle">MARITIME · OFFSHORE</textPath></text>
-            <text font-family="'Space Mono',monospace" font-size="11" letter-spacing="3" fill="currentColor"><textPath href="#arcBot" startOffset="50%" text-anchor="middle">EST. 2024</textPath></text>
-            <circle cx="100" cy="71" r="4" fill="currentColor"/>
-            <path d="M100 75v42M84 96a16 16 0 0 0 32 0M82 90h36" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-          </svg>
+          <img src="images/navarca-stamp.webp" alt="Navarca Ship Management company seal designed by Clathra">
         </div>
-        <figcaption class="cap"><h4>Company stamp &amp; seal</h4><div class="medium">Branding · Print</div><span class="tech">Embossed seal artwork</span></figcaption>
+        <figcaption class="cap"><h4>Navarca Ship Management — company seal</h4><div class="medium">Branding · Stationery</div><span class="tech">Company seal artwork</span></figcaption>
       </figure>
 
       <!-- 7 · AUDIT — outcome card -->
