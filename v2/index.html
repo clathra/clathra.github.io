@@ -350,6 +350,14 @@ section{position:relative;padding:118px 0}
 .art-thumb{background:linear-gradient(135deg,#0e1726,#0a5e49);position:relative;overflow:hidden}
 .art-thumb .at-mark{position:absolute;right:-10px;bottom:-12px;width:140px;height:140px;color:#fff;opacity:.16}
 
+/* exhibition stand — slow horizontal pan across a long stand */
+.frame.expo{aspect-ratio:24/9;background:#0e1726}
+.expo-track{display:flex;height:100%;width:max-content;animation:expopan 36s linear infinite}
+.expo:hover .expo-track{animation-play-state:paused}
+.expo-track img{height:100%;width:auto;display:block}
+.expo-cap{position:absolute;left:14px;bottom:14px;z-index:2;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:rgba(14,23,38,.6);backdrop-filter:blur(4px);padding:6px 10px;border-radius:7px}
+@keyframes expopan{to{transform:translateX(-50%)}}
+
 @media(max-width:900px){
   .c3{grid-column:span 6}.c4{grid-column:span 6}.c5,.c6,.c7{grid-column:span 12}
   .article{grid-template-columns:1fr}.art-thumb{min-height:120px;order:-1}
@@ -591,6 +599,20 @@ footer{padding:56px 0 40px}
           <div class="deck-dots"><b class="on"></b><b></b><b></b></div>
         </div>
         <figcaption class="cap"><h4>Northwind Bulk — strategy deck</h4><div class="medium">Presentation · Deck</div><span class="tech">Swipeable slide carousel</span></figcaption>
+      </figure>
+
+      <!-- 5b · EXHIBITION STAND — slow horizontal pan -->
+      <figure class="sw c12 reveal">
+        <div class="frame expo">
+          <div class="expo-track">
+            <img src="images/exhibition-1.webp" alt="Maritime trade-show exhibition stand designed by Clathra">
+            <img src="images/exhibition-2.webp" alt="Exhibition stand, alternate view">
+            <img src="images/exhibition-1.webp" alt="" aria-hidden="true">
+            <img src="images/exhibition-2.webp" alt="" aria-hidden="true">
+          </div>
+          <span class="expo-cap">Trade-show exhibition stand</span>
+        </div>
+        <figcaption class="cap"><h4>Exhibition stand — trade show</h4><div class="medium">Event · Stand &amp; graphics</div><span class="tech">Slow pan across the stand</span></figcaption>
       </figure>
 
       <!-- 6 · STAMP — embossed seal -->
