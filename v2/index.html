@@ -350,8 +350,24 @@ section{position:relative;padding:118px 0}
 .art-thumb{background:linear-gradient(135deg,#0e1726,#0a5e49);position:relative;overflow:hidden}
 .art-thumb .at-mark{position:absolute;right:-10px;bottom:-12px;width:140px;height:140px;color:#fff;opacity:.16}
 
+/* revamp slider — browser-bar treatment (matches the website tile) */
+.ba-stage{position:absolute;inset:36px 0 0 0;overflow:hidden}
+
+/* logo & identity — crossfade between brand-guideline pages */
+.frame.ident{aspect-ratio:4/3;background:#fff}
+.frame.ident img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:16px;opacity:0;animation:identcf 11s infinite}
+.frame.ident img:first-child{opacity:1}
+.frame.ident img:last-child{animation-delay:-5.5s}
+.frame.ident:hover img{animation-play-state:paused}
+@keyframes identcf{0%,40%{opacity:1}50%,90%{opacity:0}100%{opacity:1}}
+
+/* brochure — clickable to open the full PDF */
+.frame.print a{position:absolute;inset:0;display:block}
+.pdf-hint{position:absolute;right:12px;bottom:12px;z-index:3;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:#fff;background:rgba(14,23,38,.62);backdrop-filter:blur(4px);padding:5px 9px;border-radius:7px;transition:background .25s}
+.frame.print a:hover .pdf-hint{background:var(--teal-deep)}
+
 /* exhibition stand — slow horizontal pan across a long stand */
-.frame.expo{aspect-ratio:2/1;background:#0e1726}
+.frame.expo{aspect-ratio:4/3;background:#0e1726}
 .expo-track{display:flex;height:100%;width:max-content;animation:expopan 36s linear infinite}
 .expo:hover .expo-track{animation-play-state:paused}
 .expo-track img{height:100%;width:auto;display:block}
@@ -543,13 +559,16 @@ footer{padding:56px 0 40px}
       <!-- 2 · REVAMP — before / after slider -->
       <figure class="sw c6 reveal">
         <div class="frame ba" style="--pos:50%">
-          <div class="ba-layer ba-after"><img src="images/asil-v2.webp" alt="Asil Trading website after the Clathra revamp" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
-          <div class="ba-layer ba-before"><img src="images/asil-v1.webp" alt="Asil Trading website before the revamp" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
-          <span class="ba-tag l">Before</span>
-          <span class="ba-tag r">After</span>
-          <span class="ba-line"></span>
-          <span class="ba-grip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></span>
-          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after">
+          <div class="bw-bar"><span class="bw-dots"><span></span><span></span><span></span></span><span class="bw-url">asiltrading.com</span></div>
+          <div class="ba-stage">
+            <div class="ba-layer ba-after"><img src="images/asil-v2.webp" alt="Asil Trading website after the Clathra revamp" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
+            <div class="ba-layer ba-before"><img src="images/asil-v1.webp" alt="Asil Trading website before the revamp" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
+            <span class="ba-tag l">Before</span>
+            <span class="ba-tag r">After</span>
+            <span class="ba-line"></span>
+            <span class="ba-grip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></span>
+            <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after">
+          </div>
         </div>
         <figcaption class="cap"><h4>Asil Trading — website revamp</h4><div class="medium">Web · Redesign</div><span class="tech">Before / after · drag to compare</span></figcaption>
       </figure>
@@ -557,48 +576,35 @@ footer{padding:56px 0 40px}
       <!-- 3 · BROCHURE — angled print mockup -->
       <figure class="sw c4 reveal">
         <div class="frame print">
-          <div class="bro">
-            <div class="bro-pg cover">
-              <div class="bp-eyebrow">CAPABILITY STATEMENT</div>
-              <svg class="b-anchor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="5" r="2"/><path d="M12 7v13M6 12H4a8 8 0 0 0 16 0h-2M5 12l-1 2M19 12l1 2"/></svg>
-              <div><div class="bp-title">Kestrel<br>Offshore</div><div class="bp-foot" style="margin-top:8px">2025 · CASPIAN SEA</div></div>
-            </div>
-            <div class="bro-fold"></div>
-            <div class="bro-pg inner"><div class="bp-h"></div><div class="bp-l" style="width:92%"></div><div class="bp-l" style="width:84%"></div><div class="bp-l" style="width:88%"></div><div class="bp-img"></div><div class="bp-l" style="width:80%"></div><div class="bp-l" style="width:68%"></div></div>
-          </div>
+          <a href="images/temka-brochure.pdf" target="_blank" rel="noopener" aria-label="Open the full TEMKA Engineering Services brochure (PDF)">
+            <img src="images/temka-brochure.webp" alt="TEMKA Engineering Services capability brochure by Clathra" style="width:100%;height:100%;object-fit:cover;display:block">
+            <span class="pdf-hint">Open PDF ↗</span>
+          </a>
         </div>
-        <figcaption class="cap"><h4>Kestrel Offshore — capability brochure</h4><div class="medium">Print · Editorial</div><span class="tech">Angled print mockup</span></figcaption>
+        <figcaption class="cap"><h4>TEMKA Engineering — capability brochure</h4><div class="medium">Print · Editorial</div><span class="tech">Opens the full brochure (PDF)</span></figcaption>
       </figure>
 
       <!-- 4 · LOGO — brand stage -->
       <figure class="sw c4 reveal">
-        <div class="frame logos">
-          <div class="logo-main">
-            <svg class="lm-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="32" cy="32" r="26"/><path d="M16 40c4 0 4-5 8-5s4 5 8 5 4-5 8-5 4 5 8 5"/><path d="M32 14v18"/><circle cx="32" cy="11" r="3" fill="currentColor" stroke="none"/></svg>
-            <span class="lm-word">Fathom</span>
-          </div>
-          <div class="logo-alts">
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M8 26c4 0 4-5 8-5s4 5 8 5 4-5 8-5"/><path d="M20 9v13"/></svg>
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="20" cy="20" r="13"/><path d="M20 7v26M7 20h26"/></svg>
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m20 7 11 6v14l-11 6-11-6V13z"/></svg>
-          </div>
-          <span class="logo-sub">Identity · marks &amp; lockups</span>
+        <div class="frame ident">
+          <img src="images/lidmann-1.webp" alt="Lidmann logo design and construction guidelines by Clathra">
+          <img src="images/lidmann-2.webp" alt="Lidmann typography and colour guidelines by Clathra">
         </div>
-        <figcaption class="cap"><h4>Fathom — logo &amp; identity</h4><div class="medium">Branding · Identity</div><span class="tech">Logo on a brand stage</span></figcaption>
+        <figcaption class="cap"><h4>Lidmann — logo &amp; identity</h4><div class="medium">Branding · Identity</div><span class="tech">Logo &amp; brand guidelines</span></figcaption>
       </figure>
 
-      <!-- 5 · PRESENTATION — swipeable deck -->
+      <!-- EXHIBITION STAND — slow horizontal pan -->
       <figure class="sw c4 reveal">
-        <div class="frame deck">
-          <div class="deck-track">
-            <div class="slide title"><div class="sl-eye">Strategy deck</div><h5>Fleet Decarbonisation 2030</h5><div class="sl-foot">Northwind Bulk Carriers · 24 slides</div></div>
-            <div class="slide chart"><div class="sl-h">Emissions trajectory</div><div class="bars"><i style="height:82%"></i><i style="height:64%"></i><i style="height:50%"></i><i style="height:38%"></i><i style="height:24%"></i></div></div>
-            <div class="slide stat"><div class="big">&minus;<em>38%</em></div><div class="oc-label">CO&#8322; per tonne-mile, targeted by 2030</div></div>
+        <div class="frame expo">
+          <div class="expo-track">
+            <img src="images/exhibition-1.webp" alt="Maritime trade-show exhibition stand designed by Clathra">
+            <img src="images/exhibition-2.webp" alt="Exhibition stand, alternate view">
+            <img src="images/exhibition-1.webp" alt="" aria-hidden="true">
+            <img src="images/exhibition-2.webp" alt="" aria-hidden="true">
           </div>
-          <span class="bw-scrollhint" style="opacity:1">Swipe &rarr;</span>
-          <div class="deck-dots"><b class="on"></b><b></b><b></b></div>
+          <span class="expo-cap">Trade-show exhibition stand</span>
         </div>
-        <figcaption class="cap"><h4>Northwind Bulk — strategy deck</h4><div class="medium">Presentation · Deck</div><span class="tech">Swipeable slide carousel</span></figcaption>
+        <figcaption class="cap"><h4>Exhibition stand — trade show</h4><div class="medium">Event · Stand &amp; graphics</div><span class="tech">Slow pan across the stand</span></figcaption>
       </figure>
 
       <!-- 6 · STAMP — embossed seal -->
@@ -651,22 +657,8 @@ footer{padding:56px 0 40px}
         <figcaption class="cap"><h4>Fleet-manager outreach campaign</h4><div class="medium">Marketing · Email</div><span class="tech">Result card</span></figcaption>
       </figure>
 
-      <!-- EXHIBITION STAND — slow horizontal pan (half width) -->
-      <figure class="sw c6 reveal">
-        <div class="frame expo">
-          <div class="expo-track">
-            <img src="images/exhibition-1.webp" alt="Maritime trade-show exhibition stand designed by Clathra">
-            <img src="images/exhibition-2.webp" alt="Exhibition stand, alternate view">
-            <img src="images/exhibition-1.webp" alt="" aria-hidden="true">
-            <img src="images/exhibition-2.webp" alt="" aria-hidden="true">
-          </div>
-          <span class="expo-cap">Trade-show exhibition stand</span>
-        </div>
-        <figcaption class="cap"><h4>Exhibition stand — trade show</h4><div class="medium">Event · Stand &amp; graphics</div><span class="tech">Slow pan across the stand</span></figcaption>
-      </figure>
-
       <!-- 10 · BLOG — article card -->
-      <figure class="sw c6 reveal">
+      <figure class="sw c12 reveal">
         <div class="frame article">
           <div class="art-body">
             <div class="art-cat">Insight · Content</div>
