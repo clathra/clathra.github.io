@@ -1,0 +1,6 @@
+# clathra.com
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://clathra.com/sitemap.xml
