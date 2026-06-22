@@ -351,7 +351,7 @@ section{position:relative;padding:118px 0}
 .art-thumb .at-mark{position:absolute;right:-10px;bottom:-12px;width:140px;height:140px;color:#fff;opacity:.16}
 
 /* exhibition stand — slow horizontal pan across a long stand */
-.frame.expo{aspect-ratio:24/9;background:#0e1726}
+.frame.expo{aspect-ratio:2/1;background:#0e1726}
 .expo-track{display:flex;height:100%;width:max-content;animation:expopan 36s linear infinite}
 .expo:hover .expo-track{animation-play-state:paused}
 .expo-track img{height:100%;width:auto;display:block}
@@ -531,7 +531,7 @@ footer{padding:56px 0 40px}
     <div class="sw-grid">
 
       <!-- 1 · WEBSITE — browser frame, scroll on hover -->
-      <figure class="sw c7 reveal">
+      <figure class="sw c6 reveal">
         <div class="frame bw">
           <div class="bw-bar"><span class="bw-dots"><span></span><span></span><span></span></span><span class="bw-url">gsptrading.com</span></div>
           <div class="bw-view"><div class="bw-page"><img src="images/gsptrading.webp" alt="Gulfstream Petroleum Trading website by Clathra" style="width:100%;display:block"></div></div>
@@ -541,7 +541,7 @@ footer{padding:56px 0 40px}
       </figure>
 
       <!-- 2 · REVAMP — before / after slider -->
-      <figure class="sw c5 reveal">
+      <figure class="sw c6 reveal">
         <div class="frame ba" style="--pos:50%">
           <div class="ba-layer ba-after"><img src="images/asil-v2.webp" alt="Asil Trading website after the Clathra revamp" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
           <div class="ba-layer ba-before"><img src="images/asil-v1.webp" alt="Asil Trading website before the revamp" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
@@ -601,20 +601,6 @@ footer{padding:56px 0 40px}
         <figcaption class="cap"><h4>Northwind Bulk — strategy deck</h4><div class="medium">Presentation · Deck</div><span class="tech">Swipeable slide carousel</span></figcaption>
       </figure>
 
-      <!-- 5b · EXHIBITION STAND — slow horizontal pan -->
-      <figure class="sw c12 reveal">
-        <div class="frame expo">
-          <div class="expo-track">
-            <img src="images/exhibition-1.webp" alt="Maritime trade-show exhibition stand designed by Clathra">
-            <img src="images/exhibition-2.webp" alt="Exhibition stand, alternate view">
-            <img src="images/exhibition-1.webp" alt="" aria-hidden="true">
-            <img src="images/exhibition-2.webp" alt="" aria-hidden="true">
-          </div>
-          <span class="expo-cap">Trade-show exhibition stand</span>
-        </div>
-        <figcaption class="cap"><h4>Exhibition stand — trade show</h4><div class="medium">Event · Stand &amp; graphics</div><span class="tech">Slow pan across the stand</span></figcaption>
-      </figure>
-
       <!-- 6 · STAMP — embossed seal -->
       <figure class="sw c3 reveal">
         <div class="frame seal">
@@ -665,8 +651,22 @@ footer{padding:56px 0 40px}
         <figcaption class="cap"><h4>Fleet-manager outreach campaign</h4><div class="medium">Marketing · Email</div><span class="tech">Result card</span></figcaption>
       </figure>
 
+      <!-- EXHIBITION STAND — slow horizontal pan (half width) -->
+      <figure class="sw c6 reveal">
+        <div class="frame expo">
+          <div class="expo-track">
+            <img src="images/exhibition-1.webp" alt="Maritime trade-show exhibition stand designed by Clathra">
+            <img src="images/exhibition-2.webp" alt="Exhibition stand, alternate view">
+            <img src="images/exhibition-1.webp" alt="" aria-hidden="true">
+            <img src="images/exhibition-2.webp" alt="" aria-hidden="true">
+          </div>
+          <span class="expo-cap">Trade-show exhibition stand</span>
+        </div>
+        <figcaption class="cap"><h4>Exhibition stand — trade show</h4><div class="medium">Event · Stand &amp; graphics</div><span class="tech">Slow pan across the stand</span></figcaption>
+      </figure>
+
       <!-- 10 · BLOG — article card -->
-      <figure class="sw c12 reveal">
+      <figure class="sw c6 reveal">
         <div class="frame article">
           <div class="art-body">
             <div class="art-cat">Insight · Content</div>
