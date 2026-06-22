@@ -222,6 +222,143 @@ section{position:relative;padding:118px 0}
 .ph .ph-type{font-family:'Space Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft)}
 .ph .ph-flag{position:absolute;top:13px;right:13px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);background:rgba(255,255,255,.7);padding:4px 8px;border-radius:6px}
 
+/* ===== FORMAT STUDY: portfolio presentation treatments ===== */
+.studynote{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.04em;color:var(--slate);margin-top:14px;display:inline-flex;align-items:center;gap:8px}
+.studynote::before{content:"";width:18px;height:1.5px;background:var(--slate)}
+.sw-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.sw{grid-column:span 12;margin:0}
+.c3{grid-column:span 3}.c4{grid-column:span 4}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c12{grid-column:span 12}
+.sw .frame{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 1px 2px rgba(14,23,38,.04)}
+.sw .cap{margin-top:16px}
+.sw .cap h4{font-family:'Bricolage Grotesque';font-weight:600;font-size:1.1rem;color:var(--ink)}
+.sw .cap .medium{font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin-top:4px}
+.sw .cap .tech{display:inline-block;margin-top:10px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--teal-deep);background:rgba(5,153,118,.10);padding:5px 9px;border-radius:7px}
+
+/* fake-site skeleton (shared) */
+.s-hero{height:200px;background:linear-gradient(135deg,#0e1726,#163049);padding:30px 26px;color:#fff}
+.s-eyebrow{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+.s-bar{height:11px;border-radius:4px;background:rgba(255,255,255,.85);margin:6px 0}
+.s-bar.sm{height:7px;background:rgba(255,255,255,.35)}
+.s-btn{display:inline-block;margin-top:16px;width:96px;height:26px;border-radius:999px;background:var(--teal)}
+.s-band{padding:24px 26px;background:#fff}
+.s-band.alt{background:var(--bg-soft)}
+.s-h{height:10px;width:40%;border-radius:4px;background:#c3ccd6;margin-bottom:14px}
+.s-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.s-card{height:78px;border-radius:10px;background:#eef2f5;border:1px solid var(--line);position:relative}
+.s-card::after{content:"";position:absolute;left:12px;top:12px;width:26px;height:26px;border-radius:7px;background:rgba(5,153,118,.2)}
+.s-img{height:120px;border-radius:10px;background:linear-gradient(120deg,#1f6f5c,#2a7fb0)}
+
+/* 1 browser frame + scroll on hover */
+.bw{aspect-ratio:16/10}
+.bw-bar{position:absolute;top:0;left:0;right:0;height:36px;background:#eef2f5;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 14px;z-index:3}
+.bw-dots span{width:9px;height:9px;border-radius:50%;background:#cdd6df;display:inline-block;margin-right:6px}
+.bw-url{flex:1;height:20px;background:#fff;border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;padding:0 10px;margin-left:10px;font-family:'Space Mono',monospace;font-size:10px;color:var(--ink-soft)}
+.bw-view{position:absolute;inset:36px 0 0 0;overflow:hidden}
+.bw-page{position:absolute;top:0;left:0;width:100%;transition:transform 3s var(--ease)}
+.bw:hover .bw-page{transform:translateY(-50%)}
+.bw-scrollhint{position:absolute;right:12px;bottom:12px;z-index:3;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:#fff;background:rgba(14,23,38,.6);backdrop-filter:blur(4px);padding:5px 9px;border-radius:7px;transition:opacity .3s}
+.bw:hover .bw-scrollhint{opacity:0}
+
+/* 2 before / after slider */
+.ba{aspect-ratio:16/10;cursor:ew-resize}
+.ba-layer{position:absolute;inset:0;overflow:hidden}
+.ba-before{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+.ba-tag{position:absolute;top:12px;z-index:4;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:rgba(14,23,38,.65);padding:5px 9px;border-radius:6px}
+.ba-tag.l{left:12px}.ba-tag.r{right:12px}
+.ba-line{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:#fff;z-index:5;transform:translateX(-1px)}
+.ba-grip{position:absolute;top:50%;left:var(--pos,50%);width:40px;height:40px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);z-index:6;display:grid;place-items:center;box-shadow:0 4px 14px rgba(14,23,38,.25);color:var(--ink)}
+.ba-grip svg{width:18px;height:18px}
+.ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:7;margin:0}
+.old{position:absolute;inset:0;background:#e8e4d8;font-family:Georgia,'Times New Roman',serif;padding:18px 20px;color:#3a3a2f}
+.old .o-top{height:40px;background:#3b5a86;margin:-18px -20px 14px;display:flex;align-items:center;padding:0 16px;color:#fff;font-size:13px}
+.old .o-h{font-size:15px;color:#7a2d2d;margin-bottom:10px;font-weight:bold}
+.old .o-bar{height:8px;background:#b9b2a0;border-radius:2px;margin:6px 0}
+.old .o-img{height:64px;background:repeating-linear-gradient(45deg,#cfc8b6,#cfc8b6 8px,#c3bba8 8px,#c3bba8 16px);border:2px ridge #b0a890;margin-top:12px}
+.new{position:absolute;inset:0;background:#fff}
+
+/* 3 print brochure mockup */
+.print{aspect-ratio:4/3;display:grid;place-items:center;background:radial-gradient(120% 120% at 50% 0%,#eef2f5,#dde4ea);perspective:1300px}
+.bro{display:flex;transform:rotateY(-26deg) rotateX(6deg) rotate(-1deg);transform-style:preserve-3d;box-shadow:36px 38px 56px -28px rgba(14,23,38,.5);transition:transform .6s var(--ease)}
+.print:hover .bro{transform:rotateY(-13deg) rotateX(3deg)}
+.bro-pg{width:122px;height:172px;background:#fff;position:relative;overflow:hidden}
+.bro-pg.cover{background:linear-gradient(160deg,#0e1726 0%,#12324a 55%,#0a5e49 100%);color:#fff;padding:15px 13px;display:flex;flex-direction:column;justify-content:space-between}
+.bro-pg.cover .b-anchor{position:absolute;right:-18px;bottom:-12px;width:110px;height:110px;opacity:.18}
+.bro-pg.inner{padding:14px}
+.bro-fold{width:2px;background:linear-gradient(#cfd8e1,rgba(207,216,225,.25))}
+.bp-eyebrow{font-family:'Space Mono',monospace;font-size:7px;letter-spacing:.14em;color:var(--teal)}
+.bp-title{font-family:'Bricolage Grotesque';font-weight:700;font-size:18px;line-height:1.02}
+.bp-foot{font-family:'Space Mono',monospace;font-size:7px;letter-spacing:.1em;opacity:.7}
+.bp-h{height:7px;width:60%;background:#cdd6df;border-radius:3px;margin-bottom:10px}
+.bp-l{height:5px;background:#e1e7ed;border-radius:3px;margin:5px 0}
+.bp-img{height:48px;border-radius:5px;background:linear-gradient(120deg,#1f6f5c,#2a7fb0);margin:10px 0}
+
+/* 4 logo stage */
+.logos{aspect-ratio:4/3;background:radial-gradient(130% 120% at 30% 15%,#16324a,#0c1422);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:24px}
+.logo-main{display:flex;flex-direction:column;align-items:center;gap:14px}
+.lm-mark{width:64px;height:64px;color:#fff}
+.lm-word{font-family:'Bricolage Grotesque';font-weight:600;font-size:26px;letter-spacing:.16em;text-transform:uppercase}
+.logo-alts{display:flex;gap:22px;margin-top:28px;opacity:.55}
+.logo-alts svg{width:32px;height:32px;color:#fff}
+.logo-sub{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+
+/* 5 deck carousel */
+.deck{aspect-ratio:16/10;background:#0e1726}
+.deck-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.deck-track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;height:100%;scroll-snap-align:start;position:relative;overflow:hidden}
+.slide.title{background:linear-gradient(150deg,#0e1726,#0a5e49);color:#fff;padding:30px;display:flex;flex-direction:column;justify-content:center}
+.slide.title .sl-eye{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+.slide.title h5{font-family:'Bricolage Grotesque';font-weight:700;font-size:clamp(20px,2.4vw,30px);line-height:1.03;color:#fff;max-width:14ch}
+.slide.title .sl-foot{margin-top:auto;font-family:'Space Mono',monospace;font-size:10px;color:rgba(255,255,255,.6)}
+.slide.chart{background:#fff;padding:28px;display:flex;flex-direction:column}
+.slide.chart .sl-h{font-family:'Bricolage Grotesque';font-weight:600;font-size:16px;margin-bottom:auto;color:var(--ink)}
+.bars{display:flex;align-items:flex-end;gap:13px;height:62%}
+.bars i{flex:1;background:linear-gradient(var(--teal),#0a5e49);border-radius:6px 6px 0 0}
+.slide.stat{background:var(--bg-soft);padding:30px;display:flex;flex-direction:column;justify-content:center}
+.slide.stat .big{font-family:'Bricolage Grotesque';font-weight:700;font-size:clamp(40px,5vw,54px);letter-spacing:-.03em;color:var(--ink);line-height:1}
+.slide.stat .big em{font-style:normal;color:var(--teal)}
+.deck-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:3;background:rgba(14,23,38,.4);backdrop-filter:blur(4px);padding:6px 10px;border-radius:999px}
+.deck-dots b{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);transition:.25s}
+.deck-dots b.on{background:#fff;width:18px;border-radius:4px}
+
+/* 6 stamp / seal */
+.seal{aspect-ratio:4/3;background:#f6f3ea;display:grid;place-items:center;position:relative}
+.seal::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 38%,transparent,rgba(0,0,0,.05));pointer-events:none}
+.seal svg{width:64%;max-width:220px;transform:rotate(-7deg);color:#0a5e49;opacity:.9}
+
+/* 7-9 outcome cards */
+.outcome{aspect-ratio:1/1;display:flex;flex-direction:column;justify-content:space-between;padding:24px}
+.outcome.dark{background:#0e1726;border-color:#0e1726;color:#fff}
+.oc-chip{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.outcome.dark .oc-chip{color:var(--teal)}
+.oc-num{font-family:'Bricolage Grotesque';font-weight:700;font-size:clamp(2.4rem,3vw,3.1rem);letter-spacing:-.03em;line-height:1;color:var(--ink)}
+.outcome.dark .oc-num{color:#fff}
+.oc-num em{font-style:normal;color:var(--teal)}
+.oc-label{font-size:13.5px;color:var(--ink-soft);margin-top:8px;line-height:1.42}
+.outcome.dark .oc-label{color:rgba(255,255,255,.72)}
+.oc-foot{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.03em;color:var(--slate);margin-top:14px}
+.oc-spark{margin-top:12px}
+.oc-spark svg{width:100%;height:30px;display:block}
+
+/* 10 article / blog */
+.article{display:grid;grid-template-columns:1.15fr .85fr;min-height:230px}
+.art-body{padding:30px 32px;display:flex;flex-direction:column;justify-content:center}
+.art-cat{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-deep);margin-bottom:12px}
+.art-h{font-family:'Bricolage Grotesque';font-weight:600;font-size:clamp(1.3rem,2vw,1.7rem);line-height:1.1;color:var(--ink);max-width:20ch}
+.art-x{color:var(--ink-soft);font-size:14px;margin-top:12px;max-width:46ch}
+.art-meta{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--slate);margin-top:18px}
+.art-thumb{background:linear-gradient(135deg,#0e1726,#0a5e49);position:relative;overflow:hidden}
+.art-thumb .at-mark{position:absolute;right:-10px;bottom:-12px;width:140px;height:140px;color:#fff;opacity:.16}
+
+@media(max-width:900px){
+  .c3{grid-column:span 6}.c4{grid-column:span 6}.c5,.c6,.c7{grid-column:span 12}
+  .article{grid-template-columns:1fr}.art-thumb{min-height:120px;order:-1}
+}
+@media(max-width:560px){
+  .c3,.c4{grid-column:span 12}
+  .sw-grid{gap:30px}
+}
+
 /* CONTACT */
 .contact{background:var(--ink);color:#fff;border-radius:30px;padding:64px;position:relative;overflow:hidden}
 .contact::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 120% at 100% 0%,rgba(5,153,118,.28),transparent 60%);pointer-events:none}
@@ -379,75 +516,156 @@ footer{padding:56px 0 40px}
     <div class="sec-head reveal">
       <div class="kicker">Selected work</div>
       <h2>Some of our work.</h2>
-      <p>From websites and branding to brochures, presentations, exhibition stands and research — a cross-section of work delivered across the shipping and offshore sector.</p>
+      <p>A format study — each tile uses a presentation treatment suited to its medium, rather than one flat screenshot for everything.</p>
+      <span class="studynote">Sample / illustrative pieces — not real client work</span>
     </div>
 
-    <!-- Filter bar -->
-    <div class="filterbar reveal" role="group" aria-label="Filter work by type">
-      <button class="filt active" data-filter="all" aria-pressed="true">All work</button>
-      <button class="filt" data-filter="websites" aria-pressed="false">Websites</button>
-      <button class="filt" data-filter="branding" aria-pressed="false">Branding</button>
-      <button class="filt" data-filter="print" aria-pressed="false">Print &amp; editorial</button>
-      <button class="filt" data-filter="presentations" aria-pressed="false">Presentations</button>
-      <button class="filt" data-filter="exhibitions" aria-pressed="false">Exhibitions</button>
-      <button class="filt" data-filter="strategy" aria-pressed="false">Strategy &amp; research</button>
-    </div>
+    <div class="sw-grid">
 
-    <!-- PORTFOLIO GRID
-         • Real projects use <img>. Placeholder tiles use a .ph block.
-         • To publish a real piece: replace the whole <div class="ph">…</div> with
-           <img src="images/your-file.webp" alt="Describe the work">, remove the
-           "is-ph" class and the colour class (t/b/g) and the <span class="ph-flag">,
-           and add a <figcaption class="meta"><h4>Title</h4><p>Type</p></figcaption>.
-         • data-cat drives filtering (space-separated; values match the filter bar). -->
-    <div class="pgrid">
-      <!-- 1 — real -->
-      <figure class="tile reveal" data-cat="websites branding" data-tilt><span class="chip">Brand + Web</span><img src="images/project-1.webp" alt="TEMKA Engineering Services brand and website by Clathra"><figcaption class="meta"><h4>TEMKA Engineering Services</h4><p>Logo · Website · Print · Digital · Ads</p></figcaption></figure>
+      <!-- 1 · WEBSITE — browser frame, scroll on hover -->
+      <figure class="sw c7 reveal">
+        <div class="frame bw">
+          <div class="bw-bar"><span class="bw-dots"><span></span><span></span><span></span></span><span class="bw-url">meridianmarine.com</span></div>
+          <div class="bw-view"><div class="bw-page">
+            <div class="s-hero"><div class="s-eyebrow">Ship management · Piraeus</div><div class="s-bar" style="width:80%"></div><div class="s-bar" style="width:56%"></div><div class="s-bar sm" style="width:66%;margin-top:14px"></div><div class="s-bar sm" style="width:50%"></div><span class="s-btn"></span></div>
+            <div class="s-band"><div class="s-h"></div><div class="s-cards"><span class="s-card"></span><span class="s-card"></span><span class="s-card"></span></div></div>
+            <div class="s-band alt"><div class="s-img"></div></div>
+            <div class="s-band"><div class="s-h" style="width:30%"></div><div class="s-cards"><span class="s-card"></span><span class="s-card"></span><span class="s-card"></span></div></div>
+            <div class="s-band alt"><div class="s-img"></div></div>
+          </div></div>
+          <span class="bw-scrollhint">Hover to scroll &darr;</span>
+        </div>
+        <figcaption class="cap"><h4>Meridian Marine — corporate website</h4><div class="medium">Website · Design &amp; build</div><span class="tech">Browser frame · scrolls on hover</span></figcaption>
+      </figure>
 
-      <!-- 2 — placeholder -->
-      <figure class="tile is-ph g reveal" data-cat="print"><span class="chip">Brochure</span><span class="ph-flag">Placeholder</span><div class="ph"><span class="ph-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 6a4 4 0 0 0-4-4H3v15h5a4 4 0 0 1 4 2 4 4 0 0 1 4-2h5V2h-5a4 4 0 0 0-4 4z"/><path d="M12 6v13"/></svg></span><span class="ph-title">Corporate brochure</span><span class="ph-type">Print · Editorial</span></div></figure>
+      <!-- 2 · REVAMP — before / after slider -->
+      <figure class="sw c5 reveal">
+        <div class="frame ba" style="--pos:50%">
+          <div class="ba-layer ba-after"><div class="new">
+            <div class="s-hero" style="height:48%"><div class="s-eyebrow">Tidewater Logistics</div><div class="s-bar" style="width:72%"></div><div class="s-bar sm" style="width:54%;margin-top:12px"></div><span class="s-btn"></span></div>
+            <div class="s-band"><div class="s-cards"><span class="s-card"></span><span class="s-card"></span><span class="s-card"></span></div></div>
+          </div></div>
+          <div class="ba-layer ba-before"><div class="old"><div class="o-top">Tidewater Logistics Ltd.</div><div class="o-h">Welcome to our Website!</div><div class="o-bar" style="width:92%"></div><div class="o-bar" style="width:82%"></div><div class="o-bar" style="width:88%"></div><div class="o-img"></div></div></div>
+          <span class="ba-tag l">Before · 2009</span>
+          <span class="ba-tag r">After</span>
+          <span class="ba-line"></span>
+          <span class="ba-grip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></span>
+          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after">
+        </div>
+        <figcaption class="cap"><h4>Tidewater Logistics — website revamp</h4><div class="medium">Web · Redesign</div><span class="tech">Before / after · drag to compare</span></figcaption>
+      </figure>
 
-      <!-- 3 — placeholder -->
-      <figure class="tile is-ph b reveal" data-cat="presentations"><span class="chip">Presentation</span><span class="ph-flag">Placeholder</span><div class="ph"><span class="ph-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2.5" y="4" width="19" height="13" rx="1.5"/><path d="M12 17v4M9 21h6"/></svg></span><span class="ph-title">Company profile deck</span><span class="ph-type">Presentation · Deck</span></div></figure>
+      <!-- 3 · BROCHURE — angled print mockup -->
+      <figure class="sw c4 reveal">
+        <div class="frame print">
+          <div class="bro">
+            <div class="bro-pg cover">
+              <div class="bp-eyebrow">CAPABILITY STATEMENT</div>
+              <svg class="b-anchor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="5" r="2"/><path d="M12 7v13M6 12H4a8 8 0 0 0 16 0h-2M5 12l-1 2M19 12l1 2"/></svg>
+              <div><div class="bp-title">Kestrel<br>Offshore</div><div class="bp-foot" style="margin-top:8px">2025 · CASPIAN SEA</div></div>
+            </div>
+            <div class="bro-fold"></div>
+            <div class="bro-pg inner"><div class="bp-h"></div><div class="bp-l" style="width:92%"></div><div class="bp-l" style="width:84%"></div><div class="bp-l" style="width:88%"></div><div class="bp-img"></div><div class="bp-l" style="width:80%"></div><div class="bp-l" style="width:68%"></div></div>
+          </div>
+        </div>
+        <figcaption class="cap"><h4>Kestrel Offshore — capability brochure</h4><div class="medium">Print · Editorial</div><span class="tech">Angled print mockup</span></figcaption>
+      </figure>
 
-      <!-- 4 — real -->
-      <figure class="tile reveal" data-cat="websites" data-tilt><span class="chip">Logo · Web</span><img src="images/project-2.webp" alt="Appolon Group logo and website by Clathra"><figcaption class="meta"><h4>Appolon Group</h4><p>Logo · Website</p></figcaption></figure>
+      <!-- 4 · LOGO — brand stage -->
+      <figure class="sw c4 reveal">
+        <div class="frame logos">
+          <div class="logo-main">
+            <svg class="lm-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="32" cy="32" r="26"/><path d="M16 40c4 0 4-5 8-5s4 5 8 5 4-5 8-5 4 5 8 5"/><path d="M32 14v18"/><circle cx="32" cy="11" r="3" fill="currentColor" stroke="none"/></svg>
+            <span class="lm-word">Fathom</span>
+          </div>
+          <div class="logo-alts">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M8 26c4 0 4-5 8-5s4 5 8 5 4-5 8-5"/><path d="M20 9v13"/></svg>
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="20" cy="20" r="13"/><path d="M20 7v26M7 20h26"/></svg>
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m20 7 11 6v14l-11 6-11-6V13z"/></svg>
+          </div>
+          <span class="logo-sub">Identity · marks &amp; lockups</span>
+        </div>
+        <figcaption class="cap"><h4>Fathom — logo &amp; identity</h4><div class="medium">Branding · Identity</div><span class="tech">Logo on a brand stage</span></figcaption>
+      </figure>
 
-      <!-- 5 — placeholder -->
-      <figure class="tile is-ph t reveal" data-cat="branding"><span class="chip">Logo · Stamp</span><span class="ph-flag">Placeholder</span><div class="ph"><span class="ph-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m12 3 7 4v8l-7 4-7-4V7z"/><circle cx="12" cy="11" r="2.6"/></svg></span><span class="ph-title">Logo &amp; company stamp</span><span class="ph-type">Branding · Identity</span></div></figure>
+      <!-- 5 · PRESENTATION — swipeable deck -->
+      <figure class="sw c4 reveal">
+        <div class="frame deck">
+          <div class="deck-track">
+            <div class="slide title"><div class="sl-eye">Strategy deck</div><h5>Fleet Decarbonisation 2030</h5><div class="sl-foot">Northwind Bulk Carriers · 24 slides</div></div>
+            <div class="slide chart"><div class="sl-h">Emissions trajectory</div><div class="bars"><i style="height:82%"></i><i style="height:64%"></i><i style="height:50%"></i><i style="height:38%"></i><i style="height:24%"></i></div></div>
+            <div class="slide stat"><div class="big">&minus;<em>38%</em></div><div class="oc-label">CO&#8322; per tonne-mile, targeted by 2030</div></div>
+          </div>
+          <span class="bw-scrollhint" style="opacity:1">Swipe &rarr;</span>
+          <div class="deck-dots"><b class="on"></b><b></b><b></b></div>
+        </div>
+        <figcaption class="cap"><h4>Northwind Bulk — strategy deck</h4><div class="medium">Presentation · Deck</div><span class="tech">Swipeable slide carousel</span></figcaption>
+      </figure>
 
-      <!-- 6 — placeholder -->
-      <figure class="tile is-ph b reveal" data-cat="exhibitions"><span class="chip">Exhibition</span><span class="ph-flag">Placeholder</span><div class="ph"><span class="ph-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 4h18v3H3z"/><path d="M5 7v13M19 7v13M5 20h14"/><path d="M9 20v-5h6v5"/></svg></span><span class="ph-title">Exhibition stand</span><span class="ph-type">Event · Stand</span></div></figure>
+      <!-- 6 · STAMP — embossed seal -->
+      <figure class="sw c3 reveal">
+        <div class="frame seal">
+          <svg viewBox="0 0 200 200" fill="none">
+            <defs>
+              <path id="arcTop" d="M40 100a60 60 0 0 1 120 0"/>
+              <path id="arcBot" d="M46 100a54 54 0 0 0 108 0"/>
+            </defs>
+            <circle cx="100" cy="100" r="72" stroke="currentColor" stroke-width="2"/>
+            <circle cx="100" cy="100" r="60" stroke="currentColor" stroke-width="1"/>
+            <text font-family="'Space Mono',monospace" font-size="12.5" letter-spacing="3" fill="currentColor"><textPath href="#arcTop" startOffset="50%" text-anchor="middle">MARITIME · OFFSHORE</textPath></text>
+            <text font-family="'Space Mono',monospace" font-size="11" letter-spacing="3" fill="currentColor"><textPath href="#arcBot" startOffset="50%" text-anchor="middle">EST. 2024</textPath></text>
+            <circle cx="100" cy="71" r="4" fill="currentColor"/>
+            <path d="M100 75v42M84 96a16 16 0 0 0 32 0M82 90h36" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <figcaption class="cap"><h4>Company stamp &amp; seal</h4><div class="medium">Branding · Print</div><span class="tech">Embossed seal artwork</span></figcaption>
+      </figure>
 
-      <!-- 7 — real -->
-      <figure class="tile reveal" data-cat="websites" data-tilt><span class="chip">Offshore</span><img src="images/project-4.webp" alt="Caspian Offshore Marine Services branding and website by Clathra"><figcaption class="meta"><h4>Caspian Offshore Marine Services</h4><p>Logo · Website · Print · Digital</p></figcaption></figure>
+      <!-- 7 · AUDIT — outcome card -->
+      <figure class="sw c3 reveal">
+        <div class="frame outcome">
+          <span class="oc-chip">Website audit</span>
+          <div><div class="oc-num">14</div><div class="oc-label">conversion &amp; accessibility gaps found, ranked into a fix roadmap</div></div>
+          <div class="oc-foot">Halcyon Shipping</div>
+        </div>
+        <figcaption class="cap"><h4>Halcyon Shipping — web audit</h4><div class="medium">Strategy · Audit</div><span class="tech">Outcome card · no screenshot</span></figcaption>
+      </figure>
 
-      <!-- 8 — placeholder -->
-      <figure class="tile is-ph g reveal" data-cat="strategy"><span class="chip">Research</span><span class="ph-flag">Placeholder</span><div class="ph"><span class="ph-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4v16h16"/><rect x="8" y="11" width="3" height="6"/><rect x="14" y="7" width="3" height="10"/></svg></span><span class="ph-title">Market research</span><span class="ph-type">Strategy · Research</span></div></figure>
+      <!-- 8 · MARKET RESEARCH — key-finding card -->
+      <figure class="sw c3 reveal">
+        <div class="frame outcome">
+          <span class="oc-chip">Market research</span>
+          <div><div class="oc-num"><em>62%</em></div><div class="oc-label">of operators plan to outsource offshore-wind O&amp;M by 2027</div></div>
+          <div class="oc-spark"><svg viewBox="0 0 120 30" preserveAspectRatio="none"><polyline points="0,25 20,22 40,23 60,15 80,11 100,6 120,3" fill="none" stroke="#059976" stroke-width="2.4"/></svg></div>
+          <div class="oc-foot">Sector study · n=418</div>
+        </div>
+        <figcaption class="cap"><h4>Offshore-wind O&amp;M — demand study</h4><div class="medium">Strategy · Research</div><span class="tech">Key-finding card</span></figcaption>
+      </figure>
 
-      <!-- 9 — real -->
-      <figure class="tile reveal" data-cat="branding print" data-tilt><span class="chip">Brand · Print</span><img src="images/project-3.webp" alt="M. Tosun Ltd. branding and website by Clathra"><figcaption class="meta"><h4>M. Tosun Ltd.</h4><p>Logo · Website · Print</p></figcaption></figure>
+      <!-- 9 · EMAIL OUTREACH — result card (dark) -->
+      <figure class="sw c3 reveal">
+        <div class="frame outcome dark">
+          <span class="oc-chip">Email outreach</span>
+          <div><div class="oc-num"><em>18%</em></div><div class="oc-label">reply rate from cold outreach to fleet &amp; technical managers</div></div>
+          <div class="oc-foot">320 sent · 57 replies</div>
+        </div>
+        <figcaption class="cap"><h4>Fleet-manager outreach campaign</h4><div class="medium">Marketing · Email</div><span class="tech">Result card</span></figcaption>
+      </figure>
 
-      <!-- 10 — placeholder -->
-      <figure class="tile is-ph t reveal" data-cat="print"><span class="chip">Templates</span><span class="ph-flag">Placeholder</span><div class="ph"><span class="ph-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="8" y="3" width="11" height="16" rx="1.5"/><path d="M12 7h4M12 11h4M12 15h2"/><path d="M5 6v14a1 1 0 0 0 1 1h9"/></svg></span><span class="ph-title">Document templates</span><span class="ph-type">Print · Templates</span></div></figure>
+      <!-- 10 · BLOG — article card -->
+      <figure class="sw c12 reveal">
+        <div class="frame article">
+          <div class="art-body">
+            <div class="art-cat">Insight · Content</div>
+            <div class="art-h">Why most maritime websites fail the five-second test</div>
+            <p class="art-x">Buyers in shipping scan for proof of competence before anything else. We break down the three signals that decide whether a technical visitor stays or leaves.</p>
+            <div class="art-meta">8 min read · written &amp; designed by Clathra</div>
+          </div>
+          <div class="art-thumb"><svg class="at-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><circle cx="12" cy="5" r="2"/><path d="M12 7v13M6 12H4a8 8 0 0 0 16 0h-2"/></svg></div>
+        </div>
+        <figcaption class="cap"><h4>Clathra Journal — long-form articles</h4><div class="medium">Content · Editorial</div><span class="tech">Article card with excerpt</span></figcaption>
+      </figure>
 
-      <!-- 11 — placeholder -->
-      <figure class="tile is-ph b reveal" data-cat="websites"><span class="chip">Revamp</span><span class="ph-flag">Placeholder</span><div class="ph"><span class="ph-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="15" rx="2"/><path d="M3 8.5h18"/><path d="M14.5 13.5a2.5 2.5 0 1 1-.8-1.8m.8-1.4v1.8h-1.8"/></svg></span><span class="ph-title">Website revamp</span><span class="ph-type">Web · Redesign</span></div></figure>
-
-      <!-- 12 — real -->
-      <figure class="tile reveal" data-cat="branding" data-tilt><span class="chip">Logo · Ads</span><img src="images/project-5.webp" alt="Frelsea logo, website and marketing by Clathra"><figcaption class="meta"><h4>Frelsea</h4><p>Logo · Website · Ads</p></figcaption></figure>
-
-      <!-- 13 — placeholder -->
-      <figure class="tile is-ph t reveal" data-cat="strategy"><span class="chip">Blog</span><span class="ph-flag">Placeholder</span><div class="ph"><span class="ph-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 6h10M4 10h10M4 14h6"/><path d="m15 16 4-4 2 2-4 4h-2z"/></svg></span><span class="ph-title">Blog &amp; articles</span><span class="ph-type">Content · Editorial</span></div></figure>
-
-      <!-- 14 — placeholder -->
-      <figure class="tile is-ph g reveal" data-cat="strategy"><span class="chip">Outreach</span><span class="ph-flag">Placeholder</span><div class="ph"><span class="ph-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span class="ph-title">Email outreach</span><span class="ph-type">Marketing · Email</span></div></figure>
-
-      <!-- 15 — real -->
-      <figure class="tile reveal" data-cat="websites" data-tilt><span class="chip">Logo · Web</span><img src="images/project-6.webp" alt="Lidmann logo and website by Clathra"><figcaption class="meta"><h4>Lidmann</h4><p>Logo · Website · Digital</p></figcaption></figure>
-
-      <!-- 16 — placeholder -->
-      <figure class="tile is-ph b reveal" data-cat="strategy"><span class="chip">Audit</span><span class="ph-flag">Placeholder</span><div class="ph"><span class="ph-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="m21 21-3.5-3.5"/><path d="m8.5 11 2 2 3.5-3.5"/></svg></span><span class="ph-title">Brand &amp; web audit</span><span class="ph-type">Strategy · Audit</span></div></figure>
     </div>
   </div>
 </section>
@@ -514,6 +732,23 @@ document.querySelectorAll('[data-tilt]').forEach(card=>{
     });
   }));
 })();
+
+/* Before/after compare sliders */
+document.querySelectorAll('.ba-range').forEach(function(r){
+  var ba=r.closest('.ba');
+  function upd(){ba.style.setProperty('--pos',r.value+'%');}
+  r.addEventListener('input',upd); upd();
+});
+/* Deck carousel dot indicators */
+document.querySelectorAll('.deck').forEach(function(deck){
+  var track=deck.querySelector('.deck-track');
+  var dots=[].slice.call(deck.querySelectorAll('.deck-dots b'));
+  if(!track||!dots.length)return;
+  track.addEventListener('scroll',function(){
+    var i=Math.round(track.scrollLeft/track.clientWidth);
+    dots.forEach(function(d,k){d.classList.toggle('on',k===i);});
+  },{passive:true});
+});
 
 document.getElementById('burger').addEventListener('click',function(){
   const nl=document.querySelector('.nav-mid');const open=nl.style.display==='flex';
