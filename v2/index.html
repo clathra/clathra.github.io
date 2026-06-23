@@ -339,8 +339,10 @@ section{position:relative;padding:118px 0}
 .ml-foot{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.02em;color:var(--slate);border-top:1px solid var(--line);padding-top:11px;margin-top:10px}
 /* blog — scroll the article through the frame on hover */
 .frame.scrl{aspect-ratio:1/1;overflow:hidden;position:relative;background:#fff}
-.frame.scrl .scrl-img{position:absolute;top:0;left:0;width:100%;transition:transform 4s var(--ease)}
-.frame.scrl:hover .scrl-img{transform:translateY(-72%)}
+.scrl-track{display:flex;flex-direction:column;animation:scrlv 24s linear infinite}
+.frame.scrl:hover .scrl-track{animation-play-state:paused}
+.scrl-track img{width:100%;display:block}
+@keyframes scrlv{to{transform:translateY(-50%)}}
 /* email-marketing slideshow (emails + stats) */
 .frame.slides{aspect-ratio:1/1;position:relative;overflow:hidden;background:#fff}
 .slide2{position:absolute;inset:0;opacity:0;transition:opacity .6s var(--ease);display:flex;flex-direction:column;padding:22px;pointer-events:none}
@@ -660,8 +662,10 @@ footer{padding:56px 0 40px}
       <!-- BLOG WRITING — article scrolls through the frame on hover -->
       <figure class="sw c3 reveal">
         <div class="frame scrl">
-          <img class="scrl-img" src="images/blog-post-sample.webp" alt="Maritime blog article written and designed by Clathra">
-          <span class="bw-scrollhint">Hover to scroll &darr;</span>
+          <div class="scrl-track">
+            <img src="images/blog-post-sample.webp" alt="Maritime blog article written and designed by Clathra">
+            <img src="images/blog-post-sample.webp" alt="" aria-hidden="true">
+          </div>
         </div>
         <figcaption class="cap"><h4>Blog &amp; article writing</h4><div class="medium">Content · Editorial</div></figcaption>
       </figure>
