@@ -27,6 +27,4 @@ p{color:var(--ink-soft);font-size:1.15rem;max-width:46ch;margin-top:18px}
 .btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 28px -10px rgba(14,23,38,.5)}
 .btn-g{border-color:var(--line);color:var(--ink)}
 .btn-g:hover{border-color:var(--ink);transform:translateY(-2px)}
-footer{position:relative;z-index:2;padding:24px 0;font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft)}
-.foot{max-width:1180px;margin:0 auto;padding:0 28px}
 @media(prefers-reduced-motion:reduce){canvas{display:none}}

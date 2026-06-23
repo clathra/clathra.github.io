@@ -1,0 +1,15 @@
+/* ===== Shared site chrome — identical on every page ===== */
+/* Site footer */
+footer{position:relative;z-index:1;border-top:1px solid var(--line);margin-top:20px}
+.foot{max-width:1180px;margin:0 auto;padding:34px 28px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.foot .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.foot .brand img{height:28px;width:28px}
+.foot .brand .name{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:21px;color:var(--ink);line-height:1;letter-spacing:-.01em}
+.foot .c{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft)}
+.foot .c a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--ink-soft)}
+.foot .c a:hover{color:var(--teal)}
+/* Social icons */
+.socials{display:flex;gap:12px}
+.socials a{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--ink-soft);transition:.25s var(--ease)}
+.socials a:hover{color:#fff;background:var(--ink);border-color:var(--ink);transform:translateY(-3px)}
+.socials svg{width:17px;height:17px}

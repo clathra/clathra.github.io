@@ -28,8 +28,6 @@ nav.scrolled{background:rgba(251,252,253,.8);backdrop-filter:blur(14px);border-b
 .brand{display:flex;align-items:center;gap:10px}
 .brand img.logo{height:36px;width:36px;display:block}
 .brand .name{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:23px;letter-spacing:-.01em;color:var(--ink);line-height:1}
-footer .brand img.logo{height:28px;width:28px}
-footer .brand .name{font-size:21px}
 .nav-mid{display:flex;align-items:center;gap:34px}
 .nav-mid a.link{font-size:14.5px;font-family:'Space Mono',monospace;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-soft);position:relative;transition:color .25s}
 .nav-mid a.link::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--teal);transition:width .3s var(--ease)}
@@ -381,13 +379,6 @@ form .btn-primary:hover{background:#06ad86}
 .form-note a{color:rgba(255,255,255,.8);border-bottom:1px solid rgba(255,255,255,.4)}
 
 /* FOOTER */
-footer{padding:56px 0 40px}
-.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;border-top:1px solid var(--line);padding-top:34px}
-.foot .c{font-family:'Space Mono',monospace;font-size:11.5px;color:var(--ink-soft)}
-.socials{display:flex;gap:12px}
-.socials a{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--ink-soft);transition:.25s var(--ease)}
-.socials a:hover{color:#fff;background:var(--ink);border-color:var(--ink);transform:translateY(-3px)}
-.socials svg{width:17px;height:17px}
 
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .reveal.in{opacity:1;transform:none}
