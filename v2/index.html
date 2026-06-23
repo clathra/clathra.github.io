@@ -354,6 +354,15 @@ section{position:relative;padding:118px 0}
 .gfx-line{left:0;right:0;bottom:0;width:100%;height:54%}
 .gfx-corner{right:18px;bottom:16px;width:43%;height:48%}
 .gfx-corner svg{width:100%;height:100%;display:block}
+/* email "how it works" method slides */
+.slide2.meth{justify-content:flex-start;overflow:hidden;background:var(--bg-soft)}
+.slide2.meth.dark{background:#0e1726}
+.mth-step{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-deep)}
+.slide2.meth.dark .mth-step{color:#3fd292}
+.mth-title{font-family:'Bricolage Grotesque';font-weight:600;font-size:1.12rem;line-height:1.16;color:var(--ink);margin-top:9px;max-width:74%;position:relative;z-index:2}
+.slide2.meth.dark .mth-title{color:#fff}
+.mth-sub{font-size:11.5px;color:var(--ink-soft);line-height:1.45;margin-top:7px;max-width:60%;position:relative;z-index:2}
+.slide2.meth.dark .mth-sub{color:rgba(255,255,255,.72)}
 .slide2.stat2.dark{background:#0e1726}
 .st-num{font-family:'Bricolage Grotesque';font-weight:700;font-size:clamp(2.6rem,4.5vw,3.3rem);letter-spacing:-.03em;line-height:1;color:var(--ink)}
 .slide2.dark .st-num{color:#fff}
@@ -586,8 +595,8 @@ footer{padding:56px 0 40px}
       <!-- 1 · WEBSITE — browser frame, scroll on hover -->
       <figure class="sw c6 reveal">
         <div class="frame bw">
-          <div class="bw-bar"><span class="bw-dots"><span></span><span></span><span></span></span><span class="bw-url">gsptrading.com</span></div>
-          <div class="bw-view"><div class="bw-page"><img src="images/gsptrading.webp" alt="Gulfstream Petroleum Trading website by Clathra" style="width:100%;display:block"></div></div>
+          <div class="bw-bar"><span class="bw-dots"><span></span><span></span><span></span></span><span class="bw-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;flex:0 0 auto"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span style="height:6px;width:96px;border-radius:3px;background:#d4dbe3;display:inline-block;margin-left:8px"></span></span></div>
+          <div class="bw-view"><div class="bw-page"><img src="images/site-corporate.webp" alt="Corporate website built by Clathra" style="width:100%;display:block"></div></div>
           <span class="bw-scrollhint">Hover to scroll &darr;</span>
         </div>
         <figcaption class="cap"><h4>Website Design</h4><div class="medium">Website · Design &amp; build</div></figcaption>
@@ -596,10 +605,10 @@ footer{padding:56px 0 40px}
       <!-- 2 · REVAMP — before / after slider -->
       <figure class="sw c6 reveal">
         <div class="frame ba" style="--pos:50%">
-          <div class="bw-bar"><span class="bw-dots"><span></span><span></span><span></span></span><span class="bw-url">asiltrading.com</span></div>
+          <div class="bw-bar"><span class="bw-dots"><span></span><span></span><span></span></span><span class="bw-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;flex:0 0 auto"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span style="height:6px;width:96px;border-radius:3px;background:#d4dbe3;display:inline-block;margin-left:8px"></span></span></div>
           <div class="ba-stage">
-            <div class="ba-layer ba-after"><img src="images/asil-v2.webp" alt="Asil Trading website after the Clathra revamp" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
-            <div class="ba-layer ba-before"><img src="images/asil-v1.webp" alt="Asil Trading website before the revamp" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
+            <div class="ba-layer ba-after"><img src="images/revamp-after.webp" alt="Website after the Clathra revamp" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
+            <div class="ba-layer ba-before"><img src="images/revamp-before.webp" alt="Website before the revamp" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
             <span class="ba-tag l">Before</span>
             <span class="ba-tag r">After</span>
             <span class="ba-line"></span>
@@ -613,7 +622,7 @@ footer{padding:56px 0 40px}
       <!-- 3 · BROCHURE — angled print mockup -->
       <figure class="sw c4 reveal">
         <div class="frame print">
-          <img src="images/temka-brochure.webp" alt="TEMKA Engineering Services capability brochure by Clathra" style="width:100%;height:100%;object-fit:cover;display:block">
+          <img src="images/brochure.webp" alt="Capability brochure designed by Clathra" style="width:100%;height:100%;object-fit:cover;display:block">
         </div>
         <figcaption class="cap"><h4>Print Marketing</h4><div class="medium">Print · Editorial</div></figcaption>
       </figure>
@@ -621,8 +630,8 @@ footer{padding:56px 0 40px}
       <!-- 4 · LOGO — brand stage -->
       <figure class="sw c4 reveal">
         <div class="frame ident">
-          <img src="images/lidmann-1.webp" alt="Lidmann logo design and construction guidelines by Clathra">
-          <img src="images/lidmann-2.webp" alt="Lidmann typography and colour guidelines by Clathra">
+          <img src="images/identity-1.webp" alt="Logo design and construction guidelines by Clathra">
+          <img src="images/identity-2.webp" alt="Typography and colour guidelines by Clathra">
         </div>
         <figcaption class="cap"><h4>Logo &amp; Brand Design</h4><div class="medium">Branding · Identity</div></figcaption>
       </figure>
@@ -644,7 +653,7 @@ footer{padding:56px 0 40px}
       <!-- 6 · STAMP — embossed seal -->
       <figure class="sw c4 reveal">
         <div class="frame seal">
-          <img src="images/navarca-stamp.webp" alt="Navarca Ship Management company seal designed by Clathra">
+          <img src="images/stamp.webp" alt="Company seal and stamp designed by Clathra">
         </div>
         <figcaption class="cap"><h4>Stamps & Stationery</h4><div class="medium">Branding · Stationery</div></figcaption>
       </figure>
@@ -653,15 +662,15 @@ footer{padding:56px 0 40px}
       <figure class="sw c4 reveal">
         <div class="frame slides">
           <div class="slide2 mail on"><div class="ml-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Cold email · ship owners</div><div class="ml-subj">Need reliable crew for your ships?</div><div class="ml-prev">Hi [First Name], I saw that [Ship Name] recently called at [Port Name], and it caught my eye because we&rsquo;ve helped place great crew on similar vessels in the area. Finding and keeping quality crew isn&rsquo;t easy&hellip;</div></div>
-          <div class="slide2 stat2 dark"><div class="st-num"><em>150+</em></div><div class="st-lbl">hand-verified leads</div><svg class="st-gfx gfx-corner" viewBox="0 0 92 70" fill="none"><g><circle cx="7" cy="7" r="6" fill="#3fd292" fill-opacity=".9"/><rect x="18" y="4" width="42" height="5" rx="2.5" fill="#fff" fill-opacity=".22"/><path d="M72 7l3.5 3.5 7-8" stroke="#3fd292" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="translate(0,28)"><circle cx="7" cy="7" r="6" fill="#3fd292" fill-opacity=".9"/><rect x="18" y="4" width="42" height="5" rx="2.5" fill="#fff" fill-opacity=".22"/><path d="M72 7l3.5 3.5 7-8" stroke="#3fd292" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="translate(0,56)"><circle cx="7" cy="7" r="6" fill="#fff" fill-opacity=".25"/><rect x="18" y="4" width="42" height="5" rx="2.5" fill="#fff" fill-opacity=".14"/></g></svg></div>
-          <div class="slide2 mail"><div class="ml-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Follow-up</div><div class="ml-subj">Re: Need reliable crew for your ships?</div><div class="ml-prev">Hi [First Name], just wanted to follow up in case you missed my last email. I&rsquo;m sure we can help you fill crew positions quickly, like we&rsquo;ve done for Carnival, Costa Line, P&amp;O and MSC Cruise&hellip;</div></div>
-          <div class="slide2 stat2"><div class="st-num">4</div><div class="st-lbl">email sequence, AI-optimised</div><svg class="st-gfx gfx-corner" viewBox="0 0 60 92" fill="none"><line x1="11" y1="11" x2="11" y2="81" stroke="#cfd8e1" stroke-width="2"/><circle cx="11" cy="11" r="6" fill="#059976"/><circle cx="11" cy="34.5" r="6" fill="#059976" fill-opacity=".8"/><circle cx="11" cy="58" r="6" fill="#059976" fill-opacity=".62"/><circle cx="11" cy="81" r="6" fill="#059976" fill-opacity=".45"/><rect x="24" y="7" width="30" height="8" rx="3" fill="#e1e7ed"/><rect x="24" y="30.5" width="30" height="8" rx="3" fill="#e1e7ed"/><rect x="24" y="54" width="30" height="8" rx="3" fill="#e1e7ed"/><rect x="24" y="77" width="30" height="8" rx="3" fill="#e1e7ed"/></svg></div>
-          <div class="slide2 mail"><div class="ml-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Cold email · crewing agencies</div><div class="ml-subj">Access top candidates for your clients</div><div class="ml-prev">Hi [First Name], I noticed your agency has been busy filling crew positions for different shipowners. I&rsquo;d like to introduce Resonance Bulk to help expand your hiring pool&hellip;</div></div>
-          <div class="slide2 stat2"><div class="st-num">2</div><div class="st-lbl">audience segments</div><svg class="st-gfx gfx-corner" viewBox="0 0 96 72" fill="none"><circle cx="26" cy="36" r="23" fill="#059976" fill-opacity=".07" stroke="#059976" stroke-width="2" stroke-opacity=".5"/><circle cx="19" cy="31" r="4" fill="#059976"/><circle cx="33" cy="31" r="4" fill="#059976"/><circle cx="26" cy="44" r="4" fill="#059976"/><circle cx="70" cy="36" r="23" fill="#425fbc" fill-opacity=".07" stroke="#425fbc" stroke-width="2" stroke-opacity=".5"/><circle cx="63" cy="31" r="4" fill="#425fbc"/><circle cx="77" cy="31" r="4" fill="#425fbc"/><circle cx="70" cy="44" r="4" fill="#425fbc"/></svg></div>
-          <div class="slide2 stat2 dark"><div class="st-num"><em>10+</em></div><div class="st-lbl">conversions</div><svg class="st-gfx gfx-line" viewBox="0 0 240 110" preserveAspectRatio="none"><defs><linearGradient id="cgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3fd292" stop-opacity=".34"/><stop offset="1" stop-color="#3fd292" stop-opacity="0"/></linearGradient></defs><path d="M0,94 C26,84 42,90 62,72 C80,56 90,82 110,66 C130,50 140,38 162,40 C188,42 202,18 240,6 L240,110 L0,110Z" fill="url(#cgrad)"/><path d="M0,94 C26,84 42,90 62,72 C80,56 90,82 110,66 C130,50 140,38 162,40 C188,42 202,18 240,6" fill="none" stroke="#3fd292" stroke-width="3.5" stroke-linecap="round"/></svg></div>
+          <div class="slide2 meth dark"><div class="mth-step">01 · Targeting</div><div class="mth-title">Verified, relevant leads</div><div class="mth-sub">filtered from hundreds of thousands</div><svg class="st-gfx gfx-corner" viewBox="0 0 88 86" fill="none"><g fill="#3fd292" fill-opacity=".5"><circle cx="14" cy="7" r="2.6"/><circle cx="30" cy="5" r="2.6"/><circle cx="46" cy="8" r="2.6"/><circle cx="62" cy="5" r="2.6"/><circle cx="74" cy="9" r="2.6"/><circle cx="22" cy="15" r="2.6"/><circle cx="54" cy="15" r="2.6"/></g><path d="M8 24 L78 24 L48 52 L48 74 L38 74 L38 52 Z" fill="#3fd292" fill-opacity=".13" stroke="#3fd292" stroke-width="2" stroke-linejoin="round"/><circle cx="43" cy="82" r="3.2" fill="#3fd292"/></svg></div>
+          <div class="slide2 mail"><div class="ml-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Follow-up</div><div class="ml-subj">Re: Need reliable crew for your ships?</div><div class="ml-prev">Hi [First Name], just wanted to follow up in case you missed my last email. I&rsquo;m sure we can help you fill crew positions quickly, like we&rsquo;ve done for major cruise and shipping lines&hellip;</div></div>
+          <div class="slide2 meth"><div class="mth-step">02 · Copy</div><div class="mth-title">Copy engineered to convert</div><div class="mth-sub">research &amp; buyer psychology</div><svg class="st-gfx gfx-corner" viewBox="0 0 90 76" fill="none"><rect x="2" y="9" width="40" height="5" rx="2.5" fill="#cfd8e1"/><rect x="2" y="21" width="34" height="5" rx="2.5" fill="#e1e7ed"/><rect x="2" y="33" width="38" height="5" rx="2.5" fill="#e1e7ed"/><rect x="2" y="45" width="24" height="5" rx="2.5" fill="#e1e7ed"/><circle cx="64" cy="44" r="18" fill="none" stroke="#059976" stroke-width="2"/><circle cx="64" cy="44" r="10" fill="none" stroke="#059976" stroke-width="2" stroke-opacity=".55"/><circle cx="64" cy="44" r="3.6" fill="#059976"/></svg></div>
+          <div class="slide2 mail"><div class="ml-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Cold email · crewing agencies</div><div class="ml-subj">Access top candidates for your clients</div><div class="ml-prev">Hi [First Name], I noticed your agency has been busy filling crew positions for different shipowners. I&rsquo;d like to introduce our company to help expand your hiring pool&hellip;</div></div>
+          <div class="slide2 meth"><div class="mth-step">03 · Deliverability</div><div class="mth-title">Your domain, protected</div><div class="mth-sub">dedicated, warmed-up senders dodge spam filters</div><svg class="st-gfx gfx-corner" viewBox="0 0 80 82" fill="none"><path d="M40 6 L68 16 V40 C68 58 55 71 40 77 C25 71 12 58 12 40 V16 Z" fill="#059976" fill-opacity=".08" stroke="#059976" stroke-width="2" stroke-linejoin="round"/><rect x="27" y="35" width="26" height="17" rx="2" fill="none" stroke="#059976" stroke-width="2"/><path d="M28 37 l12 8 l12 -8" fill="none" stroke="#059976" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <div class="slide2 meth dark"><div class="mth-step">04 · Results</div><div class="mth-title">Conversions, handed to you</div><div class="mth-sub">timed for impact — you close the deal</div><svg class="st-gfx gfx-line" viewBox="0 0 240 110" preserveAspectRatio="none"><defs><linearGradient id="cgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3fd292" stop-opacity=".34"/><stop offset="1" stop-color="#3fd292" stop-opacity="0"/></linearGradient></defs><path d="M0,94 C26,84 42,90 62,72 C80,56 90,82 110,66 C130,50 140,38 162,40 C188,42 202,18 240,6 L240,110 L0,110Z" fill="url(#cgrad)"/><path d="M0,94 C26,84 42,90 62,72 C80,56 90,82 110,66 C130,50 140,38 162,40 C188,42 202,18 240,6" fill="none" stroke="#3fd292" stroke-width="3.5" stroke-linecap="round"/></svg></div>
           <div class="sl-dots"><b class="sl-dot on"></b><b class="sl-dot"></b><b class="sl-dot"></b><b class="sl-dot"></b><b class="sl-dot"></b><b class="sl-dot"></b><b class="sl-dot"></b></div>
         </div>
-        <figcaption class="cap"><h4>Resonance Bulk &mdash; cold email campaign</h4><div class="medium">Marketing · Email</div></figcaption>
+        <figcaption class="cap"><h4>Email Marketing</h4><div class="medium">Marketing · Email</div></figcaption>
       </figure>
 
       <!-- BLOG WRITING — article scrolls through the frame on hover -->
