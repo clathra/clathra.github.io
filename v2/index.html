@@ -210,7 +210,7 @@ section{position:relative;padding:118px 0}
 .tile .meta h4{color:#fff;font-family:'Bricolage Grotesque';font-size:1.1rem;margin-bottom:3px}
 .tile .meta p{font-family:'Space Mono',monospace;font-size:11px;color:rgba(255,255,255,.82);letter-spacing:.02em}
 .tile:hover .meta{transform:translateY(0);opacity:1}
-/* placeholder tiles — swap the .ph block for an <img> when the real asset is ready */
+/* placeholder tiles – swap the .ph block for an <img> when the real asset is ready */
 .tile.is-ph{background:var(--bg-soft)}
 .tile.is-ph::after{content:"";position:absolute;inset:12px;border:1.5px dashed #cfd8e1;border-radius:12px;pointer-events:none}
 .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;padding:26px}
@@ -337,7 +337,7 @@ section{position:relative;padding:118px 0}
 .ml-prev{position:relative;flex:1;overflow:hidden;font-size:12px;line-height:1.55;color:var(--ink-soft);margin-top:9px}
 .ml-prev::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34px;background:linear-gradient(transparent,#fff)}
 .ml-foot{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.02em;color:var(--slate);border-top:1px solid var(--line);padding-top:11px;margin-top:10px}
-/* blog — scroll the article through the frame on hover */
+/* blog – scroll the article through the frame on hover */
 .frame.scrl{aspect-ratio:4/3;overflow:hidden;position:relative;background:#fff}
 .scrl-track{display:flex;flex-direction:column;animation:scrlv 24s linear infinite}
 .frame.scrl:hover .scrl-track{animation-play-state:paused}
@@ -399,10 +399,10 @@ section{position:relative;padding:118px 0}
 .art-thumb{background:linear-gradient(135deg,#0e1726,#0a5e49);position:relative;overflow:hidden}
 .art-thumb .at-mark{position:absolute;right:-10px;bottom:-12px;width:140px;height:140px;color:#fff;opacity:.16}
 
-/* revamp slider — browser-bar treatment (matches the website tile) */
+/* revamp slider – browser-bar treatment (matches the website tile) */
 .ba-stage{position:absolute;inset:36px 0 0 0;overflow:hidden}
 
-/* logo & identity — crossfade between brand-guideline pages */
+/* logo & identity – crossfade between brand-guideline pages */
 .frame.ident{aspect-ratio:4/3;background:#fff}
 .frame.ident img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:16px;opacity:0;animation:identcf 11s infinite}
 .frame.ident img:first-child{opacity:1}
@@ -410,14 +410,14 @@ section{position:relative;padding:118px 0}
 .frame.ident:hover img{animation-play-state:paused}
 @keyframes identcf{0%,40%{opacity:1}50%,90%{opacity:0}100%{opacity:1}}
 
-/* brochure — gentle zoom on hover */
+/* brochure – gentle zoom on hover */
 .frame.print img{transition:transform .55s var(--ease)}
 .frame.print:hover img{transform:scale(1.04)}
-/* company seal — real stamp artwork on the paper stage */
+/* company seal – real stamp artwork on the paper stage */
 .frame.seal img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s var(--ease)}
 .frame.seal:hover img{transform:scale(1.05)}
 
-/* exhibition stand — slow horizontal pan across a long stand */
+/* exhibition stand – slow horizontal pan across a long stand */
 .frame.expo{aspect-ratio:4/3;background:#0e1726}
 .expo-track{display:flex;height:100%;width:max-content;animation:expopan 36s linear infinite}
 .expo:hover .expo-track{animation-play-state:paused}
@@ -586,26 +586,25 @@ footer{padding:56px 0 40px}
     <div class="sec-head reveal">
       <div class="kicker">Selected work</div>
       <h2>Some of our work.</h2>
-      <p>A format study — each tile uses a presentation treatment suited to its medium, rather than one flat screenshot for everything.</p>
-      <span class="studynote">Sample / illustrative pieces — not real client work</span>
+      <p>A cross-section of what we do for the maritime and offshore sector – websites and rebrands, brand identity, print, exhibitions, content and outreach.</p>
     </div>
 
     <div class="sw-grid">
 
-      <!-- 1 · WEBSITE — browser frame, scroll on hover -->
+      <!-- 1 · WEBSITE – browser frame, scroll on hover -->
       <figure class="sw c6 reveal">
         <div class="frame bw">
-          <div class="bw-bar"><span class="bw-dots"><span></span><span></span><span></span></span><span class="bw-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;flex:0 0 auto"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span style="height:6px;width:96px;border-radius:3px;background:#d4dbe3;display:inline-block;margin-left:8px"></span></span></div>
+          <div class="bw-bar"><span class="bw-dots"><span></span><span></span><span></span></span><span class="bw-url">gsptrading.com</span></div>
           <div class="bw-view"><div class="bw-page"><img src="images/site-corporate.webp" alt="Corporate website built by Clathra" style="width:100%;display:block"></div></div>
           <span class="bw-scrollhint">Hover to scroll &darr;</span>
         </div>
-        <figcaption class="cap"><h4>Website Design</h4><div class="medium">Website · Design &amp; build</div></figcaption>
+        <figcaption class="cap"><h4>Website Design</h4><div class="medium">Website · Design &amp; Build</div></figcaption>
       </figure>
 
-      <!-- 2 · REVAMP — before / after slider -->
+      <!-- 2 · REVAMP – before / after slider -->
       <figure class="sw c6 reveal">
         <div class="frame ba" style="--pos:50%">
-          <div class="bw-bar"><span class="bw-dots"><span></span><span></span><span></span></span><span class="bw-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;flex:0 0 auto"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span style="height:6px;width:96px;border-radius:3px;background:#d4dbe3;display:inline-block;margin-left:8px"></span></span></div>
+          <div class="bw-bar"><span class="bw-dots"><span></span><span></span><span></span></span><span class="bw-url">asiltrading.com</span></div>
           <div class="ba-stage">
             <div class="ba-layer ba-after"><img src="images/revamp-after.webp" alt="Website after the Clathra revamp" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
             <div class="ba-layer ba-before"><img src="images/revamp-before.webp" alt="Website before the revamp" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
@@ -619,7 +618,7 @@ footer{padding:56px 0 40px}
         <figcaption class="cap"><h4>Website Upgrade</h4><div class="medium">Web · Redesign</div></figcaption>
       </figure>
 
-      <!-- 3 · BROCHURE — angled print mockup -->
+      <!-- 3 · BROCHURE – angled print mockup -->
       <figure class="sw c4 reveal">
         <div class="frame print">
           <img src="images/brochure.webp" alt="Capability brochure designed by Clathra" style="width:100%;height:100%;object-fit:cover;display:block">
@@ -627,7 +626,7 @@ footer{padding:56px 0 40px}
         <figcaption class="cap"><h4>Print Marketing</h4><div class="medium">Print · Editorial</div></figcaption>
       </figure>
 
-      <!-- 4 · LOGO — brand stage -->
+      <!-- 4 · LOGO – brand stage -->
       <figure class="sw c4 reveal">
         <div class="frame ident">
           <img src="images/identity-1.webp" alt="Logo design and construction guidelines by Clathra">
@@ -636,7 +635,7 @@ footer{padding:56px 0 40px}
         <figcaption class="cap"><h4>Logo &amp; Brand Design</h4><div class="medium">Branding · Identity</div></figcaption>
       </figure>
 
-      <!-- EXHIBITION STAND — slow horizontal pan -->
+      <!-- EXHIBITION STAND – slow horizontal pan -->
       <figure class="sw c4 reveal">
         <div class="frame expo">
           <div class="expo-track">
@@ -647,10 +646,10 @@ footer{padding:56px 0 40px}
           </div>
           <span class="expo-cap">Trade-show exhibition stand</span>
         </div>
-        <figcaption class="cap"><h4>Exhibition Stand Design</h4><div class="medium">Event · Stand &amp; graphics</div></figcaption>
+        <figcaption class="cap"><h4>Exhibition Stand Design</h4><div class="medium">Event · Stand &amp; Graphics</div></figcaption>
       </figure>
 
-      <!-- 6 · STAMP — embossed seal -->
+      <!-- 6 · STAMP – embossed seal -->
       <figure class="sw c4 reveal">
         <div class="frame seal">
           <img src="images/stamp.webp" alt="Company seal and stamp designed by Clathra">
@@ -658,7 +657,7 @@ footer{padding:56px 0 40px}
         <figcaption class="cap"><h4>Stamps & Stationery</h4><div class="medium">Branding · Stationery</div></figcaption>
       </figure>
 
-      <!-- EMAIL MARKETING — campaign preview card -->
+      <!-- EMAIL MARKETING – campaign preview card -->
       <figure class="sw c4 reveal">
         <div class="frame slides">
           <div class="slide2 mail on"><div class="ml-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Cold email · ship owners</div><div class="ml-subj">Need reliable crew for your ships?</div><div class="ml-prev">Hi [First Name], I saw that [Ship Name] recently called at [Port Name], and it caught my eye because we&rsquo;ve helped place great crew on similar vessels in the area. Finding and keeping quality crew isn&rsquo;t easy&hellip;</div></div>
@@ -667,21 +666,21 @@ footer{padding:56px 0 40px}
           <div class="slide2 meth"><div class="mth-step">02 · Copy</div><div class="mth-title">Copy engineered to convert</div><div class="mth-sub">research &amp; buyer psychology</div><svg class="st-gfx gfx-corner" viewBox="0 0 90 76" fill="none"><rect x="2" y="9" width="40" height="5" rx="2.5" fill="#cfd8e1"/><rect x="2" y="21" width="34" height="5" rx="2.5" fill="#e1e7ed"/><rect x="2" y="33" width="38" height="5" rx="2.5" fill="#e1e7ed"/><rect x="2" y="45" width="24" height="5" rx="2.5" fill="#e1e7ed"/><circle cx="64" cy="44" r="18" fill="none" stroke="#059976" stroke-width="2"/><circle cx="64" cy="44" r="10" fill="none" stroke="#059976" stroke-width="2" stroke-opacity=".55"/><circle cx="64" cy="44" r="3.6" fill="#059976"/></svg></div>
           <div class="slide2 mail"><div class="ml-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Cold email · crewing agencies</div><div class="ml-subj">Access top candidates for your clients</div><div class="ml-prev">Hi [First Name], I noticed your agency has been busy filling crew positions for different shipowners. I&rsquo;d like to introduce our company to help expand your hiring pool&hellip;</div></div>
           <div class="slide2 meth"><div class="mth-step">03 · Deliverability</div><div class="mth-title">Your domain, protected</div><div class="mth-sub">dedicated, warmed-up senders dodge spam filters</div><svg class="st-gfx gfx-corner" viewBox="0 0 80 82" fill="none"><path d="M40 6 L68 16 V40 C68 58 55 71 40 77 C25 71 12 58 12 40 V16 Z" fill="#059976" fill-opacity=".08" stroke="#059976" stroke-width="2" stroke-linejoin="round"/><rect x="27" y="35" width="26" height="17" rx="2" fill="none" stroke="#059976" stroke-width="2"/><path d="M28 37 l12 8 l12 -8" fill="none" stroke="#059976" stroke-width="2" stroke-linejoin="round"/></svg></div>
-          <div class="slide2 meth dark"><div class="mth-step">04 · Results</div><div class="mth-title">Conversions, handed to you</div><div class="mth-sub">timed for impact — you close the deal</div><svg class="st-gfx gfx-line" viewBox="0 0 240 110" preserveAspectRatio="none"><defs><linearGradient id="cgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3fd292" stop-opacity=".34"/><stop offset="1" stop-color="#3fd292" stop-opacity="0"/></linearGradient></defs><path d="M0,94 C26,84 42,90 62,72 C80,56 90,82 110,66 C130,50 140,38 162,40 C188,42 202,18 240,6 L240,110 L0,110Z" fill="url(#cgrad)"/><path d="M0,94 C26,84 42,90 62,72 C80,56 90,82 110,66 C130,50 140,38 162,40 C188,42 202,18 240,6" fill="none" stroke="#3fd292" stroke-width="3.5" stroke-linecap="round"/></svg></div>
+          <div class="slide2 meth dark"><div class="mth-step">04 · Results</div><div class="mth-title">Conversions, handed to you</div><div class="mth-sub">timed for impact – you close the deal</div><svg class="st-gfx gfx-line" viewBox="0 0 240 110" preserveAspectRatio="none"><defs><linearGradient id="cgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3fd292" stop-opacity=".34"/><stop offset="1" stop-color="#3fd292" stop-opacity="0"/></linearGradient></defs><path d="M0,94 C26,84 42,90 62,72 C80,56 90,82 110,66 C130,50 140,38 162,40 C188,42 202,18 240,6 L240,110 L0,110Z" fill="url(#cgrad)"/><path d="M0,94 C26,84 42,90 62,72 C80,56 90,82 110,66 C130,50 140,38 162,40 C188,42 202,18 240,6" fill="none" stroke="#3fd292" stroke-width="3.5" stroke-linecap="round"/></svg></div>
           <div class="sl-dots"><b class="sl-dot on"></b><b class="sl-dot"></b><b class="sl-dot"></b><b class="sl-dot"></b><b class="sl-dot"></b><b class="sl-dot"></b><b class="sl-dot"></b></div>
         </div>
         <figcaption class="cap"><h4>Email Marketing</h4><div class="medium">Marketing · Email</div></figcaption>
       </figure>
 
-      <!-- BLOG WRITING — article scrolls through the frame on hover -->
+      <!-- BLOG WRITING – article scrolls through the frame on hover -->
       <figure class="sw c4 reveal">
         <div class="frame scrl">
           <div class="scrl-track">
-            <img src="images/blog-post-sample.webp" alt="Maritime blog article written and designed by Clathra">
-            <img src="images/blog-post-sample.webp" alt="" aria-hidden="true">
+            <img src="images/blog-post.webp" alt="Maritime blog article written and designed by Clathra">
+            <img src="images/blog-post.webp" alt="" aria-hidden="true">
           </div>
         </div>
-        <figcaption class="cap"><h4>Blog &amp; article writing</h4><div class="medium">Content · Editorial</div></figcaption>
+        <figcaption class="cap"><h4>Blog &amp; Article Writing</h4><div class="medium">Content · Editorial</div></figcaption>
       </figure>
 
     </div>
