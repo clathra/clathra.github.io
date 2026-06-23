@@ -322,7 +322,7 @@ section{position:relative;padding:118px 0}
 .deck-dots b.on{background:#fff;width:18px;border-radius:4px}
 
 /* 6 stamp / seal */
-.frame.seal{aspect-ratio:1/1;background:#f6f3ea;display:grid;place-items:center;position:relative}
+.frame.seal{aspect-ratio:4/3;background:#f6f3ea;display:grid;place-items:center;position:relative}
 /* blog-writing editorial card + copywriting placeholder (row 3) */
 .oc-quote{font-family:'Bricolage Grotesque';font-weight:600;font-size:1.18rem;line-height:1.2;letter-spacing:-.01em;color:var(--ink)}
 .frame.copyph{aspect-ratio:1/1;border:1.5px dashed #cfd8e1;background:var(--bg-soft);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:11px;padding:24px}
@@ -338,22 +338,27 @@ section{position:relative;padding:118px 0}
 .ml-prev::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34px;background:linear-gradient(transparent,#fff)}
 .ml-foot{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.02em;color:var(--slate);border-top:1px solid var(--line);padding-top:11px;margin-top:10px}
 /* blog — scroll the article through the frame on hover */
-.frame.scrl{aspect-ratio:1/1;overflow:hidden;position:relative;background:#fff}
+.frame.scrl{aspect-ratio:4/3;overflow:hidden;position:relative;background:#fff}
 .scrl-track{display:flex;flex-direction:column;animation:scrlv 24s linear infinite}
 .frame.scrl:hover .scrl-track{animation-play-state:paused}
 .scrl-track img{width:100%;display:block}
 @keyframes scrlv{to{transform:translateY(-50%)}}
 /* email-marketing slideshow (emails + stats) */
-.frame.slides{aspect-ratio:1/1;position:relative;overflow:hidden;background:#fff}
+.frame.slides{aspect-ratio:4/3;position:relative;overflow:hidden;background:#fff}
 .slide2{position:absolute;inset:0;opacity:0;transition:opacity .6s var(--ease);display:flex;flex-direction:column;padding:22px;pointer-events:none}
 .slide2.on{opacity:1}
 .slide2.mail{background:#fff}
-.slide2.stat2{justify-content:center;background:var(--bg-soft)}
+.slide2.stat2{justify-content:flex-start;background:var(--bg-soft);overflow:hidden}
+.slide2.stat2 .st-num,.slide2.stat2 .st-lbl{position:relative;z-index:2}
+.st-gfx{position:absolute;pointer-events:none}
+.gfx-line{left:0;right:0;bottom:0;width:100%;height:54%}
+.gfx-corner{right:18px;bottom:16px;width:43%;height:48%}
+.gfx-corner svg{width:100%;height:100%;display:block}
 .slide2.stat2.dark{background:#0e1726}
 .st-num{font-family:'Bricolage Grotesque';font-weight:700;font-size:clamp(2.6rem,4.5vw,3.3rem);letter-spacing:-.03em;line-height:1;color:var(--ink)}
 .slide2.dark .st-num{color:#fff}
 .st-num em{font-style:normal;color:var(--teal)}
-.st-lbl{font-size:12.5px;color:var(--ink-soft);margin-top:8px;max-width:20ch}
+.st-lbl{font-size:12.5px;color:var(--ink-soft);margin-top:8px;max-width:54%}
 .slide2.dark .st-lbl{color:rgba(255,255,255,.72)}
 .sl-dots{position:absolute;bottom:11px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:4}
 .sl-dot{width:6px;height:6px;border-radius:50%;background:#cdd6df;transition:.25s}
@@ -637,7 +642,7 @@ footer{padding:56px 0 40px}
       </figure>
 
       <!-- 6 · STAMP — embossed seal -->
-      <figure class="sw c3 reveal">
+      <figure class="sw c4 reveal">
         <div class="frame seal">
           <img src="images/navarca-stamp.webp" alt="Navarca Ship Management company seal designed by Clathra">
         </div>
@@ -645,22 +650,22 @@ footer{padding:56px 0 40px}
       </figure>
 
       <!-- EMAIL MARKETING — campaign preview card -->
-      <figure class="sw c3 reveal">
+      <figure class="sw c4 reveal">
         <div class="frame slides">
           <div class="slide2 mail on"><div class="ml-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Cold email · ship owners</div><div class="ml-subj">Need reliable crew for your ships?</div><div class="ml-prev">Hi [First Name], I saw that [Ship Name] recently called at [Port Name], and it caught my eye because we&rsquo;ve helped place great crew on similar vessels in the area. Finding and keeping quality crew isn&rsquo;t easy&hellip;</div></div>
-          <div class="slide2 stat2 dark"><div class="st-num"><em>150+</em></div><div class="st-lbl">hand-verified leads</div></div>
+          <div class="slide2 stat2 dark"><div class="st-num"><em>150+</em></div><div class="st-lbl">hand-verified leads</div><svg class="st-gfx gfx-corner" viewBox="0 0 92 70" fill="none"><g><circle cx="7" cy="7" r="6" fill="#3fd292" fill-opacity=".9"/><rect x="18" y="4" width="42" height="5" rx="2.5" fill="#fff" fill-opacity=".22"/><path d="M72 7l3.5 3.5 7-8" stroke="#3fd292" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="translate(0,28)"><circle cx="7" cy="7" r="6" fill="#3fd292" fill-opacity=".9"/><rect x="18" y="4" width="42" height="5" rx="2.5" fill="#fff" fill-opacity=".22"/><path d="M72 7l3.5 3.5 7-8" stroke="#3fd292" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="translate(0,56)"><circle cx="7" cy="7" r="6" fill="#fff" fill-opacity=".25"/><rect x="18" y="4" width="42" height="5" rx="2.5" fill="#fff" fill-opacity=".14"/></g></svg></div>
           <div class="slide2 mail"><div class="ml-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Follow-up</div><div class="ml-subj">Re: Need reliable crew for your ships?</div><div class="ml-prev">Hi [First Name], just wanted to follow up in case you missed my last email. I&rsquo;m sure we can help you fill crew positions quickly, like we&rsquo;ve done for Carnival, Costa Line, P&amp;O and MSC Cruise&hellip;</div></div>
-          <div class="slide2 stat2"><div class="st-num">4</div><div class="st-lbl">email sequence, AI-optimised</div></div>
+          <div class="slide2 stat2"><div class="st-num">4</div><div class="st-lbl">email sequence, AI-optimised</div><svg class="st-gfx gfx-corner" viewBox="0 0 60 92" fill="none"><line x1="11" y1="11" x2="11" y2="81" stroke="#cfd8e1" stroke-width="2"/><circle cx="11" cy="11" r="6" fill="#059976"/><circle cx="11" cy="34.5" r="6" fill="#059976" fill-opacity=".8"/><circle cx="11" cy="58" r="6" fill="#059976" fill-opacity=".62"/><circle cx="11" cy="81" r="6" fill="#059976" fill-opacity=".45"/><rect x="24" y="7" width="30" height="8" rx="3" fill="#e1e7ed"/><rect x="24" y="30.5" width="30" height="8" rx="3" fill="#e1e7ed"/><rect x="24" y="54" width="30" height="8" rx="3" fill="#e1e7ed"/><rect x="24" y="77" width="30" height="8" rx="3" fill="#e1e7ed"/></svg></div>
           <div class="slide2 mail"><div class="ml-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Cold email · crewing agencies</div><div class="ml-subj">Access top candidates for your clients</div><div class="ml-prev">Hi [First Name], I noticed your agency has been busy filling crew positions for different shipowners. I&rsquo;d like to introduce Resonance Bulk to help expand your hiring pool&hellip;</div></div>
-          <div class="slide2 stat2"><div class="st-num">2</div><div class="st-lbl">audience segments</div></div>
-          <div class="slide2 stat2 dark"><div class="st-num"><em>10+</em></div><div class="st-lbl">conversions</div></div>
+          <div class="slide2 stat2"><div class="st-num">2</div><div class="st-lbl">audience segments</div><svg class="st-gfx gfx-corner" viewBox="0 0 96 72" fill="none"><circle cx="26" cy="36" r="23" fill="#059976" fill-opacity=".07" stroke="#059976" stroke-width="2" stroke-opacity=".5"/><circle cx="19" cy="31" r="4" fill="#059976"/><circle cx="33" cy="31" r="4" fill="#059976"/><circle cx="26" cy="44" r="4" fill="#059976"/><circle cx="70" cy="36" r="23" fill="#425fbc" fill-opacity=".07" stroke="#425fbc" stroke-width="2" stroke-opacity=".5"/><circle cx="63" cy="31" r="4" fill="#425fbc"/><circle cx="77" cy="31" r="4" fill="#425fbc"/><circle cx="70" cy="44" r="4" fill="#425fbc"/></svg></div>
+          <div class="slide2 stat2 dark"><div class="st-num"><em>10+</em></div><div class="st-lbl">conversions</div><svg class="st-gfx gfx-line" viewBox="0 0 240 110" preserveAspectRatio="none"><defs><linearGradient id="cgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3fd292" stop-opacity=".34"/><stop offset="1" stop-color="#3fd292" stop-opacity="0"/></linearGradient></defs><path d="M0,94 C26,84 42,90 62,72 C80,56 90,82 110,66 C130,50 140,38 162,40 C188,42 202,18 240,6 L240,110 L0,110Z" fill="url(#cgrad)"/><path d="M0,94 C26,84 42,90 62,72 C80,56 90,82 110,66 C130,50 140,38 162,40 C188,42 202,18 240,6" fill="none" stroke="#3fd292" stroke-width="3.5" stroke-linecap="round"/></svg></div>
           <div class="sl-dots"><b class="sl-dot on"></b><b class="sl-dot"></b><b class="sl-dot"></b><b class="sl-dot"></b><b class="sl-dot"></b><b class="sl-dot"></b><b class="sl-dot"></b></div>
         </div>
         <figcaption class="cap"><h4>Resonance Bulk &mdash; cold email campaign</h4><div class="medium">Marketing · Email</div></figcaption>
       </figure>
 
       <!-- BLOG WRITING — article scrolls through the frame on hover -->
-      <figure class="sw c3 reveal">
+      <figure class="sw c4 reveal">
         <div class="frame scrl">
           <div class="scrl-track">
             <img src="images/blog-post-sample.webp" alt="Maritime blog article written and designed by Clathra">
@@ -668,16 +673,6 @@ footer{padding:56px 0 40px}
           </div>
         </div>
         <figcaption class="cap"><h4>Blog &amp; article writing</h4><div class="medium">Content · Editorial</div></figcaption>
-      </figure>
-
-      <!-- COPYWRITING — awaiting website screenshots -->
-      <figure class="sw c3 reveal">
-        <div class="frame copyph">
-          <svg class="cw-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h9M4 17h6"/><path d="m15.5 16.5 4.5-4.5 2 2-4.5 4.5H15.5z"/></svg>
-          <span class="cw-t">Website Copywriting</span>
-          <span class="cw-n">Screenshots coming</span>
-        </div>
-        <figcaption class="cap"><h4>Copywriting</h4><div class="medium">Content · Web copy</div></figcaption>
       </figure>
 
     </div>
