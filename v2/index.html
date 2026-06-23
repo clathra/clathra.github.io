@@ -341,6 +341,21 @@ section{position:relative;padding:118px 0}
 .frame.scrl{aspect-ratio:1/1;overflow:hidden;position:relative;background:#fff}
 .frame.scrl .scrl-img{position:absolute;top:0;left:0;width:100%;transition:transform 4s var(--ease)}
 .frame.scrl:hover .scrl-img{transform:translateY(-72%)}
+/* email-marketing slideshow (emails + stats) */
+.frame.slides{aspect-ratio:1/1;position:relative;overflow:hidden;background:#fff}
+.slide2{position:absolute;inset:0;opacity:0;transition:opacity .6s var(--ease);display:flex;flex-direction:column;padding:22px;pointer-events:none}
+.slide2.on{opacity:1}
+.slide2.mail{background:#fff}
+.slide2.stat2{justify-content:center;background:var(--bg-soft)}
+.slide2.stat2.dark{background:#0e1726}
+.st-num{font-family:'Bricolage Grotesque';font-weight:700;font-size:clamp(2.6rem,4.5vw,3.3rem);letter-spacing:-.03em;line-height:1;color:var(--ink)}
+.slide2.dark .st-num{color:#fff}
+.st-num em{font-style:normal;color:var(--teal)}
+.st-lbl{font-size:12.5px;color:var(--ink-soft);margin-top:8px;max-width:20ch}
+.slide2.dark .st-lbl{color:rgba(255,255,255,.72)}
+.sl-dots{position:absolute;bottom:11px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:4}
+.sl-dot{width:6px;height:6px;border-radius:50%;background:#cdd6df;transition:.25s}
+.sl-dot.on{background:var(--teal);width:14px;border-radius:3px}
 .seal::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 38%,transparent,rgba(0,0,0,.05));pointer-events:none}
 .seal svg{width:64%;max-width:220px;transform:rotate(-7deg);color:#0a5e49;opacity:.9}
 
@@ -629,11 +644,15 @@ footer{padding:56px 0 40px}
 
       <!-- EMAIL MARKETING — campaign preview card -->
       <figure class="sw c3 reveal">
-        <div class="frame mailer">
-          <div class="ml-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Cold email · ship owners</div>
-          <div class="ml-subj">Need reliable crew for your ships?</div>
-          <div class="ml-prev">Hi [First Name], I saw that [Ship Name] recently called at [Port Name], and it caught my eye because we&rsquo;ve helped place great crew on similar vessels in the area. Finding and keeping quality crew isn&rsquo;t easy, but opening up your hiring options can really help&hellip;</div>
-          <div class="ml-foot">4-email sequence · 2 segments · 150+ verified leads</div>
+        <div class="frame slides">
+          <div class="slide2 mail on"><div class="ml-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Cold email · ship owners</div><div class="ml-subj">Need reliable crew for your ships?</div><div class="ml-prev">Hi [First Name], I saw that [Ship Name] recently called at [Port Name], and it caught my eye because we&rsquo;ve helped place great crew on similar vessels in the area. Finding and keeping quality crew isn&rsquo;t easy&hellip;</div></div>
+          <div class="slide2 stat2 dark"><div class="st-num"><em>150+</em></div><div class="st-lbl">hand-verified leads</div></div>
+          <div class="slide2 mail"><div class="ml-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Follow-up</div><div class="ml-subj">Re: Need reliable crew for your ships?</div><div class="ml-prev">Hi [First Name], just wanted to follow up in case you missed my last email. I&rsquo;m sure we can help you fill crew positions quickly, like we&rsquo;ve done for Carnival, Costa Line, P&amp;O and MSC Cruise&hellip;</div></div>
+          <div class="slide2 stat2"><div class="st-num">4</div><div class="st-lbl">email sequence, AI-optimised</div></div>
+          <div class="slide2 mail"><div class="ml-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Cold email · crewing agencies</div><div class="ml-subj">Access top candidates for your clients</div><div class="ml-prev">Hi [First Name], I noticed your agency has been busy filling crew positions for different shipowners. I&rsquo;d like to introduce Resonance Bulk to help expand your hiring pool&hellip;</div></div>
+          <div class="slide2 stat2"><div class="st-num">2</div><div class="st-lbl">audience segments</div></div>
+          <div class="slide2 stat2 dark"><div class="st-num"><em>10+</em></div><div class="st-lbl">conversions</div></div>
+          <div class="sl-dots"><b class="sl-dot on"></b><b class="sl-dot"></b><b class="sl-dot"></b><b class="sl-dot"></b><b class="sl-dot"></b><b class="sl-dot"></b><b class="sl-dot"></b></div>
         </div>
         <figcaption class="cap"><h4>Resonance Bulk &mdash; cold email campaign</h4><div class="medium">Marketing · Email</div></figcaption>
       </figure>
@@ -739,6 +758,21 @@ document.querySelectorAll('.deck').forEach(function(deck){
     var i=Math.round(track.scrollLeft/track.clientWidth);
     dots.forEach(function(d,k){d.classList.toggle('on',k===i);});
   },{passive:true});
+});
+
+/* Email-marketing slideshow */
+document.querySelectorAll('.frame.slides').forEach(function(box){
+  var slides=[].slice.call(box.querySelectorAll('.slide2'));
+  var dots=[].slice.call(box.querySelectorAll('.sl-dot'));
+  if(slides.length<2)return;
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  var i=0,timer=null;
+  function go(n){slides[i].classList.remove('on');if(dots[i])dots[i].classList.remove('on');i=n;slides[i].classList.add('on');if(dots[i])dots[i].classList.add('on');}
+  function start(){timer=setInterval(function(){go((i+1)%slides.length);},2600);}
+  function stop(){clearInterval(timer);}
+  start();
+  box.addEventListener('mouseenter',stop);
+  box.addEventListener('mouseleave',start);
 });
 
 document.getElementById('burger').addEventListener('click',function(){
