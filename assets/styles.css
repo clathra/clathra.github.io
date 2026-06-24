@@ -400,3 +400,5 @@ form .btn-primary:hover{background:#06ad86}
   .pgrid{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* portfolio: light anti-lift friction (deters casual save/drag) */
+.sw-grid img{-webkit-user-drag:none;user-drag:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;pointer-events:none}

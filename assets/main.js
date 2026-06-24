@@ -116,3 +116,9 @@ document.getElementById('burger').addEventListener('click',function(){
   }
   draw();
 })();
+
+/* deter casual saving of portfolio images (portfolio grid only) */
+(function(){var g=document.querySelector('.sw-grid');if(!g)return;
+  g.addEventListener('contextmenu',function(e){e.preventDefault();});
+  g.addEventListener('dragstart',function(e){e.preventDefault();});
+})();
