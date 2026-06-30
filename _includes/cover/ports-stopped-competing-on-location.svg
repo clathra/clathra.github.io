@@ -1,0 +1,10 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A faded map pin, struck through, gives way to a linked chain of nodes ending in a highlighted node.">
+  <rect class="bg-tealdeep" width="400" height="500"/>
+  <circle class="ln-f" cx="92" cy="350" r="15"/>
+  <path class="ln-f" d="M80 360 L92 382 L104 360"/>
+  <circle class="ln-f" cx="92" cy="350" r="5"/>
+  <line class="ln-f" x1="74" y1="332" x2="112" y2="372"/>
+  <line class="ln" x1="172" y1="362" x2="344" y2="362"/>
+  <circle class="tlf" cx="172" cy="362" r="6"/><circle class="tlf" cx="230" cy="362" r="6"/><circle class="tlf" cx="288" cy="362" r="6"/>
+  <circle class="gds" cx="344" cy="362" r="9"/><circle class="gd" cx="344" cy="362" r="3.6"/>
+</svg>

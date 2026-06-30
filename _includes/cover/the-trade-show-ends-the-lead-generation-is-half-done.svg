@@ -1,0 +1,10 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A funnel of trade-show leads, most not ready, crosses a dashed line marked show ends and continues through follow-up to a single qualified pipeline node.">
+  <rect class="bg-ink" width="400" height="500"/>
+  <path class="ln" d="M104 300 L176 392"/><path class="ln" d="M296 300 L224 392"/>
+  <line class="ln-f" x1="104" y1="300" x2="296" y2="300"/>
+  <g class="dt"><circle cx="140" cy="318" r="3"/><circle cx="180" cy="320" r="3"/><circle cx="220" cy="316" r="3"/><circle cx="260" cy="320" r="3"/><circle cx="162" cy="346" r="3"/><circle cx="238" cy="346" r="3"/></g>
+  <circle class="gd" cx="200" cy="376" r="3.4"/>
+  <line class="ln-d" x1="60" y1="404" x2="340" y2="404"/>
+  <path class="gds" d="M200 408 L200 436 M200 436 L194 428 M200 436 L206 428"/>
+  <circle class="gds" cx="200" cy="448" r="9"/><circle class="gd" cx="200" cy="448" r="3.4"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A centred lollipop ranking, two stems reaching far and two sitting near the axis, an abstract motif for reach by content.">
+  <rect class="bg-tealdeep" width="400" height="500"/>
+  <line class="ln-f" x1="100" y1="318" x2="100" y2="448"/>
+  <line class="ln" x1="100" y1="336" x2="300" y2="336"/><circle class="tlf" cx="300" cy="336" r="7"/>
+  <line class="ln" x1="100" y1="372" x2="252" y2="372"/><circle class="tlf" cx="252" cy="372" r="7"/>
+  <line class="ln-f" x1="100" y1="408" x2="158" y2="408"/><circle class="dt" cx="158" cy="408" r="6"/>
+  <line class="ln-f" x1="100" y1="444" x2="136" y2="444"/><circle class="dt" cx="136" cy="444" r="6"/>
+</svg>

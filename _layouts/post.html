@@ -1,0 +1,53 @@
+---
+layout: default
+---
+{% include nav.html %}
+<main id="main">
+  <article class="post">
+    <div class="wrap">
+      <div class="post-nav">
+        <a class="post-back" href="/insights.html">← Back to Insights</a>
+        <a class="post-home" href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10.5 9-7 9 7"/><path d="M5 9v11h14V9"/><path d="M10 20v-6h4v6"/></svg>Home</a>
+      </div>
+      <div class="post-meta">
+        <span class="ttag {{ page.type }}">{% case page.type %}{% when 'report' %}Report{% when 'case' %}Case study{% when 'note' %}Note{% endcase %}</span>
+        <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %Y' }}</time>
+      </div>
+      <h1 class="post-title">{{ page.title }}</h1>
+      {% if page.excerpt %}<p class="post-lead">{{ page.excerpt | strip_html | strip_newlines | strip }}</p>{% endif %}
+      <div class="post-body">
+        {{ content }}
+      </div>
+      <div class="post-nav post-nav-foot">
+        <a class="post-back" href="/insights.html">← Back to Insights</a>
+        <a class="post-home" href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10.5 9-7 9 7"/><path d="M5 9v11h14V9"/><path d="M10 20v-6h4v6"/></svg>Home</a>
+      </div>
+    </div>
+  </article>
+  {% assign rel = site.posts | where: "type", page.type | where_exp: "p", "p.url != page.url" %}
+  {% if rel.size < 3 %}{% assign rel = site.posts | where_exp: "p", "p.url != page.url" %}{% endif %}
+  {% assign rel = rel | sort: "date" | reverse %}
+  {% if rel.size > 0 %}
+  <aside class="post-related" aria-label="Related posts">
+    <div class="wrap">
+      <h2 class="pr-head">Related Posts</h2>
+      <div class="pr-grid">
+        {% for p in rel limit: 3 %}
+        <a class="pr-card" href="{{ p.url }}">
+          <span class="pr-tag {{ p.type }}">{% case p.type %}{% when 'report' %}Report{% when 'case' %}Case study{% when 'note' %}Note{% endcase %}</span>
+          <span class="pr-title">{{ p.title }}</span>
+          <span class="pr-date">{{ p.date | date: '%b %Y' }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </aside>
+  {% endif %}
+  <section class="post-cta">
+    <div class="wrap">
+      <h2>Let's talk.</h2>
+      <p>We work with maritime, offshore and energy businesses, and the companies that serve them.</p>
+      <a class="btn btn-primary" href="/#contact">Get in touch →</a>
+    </div>
+  </section>
+</main>

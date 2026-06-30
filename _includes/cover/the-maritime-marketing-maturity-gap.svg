@@ -1,0 +1,6 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A rising staircase of marketing maturity with most firms clustered as dots on the low steps and only a few majors on the top step.">
+  <rect class="bg-blue" width="400" height="500"/>
+  <path class="ln" d="M56 444 H120 V412 H184 V380 H248 V344 H312 V308 H360"/>
+  <g class="dt"><circle cx="72" cy="432" r="3.4"/><circle cx="92" cy="432" r="3.4"/><circle cx="112" cy="432" r="3.4"/><circle cx="138" cy="400" r="3.4"/><circle cx="160" cy="400" r="3.4"/><circle cx="206" cy="368" r="3.4"/></g>
+  <circle class="gd" cx="330" cy="296" r="4"/>
+</svg>

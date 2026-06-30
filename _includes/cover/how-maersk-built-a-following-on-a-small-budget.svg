@@ -1,0 +1,21 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A small gold origin node low on the cover radiates concentric arcs upward and outward, scattered with dots, a large following grown from a small spend.">
+  <rect class="bg-teal" width="400" height="500"/>
+  <!-- reach arcs expanding from the origin -->
+  <path class="ln-f" d="M96 404 A 118 118 0 0 1 214 286"/>
+  <path class="ln-f" d="M96 404 A 178 178 0 0 1 270 244"/>
+  <path class="tl" d="M96 404 A 236 236 0 0 1 322 280" opacity=".55"/>
+  <path class="ln-f" d="M96 404 A 300 300 0 0 1 388 320"/>
+  <!-- the following: dots riding the arcs -->
+  <circle class="dt" cx="198" cy="356" r="2.8"/>
+  <circle class="dt" cx="242" cy="318" r="2.8"/>
+  <circle class="dt-t" cx="286" cy="344" r="3.2"/>
+  <circle class="dt" cx="316" cy="300" r="2.8"/>
+  <circle class="dt" cx="352" cy="338" r="2.8"/>
+  <circle class="dt-t" cx="372" cy="296" r="3.2"/>
+  <circle class="dt" cx="250" cy="398" r="2.8"/>
+  <circle class="dt" cx="318" cy="400" r="2.8"/>
+  <circle class="dt" cx="372" cy="372" r="2.8"/>
+  <!-- origin node: small spend -->
+  <circle class="gds" cx="96" cy="404" r="12"/>
+  <circle class="gd" cx="96" cy="404" r="4.4"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A port node at the centre with a carrier held in a closed orbit of structural ties, and a faint dashed arrow showing the alternative of leaving.">
+  <rect class="bg-blue" width="400" height="500"/>
+  <ellipse class="ln" cx="184" cy="384" rx="86" ry="52"/>
+  <circle class="tlf" cx="184" cy="384" r="7"/>
+  <circle class="gd" cx="184" cy="332" r="6"/>
+  <path class="ln-df" d="M270 384 L340 384 M340 384 L332 378 M340 384 L332 390"/>
+</svg>

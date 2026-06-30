@@ -1,0 +1,6 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A timeline of regulatory milestone diamonds with content dots placed just ahead of each, marketing timed to the rules.">
+  <rect class="bg-tealdeep" width="400" height="500"/>
+  <line class="ln" x1="50" y1="392" x2="360" y2="392"/>
+  <g class="gds"><path d="M118 380 l10 12 l-10 12 l-10 -12 z"/><path d="M198 380 l10 12 l-10 12 l-10 -12 z"/><path d="M278 380 l10 12 l-10 12 l-10 -12 z"/><path d="M348 380 l10 12 l-10 12 l-10 -12 z"/></g>
+  <g class="dt-t"><circle cx="96" cy="392" r="4"/><circle cx="176" cy="392" r="4"/><circle cx="256" cy="392" r="4"/><circle cx="326" cy="392" r="4"/></g>
+</svg>

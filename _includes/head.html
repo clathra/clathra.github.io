@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1{% if page.viewport_shrink %}, shrink-to-fit=no{% endif %}">
+<title>{{ page.seo_title | default: page.title }}{% unless page.title_raw %} · Clathra{% endunless %}</title>
+<meta name="description" content="{{ page.description | default: page.excerpt | strip_html | strip_newlines | strip }}">
+{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">
+{% endif %}<meta name="author" content="Clathra">
+<meta name="robots" content="{{ page.robots | default: 'index, follow' }}">
+{% unless page.canonical == false %}<link rel="canonical" href="{{ page.url | absolute_url }}">{% endunless %}
+<meta name="theme-color" content="#0e1726">
+{% unless page.no_og %}
+<!-- Open Graph -->
+<meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+<meta property="og:site_name" content="Clathra">
+<meta property="og:title" content="{{ page.og_title | default: page.title }}">
+<meta property="og:description" content="{{ page.og_description | default: page.description | default: page.excerpt | strip_html | strip_newlines | strip }}">
+<meta property="og:image" content="{{ page.image | default: '/images/og-image.png' | absolute_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ page.og_image_alt | default: page.title | default: 'Clathra · a marketing agency for the maritime and offshore world' }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:locale" content="en_US">
+{% if page.og_type == 'article' %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+<meta property="article:modified_time" content="{{ page.last_modified_at | default: page.date | date_to_xmlschema }}">
+<meta property="article:author" content="Clathra">
+{% if page.type %}<meta property="article:section" content="{% case page.type %}{% when 'report' %}Report{% when 'case' %}Case study{% when 'note' %}Note{% endcase %}">
+{% endif %}{% endif %}
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.og_title | default: page.title }}">
+<meta name="twitter:description" content="{{ page.og_description | default: page.description | default: page.excerpt | strip_html | strip_newlines | strip }}">
+<meta name="twitter:image" content="{{ page.image | default: '/images/og-image.png' | absolute_url }}">
+<meta name="twitter:site" content="@clathra">
+{% endunless %}
+<link rel="icon" href="/images/favicon.png" sizes="any">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+{% if page.jsonld %}{% include jsonld-{{ page.jsonld }}.html %}{% endif %}
+<link rel="stylesheet" href="/assets/common.css?v={{ site.time | date: '%s' }}">
+{% for s in page.styles %}<link rel="stylesheet" href="/assets/{{ s }}?v={{ site.time | date: '%s' }}">
+{% endfor %}<script src="/assets/consent.js?v={{ site.time | date: '%s' }}" defer></script>

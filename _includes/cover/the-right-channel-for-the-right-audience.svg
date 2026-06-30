@@ -1,0 +1,15 @@
+<svg class="art on-cream" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A centred grid of cells with one highlighted on each row in a different column, an abstract motif for matching channel to audience.">
+  <rect class="bg-cream" width="400" height="500"/>
+  <g class="ln">
+    <rect x="78" y="300" width="52" height="26"/><rect x="142" y="300" width="52" height="26"/><rect x="206" y="300" width="52" height="26"/><rect x="270" y="300" width="52" height="26"/>
+    <rect x="78" y="338" width="52" height="26"/><rect x="142" y="338" width="52" height="26"/><rect x="206" y="338" width="52" height="26"/><rect x="270" y="338" width="52" height="26"/>
+    <rect x="78" y="376" width="52" height="26"/><rect x="142" y="376" width="52" height="26"/><rect x="206" y="376" width="52" height="26"/><rect x="270" y="376" width="52" height="26"/>
+    <rect x="78" y="414" width="52" height="26"/><rect x="142" y="414" width="52" height="26"/><rect x="206" y="414" width="52" height="26"/><rect x="270" y="414" width="52" height="26"/>
+  </g>
+  <g class="tlf">
+    <rect x="142" y="300" width="52" height="26"/>
+    <rect x="270" y="338" width="52" height="26"/>
+    <rect x="78" y="376" width="52" height="26"/>
+    <rect x="206" y="414" width="52" height="26"/>
+  </g>
+</svg>

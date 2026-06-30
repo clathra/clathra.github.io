@@ -1,0 +1,35 @@
+---
+title: "Webinars and trade shows do different jobs"
+date: 2027-03-23
+type: note
+cover: true
+excerpt: "Online and offline events perform separate functions in a long maritime sale, and they compound only when a common owned platform connects them. The website is the connective tissue and the lead-capture engine."
+description: "Webinars and maritime trade shows serve distinct roles in a long capital sale, and a single owned website links the two channels into one measured pipeline."
+image: /images/og/webinars-and-trade-shows-do-different-jobs.png
+last_modified_at: 2027-03-23
+
+---
+
+The maritime and port-equipment sectors organise much of their marketing around a small number of large physical events. The trade show holds the budget and the calendar, and it is treated as the place where commercial relationships are built. A master's thesis by Shi (2023) at Haaga-Helia University of Applied Sciences, studying the case of Konecranes Port Solutions, a maker of container, terminal, and shipyard cranes and the software that runs them, examines how online and offline events each contribute to lead generation in this kind of business. The study is a single qualitative case, so its conclusions are indicative, and the pattern it describes is coherent enough to be worth setting out.
+
+The starting point is that the two kinds of event do different work. Shi (2023) characterises offline events, principally trade shows, by the one thing they supply that nothing else does: face-to-face contact with the people who decide. In a maritime capital purchase that decision rarely sits with one person. It passes through a decision-making unit of initiators, influencers, gatekeepers, users, buyers, and deciders, each forming a view at a different stage. The physical event is where several members of that unit can be met at once, where a technical objection can be answered in person, and where trust accumulates in a way that is difficult to manufacture remotely. That function is real, and the study treats it as the irreplaceable contribution of the offline channel.
+
+## What the online channel contributes
+
+Online events do a different job, and the thesis is specific about it. Shi (2023) describes webinars, recorded sessions, gated whitepapers, and online product-advisor tools as low cost, geography-agnostic, and capable of collecting prospect information without a salesperson present. A webinar reaches a buyer in a port thousands of miles from the nearest exhibition hall, runs at a fraction of the cost of a stand, and continues to work after it has been delivered. The recording becomes a gated download, the transcript becomes a blog, the session becomes a podcast. One piece of work is repurposed across several formats and stays available indefinitely.
+
+The study assigns the online channel a particular role in the sequence: the door opener. An online event qualifies interest and gathers a name early, at low cost, before any sales time has been committed. The offline event then does the relationship work with the buyers who have already signalled that they are worth meeting. The two are complementary functions in a single process, the first cheap and always running, the second expensive and concentrated into a few dates. Each is suited to a different stage of a purchase that, in this market, runs for years.
+
+The economics of that market explain why the distinction matters. Shi (2023) notes that there are only around 1,500 to 2,000 ports and terminals worldwide, that a single port crane can cost more than one million euros, and that such equipment may be bought once a decade. The buying population is small, the decisions are large, and the cycles are long. A channel that gathers and holds interest cheaply over years has obvious value when the gap between first contact and order runs for years. The conclusion the thesis returns to is lead quality over lead quantity. A small market does not reward volume; it rewards knowing which few buyers are real and staying present with them across a long cycle.
+
+## What ties the two together
+
+The two channels do not compound on their own. A webinar that gathers a name and a trade show that produces a conversation are two separate events unless something connects them, and the thing that connects them is an owned platform. Shi (2023) names gated content on the firm's own website as the mechanism that turns anonymous traffic into identified leads. The whitepaper, the recorded session, and the product-advisor tool sit on the website and ask the visitor to identify themselves in exchange for access. That is where the door-opener function actually happens, and it is where a contact captured online and a contact met in the hall can be recorded against the same buyer and developed as one relationship.
+
+A conceptual treatment of the same problem reaches a compatible conclusion from a different direction. Sekularac-Ivosevic (2021), writing in the Journal of Innovative Business and Management on marketing in a digital technology-driven maritime business, identifies the most effective digital channels as email marketing, content marketing, social media marketing, landing-page and website optimisation, and search-engine optimisation. Every item on that list either lives on the owned platform or feeds traffic into it. Content and search bring the buyer to the site, the landing page and gated asset capture the name, and email carries the relationship forward between events. The website is the common point through which the others operate.
+
+## The marketing reading
+
+The practical implication for a maritime firm is about the relationship between the show and everything around it. Online and offline events perform separate functions in a long, decision-making-unit-driven sale. The trade show supplies the face-to-face contact with the buying group that the sale eventually requires; the online channel supplies cheap, geography-free, repurposable contact that opens doors and holds interest across the years before a decision. They compound into a single pipeline only when a common owned platform connects them, a website carrying gated content and lead capture and feeding the records into a system that follows the buyer over time.
+
+For a sector that concentrates its spending on the events and builds little around them, the figures from Shi (2023) point to where the unused capacity sits. A firm that relies on the trade show alone is paying for the expensive, concentrated half of the funnel while leaving the cheaper, always-on, repurposable half unbuilt. The webinar that never becomes a gated download, the session that is never recorded, the visitor who is never asked to identify themselves, are all foregone leads in a market where the buying population is small enough that each one counts. The website is the connective tissue and the lead-capture engine that makes the two halves into one process. Without it, the show is a recurring cost with no system to convert what it gathers, and the online half of the funnel, the part that runs between the shows, is left empty.

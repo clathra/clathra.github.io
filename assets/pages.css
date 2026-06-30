@@ -1,12 +1,6 @@
-:root{--bg:#fbfcfd;--ink:#0e1726;--ink-soft:#54637a;--line:#e3e9ef;--teal:#059976;--ease:cubic-bezier(.2,.7,.2,1)}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+/* Legal pages. Tokens, reset, base body, a/focus and .skip live in common.css. */
+body{font-size:17px;line-height:1.65}
 h1,h2,.brand .name{font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;line-height:1.05}
-a{color:inherit}
-a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px}
-.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px;font-size:14px}
-.skip:focus{left:12px;top:12px}
 .wrap{max-width:760px;margin:0 auto;padding:0 28px}
 nav{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(251,252,253,.85);backdrop-filter:blur(12px);z-index:10}
 .nav-in{max-width:1180px;margin:0 auto;padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between}

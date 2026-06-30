@@ -1,0 +1,6 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A radar chart strong on the visible promotional dimensions and collapsed on the neglected ones, marking the openings.">
+  <rect class="bg-navy" width="400" height="500"/>
+  <polygon class="ln-f" points="200,308 262,344 262,416 200,452 138,416 138,344"/>
+  <g class="ln-f"><line x1="200" y1="380" x2="200" y2="308"/><line x1="200" y1="380" x2="262" y2="344"/><line x1="200" y1="380" x2="262" y2="416"/><line x1="200" y1="380" x2="200" y2="452"/><line x1="200" y1="380" x2="138" y2="416"/><line x1="200" y1="380" x2="138" y2="344"/></g>
+  <polygon class="tl" points="200,308 262,344 226,395 200,410 174,395 138,344" fill="rgba(63,210,146,.12)"/>
+</svg>

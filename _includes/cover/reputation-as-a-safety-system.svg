@@ -1,0 +1,8 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Concentric defensive layers around a core; the inner layers are technical and procedural and the outer highlighted layer is reputation.">
+  <rect class="bg-navy" width="400" height="500"/>
+  <circle class="ln-f" cx="200" cy="388" r="28"/>
+  <circle class="ln-f" cx="200" cy="388" r="58"/>
+  <circle class="ln-f" cx="200" cy="388" r="88"/>
+  <path class="tl" d="M200 268 A 120 120 0 0 1 320 388"/>
+  <circle class="tlf" cx="200" cy="388" r="6"/>
+</svg>

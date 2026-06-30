@@ -1,0 +1,10 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Five vertical lanes of sustainability messaging; four are crowded with marks and one, the social pillar, sits empty and open.">
+  <rect class="bg-blue" width="400" height="500"/>
+  <g class="dt">
+    <circle cx="78" cy="312" r="3"/><circle cx="78" cy="336" r="3"/><circle cx="78" cy="360" r="3"/><circle cx="78" cy="384" r="3"/><circle cx="78" cy="408" r="3"/>
+    <circle cx="138" cy="320" r="3"/><circle cx="138" cy="348" r="3"/><circle cx="138" cy="372" r="3"/><circle cx="138" cy="400" r="3"/>
+    <circle cx="198" cy="312" r="3"/><circle cx="198" cy="340" r="3"/><circle cx="198" cy="368" r="3"/><circle cx="198" cy="392" r="3"/><circle cx="198" cy="416" r="3"/>
+    <circle cx="318" cy="324" r="3"/><circle cx="318" cy="352" r="3"/><circle cx="318" cy="380" r="3"/><circle cx="318" cy="404" r="3"/>
+  </g>
+  <rect class="tl" x="244" y="300" width="32" height="132" rx="4" stroke-dasharray="4 4"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A waterline low on the cover. A small peak rises above it; below sits the large submerged mass of brokers, relationships and research, with a gold node marking where the deal closes offline.">
+  <rect class="bg-navy" width="400" height="500"/>
+  <!-- the visible tip above the waterline -->
+  <path class="tl" d="M196 300 L222 268 L248 300"/>
+  <!-- waterline -->
+  <line class="ln-d" x1="30" y1="300" x2="370" y2="300"/>
+  <!-- the submerged mass -->
+  <path class="ln-f fl-f" d="M84 300 C62 364 92 436 168 462 C246 488 322 466 352 414 C372 378 366 338 352 300 Z"/>
+  <line class="ln-f" x1="112" y1="344" x2="330" y2="344"/>
+  <line class="ln-f" x1="100" y1="384" x2="344" y2="384"/>
+  <line class="ln-f" x1="132" y1="424" x2="312" y2="424"/>
+  <!-- where it closes -->
+  <circle class="gds" cx="256" cy="392" r="11"/>
+  <circle class="gd" cx="256" cy="392" r="4"/>
+</svg>

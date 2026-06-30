@@ -1,0 +1,5 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Two signal traces at equal market share: a clear regular wave with high amplitude above a noisy scattered wave with low amplitude.">
+  <rect class="bg-blue" width="400" height="500"/>
+  <path class="tl" d="M56 352 Q86 320 116 352 T176 352 T236 352 T296 352 T356 352"/>
+  <path class="ln-f" d="M56 426 L74 414 L92 432 L110 410 L128 430 L146 418 L164 428 L182 414 L200 430 L218 420 L236 428 L254 416 L272 430 L290 420 L308 428 L326 418 L344 426 L356 422"/>
+</svg>

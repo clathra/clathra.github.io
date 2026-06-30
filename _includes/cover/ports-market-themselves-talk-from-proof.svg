@@ -1,0 +1,8 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A targeting reticle locked onto a claim node that carries a verification check, standing for provable claims and precise targeting.">
+  <rect class="bg-teal" width="400" height="500"/>
+  <circle class="ln" cx="200" cy="378" r="50"/>
+  <line class="ln-f" x1="200" y1="312" x2="200" y2="444"/><line class="ln-f" x1="134" y1="378" x2="266" y2="378"/>
+  <line class="ln" x1="200" y1="318" x2="200" y2="332"/><line class="ln" x1="200" y1="424" x2="200" y2="438"/><line x1="146" y1="378" x2="160" y2="378" class="ln"/><line x1="240" y1="378" x2="254" y2="378" class="ln"/>
+  <circle class="ln-f" cx="200" cy="378" r="16"/>
+  <path class="gds" d="M190 378 L198 387 L213 367"/>
+</svg>

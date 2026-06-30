@@ -1,0 +1,22 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A broad colonnade resting on two stacked plinths marked leadership and readiness, beside a single small gold column on a slab marked tech spend.">
+  <rect class="bg-ink" width="400" height="500"/>
+  <!-- ground -->
+  <line class="ln-f" x1="34" y1="462" x2="366" y2="462"/>
+  <!-- broad structure: readiness + leadership plinths -->
+  <rect class="ln" x="86" y="432" width="208" height="24"/>
+  <rect class="ln" x="98" y="408" width="184" height="24"/>
+  <!-- colonnade -->
+  <g class="ln">
+    <line x1="116" y1="332" x2="116" y2="408"/>
+    <line x1="146" y1="332" x2="146" y2="408"/>
+    <line x1="176" y1="332" x2="176" y2="408"/>
+    <line x1="206" y1="332" x2="206" y2="408"/>
+    <line x1="236" y1="332" x2="236" y2="408"/>
+    <line x1="266" y1="332" x2="266" y2="408"/>
+  </g>
+  <rect class="ln" x="98" y="318" width="184" height="14"/>
+  <!-- the small gold column: tech spend -->
+  <rect class="gds" x="318" y="436" width="56" height="20"/>
+  <line class="gds" x1="346" y1="392" x2="346" y2="436"/>
+  <rect class="gds" x="336" y="384" width="20" height="9"/>
+</svg>

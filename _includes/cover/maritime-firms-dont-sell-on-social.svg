@@ -1,0 +1,20 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Three rows of evidence marks labelled safety, people and sustainability stream from the left and converge into a single ringed node marked trust.">
+  <rect class="bg-blue" width="400" height="500"/>
+  <!-- row labels -->
+  <!-- evidence ticks -->
+  <g class="ln" stroke-width="1.4">
+    <path d="M30 314v16M48 316v12M66 312v18M84 316v12M102 314v16M120 316v12M138 312v18M156 316v12M174 314v15M192 316v12M210 315v14"/>
+    <path d="M30 376v16M48 378v12M66 374v18M84 378v12M102 376v16M138 374v18M156 378v12M174 376v15M192 378v12M210 377v14"/>
+    <path d="M30 438v16M48 440v12M66 436v18M84 440v12M102 438v16M120 440v12M138 436v18M156 440v12M174 438v15M192 440v12M210 439v14"/>
+  </g>
+  <!-- one gold mark in the people row -->
+  <path class="gds" d="M120 367v18"/>
+  <!-- convergence to the node -->
+  <path class="ln-f" d="M224 322 C284 322 296 374 340 384"/>
+  <path class="ln-f" d="M224 384 C284 384 304 384 340 386"/>
+  <path class="ln-f" d="M224 446 C284 446 296 398 340 388"/>
+  <!-- trust node -->
+  <circle class="ln-f" cx="338" cy="386" r="48"/>
+  <circle class="ln-f" cx="338" cy="386" r="32"/>
+  <circle class="tl" cx="338" cy="386" r="19"/>
+</svg>

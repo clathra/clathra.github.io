@@ -1,0 +1,7 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A heavily watermarked post with tight short ripples beside a lightly marked post whose ripples travel much further.">
+  <rect class="bg-navy" width="400" height="500"/>
+  <circle class="ln-f" cx="104" cy="372" r="20"/><circle class="ln-f" cx="104" cy="372" r="32"/>
+  <rect class="ln" x="90" y="358" width="28" height="28"/><line class="ln" x1="90" y1="358" x2="118" y2="386"/><line class="ln" x1="118" y1="358" x2="90" y2="386"/>
+  <circle class="tl" cx="296" cy="372" r="22"/><circle class="tl" cx="296" cy="372" r="40"/><circle class="ln-f" cx="296" cy="372" r="58"/>
+  <circle class="dt-t" cx="296" cy="372" r="4"/>
+</svg>

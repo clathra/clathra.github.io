@@ -1,0 +1,11 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A central site node ringed by plugin nodes, most flagged as breaches, beside a single clean static node.">
+  <rect class="bg-navy" width="400" height="500"/>
+  <circle class="ln" cx="156" cy="378" r="13"/>
+  <g class="ln-f"><line x1="156" y1="378" x2="156" y2="312"/><line x1="156" y1="378" x2="214" y2="344"/><line x1="156" y1="378" x2="214" y2="412"/><line x1="156" y1="378" x2="156" y2="444"/><line x1="156" y1="378" x2="98" y2="412"/><line x1="156" y1="378" x2="98" y2="344"/></g>
+  <circle class="ln" cx="156" cy="312" r="8"/><circle class="ln" cx="156" cy="444" r="8"/>
+  <circle class="gds" cx="214" cy="344" r="8"/><path class="gds" d="M210 340 l8 8 M218 340 l-8 8"/>
+  <circle class="gds" cx="214" cy="412" r="8"/><path class="gds" d="M210 408 l8 8 M218 408 l-8 8"/>
+  <circle class="gds" cx="98" cy="412" r="8"/><path class="gds" d="M94 408 l8 8 M102 408 l-8 8"/>
+  <circle class="gds" cx="98" cy="344" r="8"/><path class="gds" d="M94 340 l8 8 M102 340 l-8 8"/>
+  <circle class="tl" cx="320" cy="378" r="16"/><path class="tl" d="M320 366 l9 4 v7 c0 6 -5 10 -9 12 c-4 -2 -9 -6 -9 -12 v-7 z"/>
+</svg>

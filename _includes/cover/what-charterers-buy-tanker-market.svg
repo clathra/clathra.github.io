@@ -1,0 +1,8 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A centred set of ranked bars descending in length, an abstract motif for priorities weighed in different order.">
+  <rect class="bg-tealdeep" width="400" height="500"/>
+  <line class="ln-f" x1="100" y1="312" x2="100" y2="442"/>
+  <rect class="tlf" x="101" y="320" width="200" height="20"/>
+  <rect class="tlf" x="101" y="354" width="168" height="20"/>
+  <rect class="tlf" x="101" y="388" width="128" height="20"/>
+  <rect class="gd" x="101" y="422" width="56" height="20"/>
+</svg>

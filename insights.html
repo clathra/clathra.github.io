@@ -1,0 +1,51 @@
+---
+layout: default
+permalink: /insights.html
+title: "Insights"
+title_raw: false
+description: "Reports, case studies and short notes on marketing for the shipping, maritime and offshore world, from Clathra."
+og_title: "Insights · Clathra"
+og_description: "Reports, case studies and short notes on marketing for the shipping, maritime and offshore world."
+styles:
+  - styles.css
+  - insights.css
+scripts:
+  - main.js
+jsonld: blog
+---
+{% include nav.html %}
+<main id="main">
+<section class="ins-section">
+  <div class="wrap">
+    <a class="post-home" href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10.5 9-7 9 7"/><path d="M5 9v11h14V9"/><path d="M10 20v-6h4v6"/></svg>Home</a>
+    <div class="ins-head reveal">
+      <div class="kicker">Insights</div>
+      <h2>Notes from the sector.</h2>
+      <p class="muted">Reports, case studies and notes on marketing for the maritime, offshore and energy world.</p>
+    </div>
+
+    <div class="igrid">
+      {% for post in site.posts %}
+      <a class="icard reveal c-{{ post.type }}{% if post.cover %} has-art{% endif %}{% if post.cover_light %} is-light{% endif %}{% if post.cover_accent == 'gold' %} acc-gold{% endif %}" href="{{ post.url }}" aria-label="{{ post.title | escape }}">
+        <div class="cover-art">
+          {% if post.cover %}{% include cover/{{ post.slug }}.svg %}{% else %}{% include cover-icon.html type=post.type %}{% endif %}
+        </div>
+        <div class="cf-top">
+          <span class="cf-kicker">{% case post.type %}{% when 'report' %}Report{% when 'case' %}Case study{% when 'note' %}Note{% endcase %}</span>
+          <span class="cf-date">{{ post.date | date: '%b %Y' }}</span>
+        </div>
+        <div class="cf-head">
+          <h3 class="cf-title">{{ post.title }}</h3>
+          <span class="cf-rule"></span>
+          <p class="cf-sub">{{ post.excerpt | strip_html | strip_newlines | strip }}</p>
+        </div>
+        <span class="cf-go">→</span>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="ins-more-wrap">
+      <button class="ins-more" type="button" hidden>Load more</button>
+    </div>
+  </div>
+</section>
+</main>

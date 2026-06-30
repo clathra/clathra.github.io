@@ -1,0 +1,7 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A buyer path of nodes where the first gate node, marked trust, is highlighted gold and must be passed before the rest of the site does its work.">
+  <rect class="bg-blue" width="400" height="500"/>
+  <line class="ln" x1="70" y1="378" x2="350" y2="378"/>
+  <line class="gds" x1="118" y1="338" x2="118" y2="418"/>
+  <circle class="gds" cx="118" cy="378" r="11"/><circle class="gd" cx="118" cy="378" r="4"/>
+  <circle class="dt" cx="196" cy="378" r="5"/><circle class="dt" cx="254" cy="378" r="5"/><circle class="dt" cx="312" cy="378" r="5"/>
+</svg>

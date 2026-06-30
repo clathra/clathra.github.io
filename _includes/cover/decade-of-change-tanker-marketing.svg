@@ -1,0 +1,7 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Over two decades, a declining line for print and trade fairs crosses a rising line for digital and reputation.">
+  <rect class="bg-ink" width="400" height="500"/>
+  <line class="ln-f" x1="56" y1="448" x2="360" y2="448"/>
+  <path class="ln-f" d="M56 318 L360 432"/>
+  <path class="tl" d="M56 432 L360 312"/>
+  <circle class="tlf" cx="360" cy="312" r="5"/>
+</svg>

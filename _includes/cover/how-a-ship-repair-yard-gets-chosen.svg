@@ -1,0 +1,7 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A chosen yard node fed by thick reputation and referral links from several sources, with price as a single faint thin link.">
+  <rect class="bg-teal" width="400" height="500"/>
+  <circle class="ln" cx="92" cy="316" r="7"/><circle class="ln" cx="84" cy="382" r="7"/><circle class="ln" cx="96" cy="446" r="7"/>
+  <path class="ln" d="M99 316 L286 374"/><path class="ln" d="M91 382 L286 378"/><path class="ln" d="M103 446 L286 382"/>
+  <path class="ln-df" d="M180 440 L286 388"/>
+  <circle class="gds" cx="300" cy="380" r="13"/><circle class="gd" cx="300" cy="380" r="4.4"/>
+</svg>

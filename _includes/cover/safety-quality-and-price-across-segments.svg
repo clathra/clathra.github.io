@@ -1,0 +1,8 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Three stacks of priority chips in different orders, an abstract motif for ranking that differs by market segment.">
+  <rect class="bg-teal" width="400" height="500"/>
+  <g>
+    <rect class="tlf" x="60" y="332" width="74" height="26" rx="3"/><rect class="ln" x="60" y="366" width="74" height="26" rx="3"/><rect class="gd" x="60" y="400" width="74" height="26" rx="3"/>
+    <rect class="tlf" x="163" y="332" width="74" height="26" rx="3"/><rect class="gd" x="163" y="366" width="74" height="26" rx="3"/><rect class="ln" x="163" y="400" width="74" height="26" rx="3"/>
+    <rect class="ln" x="266" y="332" width="74" height="26" rx="3"/><rect class="tlf" x="266" y="366" width="74" height="26" rx="3"/><rect class="gd" x="266" y="400" width="74" height="26" rx="3"/>
+  </g>
+</svg>

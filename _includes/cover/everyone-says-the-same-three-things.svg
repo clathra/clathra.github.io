@@ -1,0 +1,11 @@
+<svg class="art on-cream" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Six columns each showing the same three identical claim bars, with one column broken out in colour as the firm that differentiates.">
+  <rect class="bg-cream" width="400" height="500"/>
+  <g class="ln">
+    <rect x="50" y="328" width="34" height="14"/><rect x="50" y="350" width="34" height="14"/><rect x="50" y="372" width="34" height="14"/>
+    <rect x="104" y="328" width="34" height="14"/><rect x="104" y="350" width="34" height="14"/><rect x="104" y="372" width="34" height="14"/>
+    <rect x="158" y="328" width="34" height="14"/><rect x="158" y="350" width="34" height="14"/><rect x="158" y="372" width="34" height="14"/>
+    <rect x="266" y="328" width="34" height="14"/><rect x="266" y="350" width="34" height="14"/><rect x="266" y="372" width="34" height="14"/>
+    <rect x="320" y="328" width="34" height="14"/><rect x="320" y="350" width="34" height="14"/><rect x="320" y="372" width="34" height="14"/>
+  </g>
+  <g class="tlf"><rect x="212" y="328" width="34" height="14"/><rect x="212" y="350" width="34" height="14"/><rect x="212" y="372" width="34" height="14"/></g>
+</svg>

@@ -1,0 +1,6 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A broad market segment converges through a funnel to a single sharp niche node.">
+  <rect class="bg-ink" width="400" height="500"/>
+  <path class="ln" d="M64 312 L300 374"/><path class="ln" d="M64 444 L300 378"/>
+  <g class="ln-f"><line x1="64" y1="338" x2="120" y2="352"/><line x1="64" y1="364" x2="120" y2="368"/><line x1="64" y1="390" x2="120" y2="384"/><line x1="64" y1="416" x2="120" y2="400"/></g>
+  <circle class="gds" cx="306" cy="376" r="10"/><circle class="gd" cx="306" cy="376" r="3.6"/>
+</svg>

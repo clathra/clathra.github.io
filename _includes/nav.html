@@ -1,0 +1,9 @@
+<nav id="nav"{% unless page.home %} class="scrolled"{% endunless %}>
+  <div class="wrap nav-inner">
+    <a class="brand" href="{% if page.home %}#top{% else %}/{% endif %}"><img src="/images/logo.svg" alt="" class="logo"><span class="name">Clathra</span></a>
+    <div class="nav-actions">
+      <a class="btn btn-ghost" href="/insights.html">Insights</a>
+      <a class="btn btn-primary" href="{% if page.home %}#contact{% else %}/#contact{% endif %}">Contact</a>
+    </div>
+  </div>
+</nav>

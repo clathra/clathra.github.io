@@ -1,0 +1,7 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Two stacked value bars compared: the supplier with visible value segments stands taller than the next-best alternative.">
+  <rect class="bg-tealdeep" width="400" height="500"/>
+  <g>
+    <rect class="tlf" x="104" y="420" width="66" height="24"/><rect class="tlf" x="104" y="394" width="66" height="24"/><rect class="tlf" x="104" y="368" width="66" height="24"/><rect class="tlf" x="104" y="342" width="66" height="24"/>
+    <rect class="ln" x="232" y="420" width="66" height="24"/><rect class="ln" x="232" y="394" width="66" height="24"/>
+  </g>
+</svg>

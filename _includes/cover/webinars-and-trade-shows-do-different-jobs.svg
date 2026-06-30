@@ -1,0 +1,8 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Two distinct event nodes, a webinar and a trade show, are joined through a central owned website hub.">
+  <rect class="bg-blue" width="400" height="500"/>
+  <line class="ln" x1="98" y1="376" x2="178" y2="376"/><line class="ln" x1="222" y1="376" x2="302" y2="376"/>
+  <circle class="ln" cx="86" cy="376" r="14"/>
+  <circle class="ln" cx="314" cy="376" r="14"/>
+  <circle class="tl" cx="200" cy="376" r="20"/>
+  <circle class="tlf" cx="200" cy="376" r="5"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Four routes fan out from a single origin; three are faint and marked as capital heavy, one is highlighted as reputation, the affordable route.">
+  <rect class="bg-ink" width="400" height="500"/>
+  <circle class="ln" cx="78" cy="436" r="6"/>
+  <path class="ln-f" d="M84 432 L300 300"/><path class="ln-f" d="M84 433 L312 344"/><path class="ln-f" d="M84 438 L312 430"/>
+  <path class="tl" d="M84 430 L300 360"/>
+  <circle class="tlf" cx="300" cy="360" r="6"/>
+</svg>

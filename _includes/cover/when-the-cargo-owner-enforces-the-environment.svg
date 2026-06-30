@@ -1,0 +1,10 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Several dots sit above a dashed cutoff line and one crossed-out dot sits below it, an abstract motif for a performance threshold that admits or refuses.">
+  <rect class="bg-ink" width="400" height="500"/>
+  <circle class="tlf" cx="116" cy="332" r="6"/>
+  <circle class="tlf" cx="172" cy="316" r="6"/>
+  <circle class="tlf" cx="228" cy="340" r="6"/>
+  <circle class="tlf" cx="284" cy="322" r="6"/>
+  <line class="gds" x1="84" y1="388" x2="316" y2="388" stroke-dasharray="5 4"/>
+  <circle class="ln-f" cx="200" cy="430" r="7"/>
+  <path class="gds" d="M193 423 l14 14 M207 423 l-14 14"/>
+</svg>

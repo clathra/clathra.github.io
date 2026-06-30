@@ -1,0 +1,59 @@
+title: Clathra
+description: >-
+  A marketing agency working only in shipping, maritime and offshore. Websites,
+  brand identity and marketing built on real industry knowledge.
+url: "https://clathra.com"
+baseurl: ""
+lang: en
+# Pin the build clock so the weekly drip is deterministic regardless of build host.
+# Posts dated YYYY-MM-DD go live at 00:00 UTC on that date (CI runners are UTC).
+timezone: Etc/UTC
+
+# Insights posts live at /insights/<slug>/
+permalink: /insights/:title/
+# Only publish posts whose date has arrived (drives the weekly drip; prevents a
+# big-bang reveal of future-dated posts). For local review of upcoming posts,
+# build/serve with the --future flag: `bundle exec jekyll serve --future`.
+future: false
+
+# Plugins (all supported by GitHub Pages)
+plugins:
+  - jekyll-sitemap
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  # Keep straight quotes/apostrophes in output (no curly "smart" typography)
+  smart_quotes: apos,apos,quot,quot
+
+# Per-collection front-matter defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      styles:
+        - styles.css
+        - insights.css
+      scripts:
+        - main.js
+      og_type: article
+      jsonld: post
+
+# Files Jekyll should not copy into the built site
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - insights-mockup.html
+  - .gitignore
+  - .gitattributes
+  - .nojekyll
+
+# Keep static SEO files as-is (no Jekyll processing of these)
+keep_files:
+  - images

@@ -1,0 +1,7 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="On a countdown to the trade show, many candidate suppliers narrow to a shortlist of three well before the meeting at the stand.">
+  <rect class="bg-navy" width="400" height="500"/>
+  <line class="ln-f" x1="54" y1="446" x2="346" y2="446"/>
+  <g class="ln-f"><path d="M58 312 C150 312 150 360 244 372"/><path d="M58 332 C150 332 150 366 244 376"/><path d="M58 352 C150 352 150 372 244 380"/><path d="M58 372 C150 372 160 376 244 384"/><path d="M58 392 C150 392 150 384 244 388"/><path d="M58 412 C150 412 150 392 244 392"/></g>
+  <g class="tl"><path d="M244 372 L300 374"/><path d="M244 380 L300 380"/><path d="M244 388 L300 386"/></g>
+  <circle class="gds" cx="346" cy="380" r="11"/><circle class="gd" cx="346" cy="380" r="3.6"/>
+</svg>

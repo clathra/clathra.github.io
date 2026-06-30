@@ -1,0 +1,385 @@
+/* ===== Insights – index grid (dateless card look + subtle date) ===== */
+/* Relies on tokens + chrome from styles.css (load this AFTER styles.css). */
+
+.ins-section{padding-top:130px}
+.ins-head{margin-bottom:46px}
+.ins-head h2{font-size:clamp(2rem,3.6vw,3rem)}
+.ins-head p{margin-top:16px}
+
+/* type tags – colour-coded text label (used on the individual post page) */
+.ttag{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;display:inline-flex;align-items:center}
+.ttag.report{color:var(--teal-deep)}
+.ttag.case{color:var(--blue)}
+.ttag.note{color:#b07d00}
+
+/* grid */
+.igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+/* ===== Full-cover tile – the whole card is a designed cover, title typeset in ===== */
+.icard{position:relative;display:block;aspect-ratio:4/5;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#0e1726;transition:transform .4s var(--ease),box-shadow .4s,border-color .4s}
+.icard:hover{transform:translateY(-6px);box-shadow:0 30px 56px -28px rgba(14,23,38,.42);border-color:transparent}
+/* fallback field – colour encodes the type when a post has no bespoke cover yet */
+.icard.c-report{background:linear-gradient(160deg,#0e1726,#0a5e49)}
+.icard.c-case{background:linear-gradient(160deg,#0e1726,#1c3a83)}
+.icard.c-note{background:linear-gradient(160deg,#0a3047,#7a5500)}
+.icard.has-art{background:#0e1726}
+/* art layer (bespoke SVG, or fallback texture + type icon) */
+.cover-art{position:absolute;inset:0;z-index:0}
+.cover-art svg.art{position:absolute;inset:0;width:100%;height:100%;display:block}
+.icard:not(.has-art) .cover-art::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.10) 1px,transparent 1px);background-size:18px 18px;opacity:.55}
+.icard .mk{position:absolute;right:-22px;bottom:-22px;width:150px;height:150px;opacity:.1;color:#fff}
+/* readability scrim behind the title */
+.icard::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(14,23,38,.5) 0%,rgba(14,23,38,.12) 32%,rgba(14,23,38,0) 50%)}
+.icard.is-light::before{background:linear-gradient(180deg,rgba(244,246,249,.72) 0%,rgba(244,246,249,0) 48%)}
+/* overlay: kicker (type) + date */
+.cf-top{position:absolute;top:0;left:0;right:0;z-index:3;display:flex;justify-content:space-between;align-items:baseline;padding:20px 22px;font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase}
+.cf-kicker{color:rgba(255,255,255,.74)}
+.cf-date{color:rgba(255,255,255,.58)}
+.is-light .cf-kicker{color:rgba(14,23,38,.72)}
+.is-light .cf-date{color:rgba(14,23,38,.52)}
+/* overlay: title + accent rule + subtitle */
+.cf-head{position:absolute;top:52px;left:22px;right:22px;z-index:3}
+.cf-title{font-family:'Bricolage Grotesque','Hanken Grotesk',sans-serif;font-weight:600;font-size:clamp(1.28rem,1.65vw,1.6rem);line-height:1.1;letter-spacing:-.02em;color:#fff;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.is-light .cf-title{color:var(--ink)}
+.cf-rule{display:block;width:34px;height:2px;background:var(--teal);margin:15px 0 0}
+.icard.acc-gold .cf-rule{background:var(--gold)}
+.cf-sub{margin-top:13px;font-family:'Hanken Grotesk',sans-serif;font-size:12.5px;line-height:1.42;color:rgba(255,255,255,.72);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.is-light .cf-sub{color:var(--ink-soft)}
+/* overlay: read affordance (bottom-right) */
+.cf-go{position:absolute;right:20px;bottom:16px;z-index:3;font-family:'Space Mono',monospace;font-size:13px;color:rgba(255,255,255,.0);transition:color .25s}
+.icard:hover .cf-go{color:rgba(255,255,255,.8)}
+.is-light .icard:hover .cf-go,.is-light.icard:hover .cf-go{color:rgba(14,23,38,.7)}
+
+/* ===== Bespoke cover art vocabulary – shared by every _includes/cover/<slug>.svg ===== */
+.cover-art .art{position:absolute;inset:0;width:100%;height:100%;display:block}
+/* field fills (drawn full-bleed inside the SVG) */
+.cover-art .art .bg-ink{fill:#0e1726}
+.cover-art .art .bg-navy{fill:#11244a}
+.cover-art .art .bg-blue{fill:#1b3a84}
+.cover-art .art .bg-teal{fill:#0a5e49}
+.cover-art .art .bg-tealdeep{fill:#073e30}
+.cover-art .art .bg-cream{fill:#f4f6f9}
+/* line work – light, for dark fields */
+.cover-art .art .ln{fill:none;stroke:rgba(255,255,255,.62);stroke-width:1.5}
+.cover-art .art .ln-f{fill:none;stroke:rgba(255,255,255,.32);stroke-width:1.1}
+.cover-art .art .ln-d{fill:none;stroke:rgba(255,255,255,.52);stroke-width:1.5;stroke-dasharray:2 5}
+.cover-art .art .ln-df{fill:none;stroke:rgba(255,255,255,.28);stroke-width:1;stroke-dasharray:2 5}
+/* accents */
+.cover-art .art .tl{fill:none;stroke:#3fd292;stroke-width:1.8}
+.cover-art .art .tlf{fill:#3fd292}
+.cover-art .art .gd{fill:var(--gold)}
+.cover-art .art .gds{fill:none;stroke:var(--gold);stroke-width:1.8}
+/* marks */
+.cover-art .art .dt{fill:rgba(255,255,255,.62)}
+.cover-art .art .dt-t{fill:#3fd292}
+.cover-art .art .fl-f{fill:rgba(255,255,255,.06)}
+/* mono captions (uppercase set in markup) */
+.cover-art .art text{font-family:'Space Mono',monospace}
+.cover-art .art .cp{font-size:12px;letter-spacing:.1em;fill:rgba(255,255,255,.72)}
+.cover-art .art .cp-s{font-size:10.5px;letter-spacing:.09em;fill:rgba(255,255,255,.6)}
+.cover-art .art .cp-t{fill:#3fd292}
+.cover-art .art .cp-g{fill:var(--gold)}
+.cover-art .art .lbl{font-size:12.5px;letter-spacing:.15em;fill:rgba(255,255,255,.88)}
+/* cream-field variants (dark line work) */
+.cover-art .art.on-cream .ln{stroke:rgba(14,23,38,.5)}
+.cover-art .art.on-cream .ln-f{stroke:rgba(14,23,38,.22)}
+.cover-art .art.on-cream .ln-d{stroke:rgba(14,23,38,.45)}
+.cover-art .art.on-cream .dt{fill:rgba(14,23,38,.5)}
+.cover-art .art.on-cream .cp{fill:rgba(14,23,38,.62)}
+.cover-art .art.on-cream .cp-s{fill:rgba(14,23,38,.5)}
+.cover-art .art.on-cream .lbl{fill:rgba(14,23,38,.85)}
+@media(max-width:900px){.igrid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.igrid{grid-template-columns:1fr}}
+
+/* ===== Insights – individual post (reader) ===== */
+.post{padding:128px 0 0;position:relative;z-index:1}
+.post .wrap{max-width:760px}
+.post-back{display:inline-flex;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-size:13px;font-weight:700;letter-spacing:.03em;color:var(--teal-deep);background:rgba(5,153,118,.08);border:1px solid rgba(5,153,118,.45);border-radius:999px;padding:10px 18px;margin-bottom:28px;transition:border-color .2s,color .2s,background .2s,box-shadow .2s}
+.post-back:hover{color:#fff;background:var(--teal);border-color:var(--teal);box-shadow:0 8px 20px -8px rgba(5,153,118,.5)}
+.post-back-foot{margin:44px 0 0}
+.post-nav{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.post-nav .post-back{margin:0}
+.post-nav-foot{margin:44px 0 0}
+.post-home{display:inline-flex;align-items:center;gap:7px;font-family:'Space Mono',monospace;font-size:13px;font-weight:700;letter-spacing:.03em;color:var(--blue);background:rgba(66,95,188,.08);border:1px solid rgba(66,95,188,.45);border-radius:999px;padding:10px 16px;margin-bottom:28px;transition:color .2s,border-color .2s,background .2s,box-shadow .2s}
+.post-home:hover{color:#fff;background:var(--blue);border-color:var(--blue);box-shadow:0 8px 20px -8px rgba(66,95,188,.5)}
+.post-home svg{width:14px;height:14px}
+.post-nav .post-home{margin:0}
+.post-meta{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.post-date{font-family:'Space Mono',monospace;font-size:12px;color:var(--slate)}
+.post-title{font-family:'Bricolage Grotesque','Hanken Grotesk',sans-serif;font-weight:600;font-size:clamp(2rem,4vw,3rem);line-height:1.06;letter-spacing:-.02em;color:var(--ink)}
+.post-lead{font-size:1.2rem;color:var(--ink-soft);margin-top:18px;line-height:1.5}
+.post-body{margin-top:30px;font-size:1.06rem;line-height:1.7;color:var(--ink)}
+.post-body > * + *{margin-top:18px}
+.post-body h2{font-family:'Bricolage Grotesque','Hanken Grotesk',sans-serif;font-weight:600;font-size:1.5rem;letter-spacing:-.01em;margin-top:38px;color:var(--ink)}
+.post-body h3{font-family:'Bricolage Grotesque','Hanken Grotesk',sans-serif;font-weight:600;font-size:1.2rem;margin-top:28px;color:var(--ink)}
+.post-body ul{list-style:none;padding-left:0;display:flex;flex-direction:column;gap:10px}
+.post-body li{position:relative;padding-left:22px}
+.post-body li::before{content:"";position:absolute;left:0;top:13px;width:10px;height:2px;background:var(--teal)}
+.post-body a{color:var(--teal-deep);border-bottom:1px solid rgba(5,153,118,.45)}
+.post-body a:hover{border-color:var(--teal)}
+.post-body strong{font-weight:600}
+.post-body blockquote{border-left:3px solid var(--teal);padding:4px 0 4px 20px;margin-top:24px;font-family:'Bricolage Grotesque','Hanken Grotesk',sans-serif;font-size:1.3rem;line-height:1.3;color:var(--ink)}
+.post-cta{margin-top:70px;border-top:1px solid var(--line);padding:64px 0 64px}
+.post-cta .wrap{max-width:760px}
+.post-cta h2{font-family:'Bricolage Grotesque','Hanken Grotesk',sans-serif;font-weight:600;font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.02em;color:var(--ink)}
+.post-cta p{color:var(--ink-soft);margin-top:12px}
+.post-cta .btn{margin-top:22px}
+@media(max-width:600px){.post{padding:104px 0 0}}
+
+/* ===== Figure card – grounded insight-post graphics, in brand styling ===== */
+.fig{margin:34px 0;border:1px solid var(--line);border-radius:var(--radius);background:#fff;overflow:hidden}
+.fig-head{padding:22px 24px 0}
+.fig-kicker{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-deep)}
+.fig-title{font-family:'Bricolage Grotesque','Hanken Grotesk',sans-serif;font-weight:600;font-size:1.1rem;letter-spacing:-.01em;color:var(--ink);margin-top:9px;line-height:1.22}
+.fig-legend{display:flex;gap:18px;flex-wrap:wrap;padding:16px 24px 0}
+.fig-legend span{display:inline-flex;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.02em;color:var(--ink-soft)}
+.fig-legend i{width:11px;height:11px;border-radius:3px}
+.fig-chart{padding:12px 22px 4px}
+.fig-chart svg{display:block;width:100%;height:auto}
+.fig-note{padding:6px 24px 22px;font-family:'Space Mono',monospace;font-size:10.5px;line-height:1.55;letter-spacing:.01em;color:var(--slate)}
+
+/* ===== Related Insights (post foot) ===== */
+.post-related{margin-top:70px;border-top:1px solid var(--line);padding:48px 0 0}
+.post-related .wrap{max-width:760px}
+.pr-head{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);margin-bottom:22px}
+.pr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pr-card{display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-radius:var(--radius);padding:18px;background:#fff;transition:border-color .2s,box-shadow .2s,transform .2s}
+.pr-card:hover{border-color:transparent;box-shadow:0 18px 40px -24px rgba(14,23,38,.3);transform:translateY(-3px)}
+.pr-tag{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase}
+.pr-tag.report{color:var(--teal-deep)}
+.pr-tag.case{color:var(--blue)}
+.pr-tag.note{color:#b07d00}
+.pr-title{font-family:'Bricolage Grotesque','Hanken Grotesk',sans-serif;font-weight:600;font-size:1.02rem;line-height:1.18;letter-spacing:-.01em;color:var(--ink);flex:1}
+.pr-date{font-family:'Space Mono',monospace;font-size:11px;color:var(--slate)}
+@media(max-width:600px){.pr-grid{grid-template-columns:1fr}}
+
+/* ===== Insights index: load-more pagination ===== */
+.icard.is-hidden{display:none}
+.ins-more-wrap{display:flex;justify-content:center;margin-top:44px}
+.ins-more{font-family:'Space Mono',monospace;font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--teal-deep);background:rgba(5,153,118,.08);border:1px solid rgba(5,153,118,.45);border-radius:999px;padding:13px 26px;cursor:pointer;transition:color .2s,background .2s,border-color .2s,box-shadow .2s}
+.ins-more:hover{color:#fff;background:var(--teal);border-color:var(--teal);box-shadow:0 8px 20px -8px rgba(5,153,118,.5)}
+
+/* ===== Figure-specific styles (extracted from figure includes) ===== */
+/* fig: abm-tiers */
+#fig-abm .t1{fill:var(--ink)}
+#fig-abm .t2{fill:var(--teal-deep)}
+#fig-abm .t3{fill:var(--teal)}
+#fig-abm .tier{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:18px;fill:#fff;text-anchor:middle}
+#fig-abm .desc{font-family:'Space Mono',monospace;font-size:11px;fill:rgba(255,255,255,.85);text-anchor:middle}
+
+/* fig: channel-audience-matrix */
+#fig-chan .hd text{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.02em;fill:var(--ink-soft);text-anchor:middle}
+#fig-chan .rl text{font-family:'Space Mono',monospace;font-size:11.5px;fill:var(--ink);text-anchor:end}
+#fig-chan .sep{stroke:var(--line);stroke-width:1}
+#fig-chan .rows line{stroke:var(--line);stroke-width:1}
+#fig-chan .p{fill:var(--teal)}
+#fig-chan .s{fill:var(--slate)}
+
+/* fig: charterer-eight-ps */
+#fig-8ps .axis{stroke:#cdd6df;stroke-width:1.5}
+#fig-8ps .bar{fill:var(--teal)}
+#fig-8ps .lbl{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:end}
+#fig-8ps .val{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;fill:var(--ink);text-anchor:start}
+
+/* fig: crew-blog-mix */
+#fig-crew .axis{stroke:#cdd6df;stroke-width:1.5}
+#fig-crew .bar{fill:var(--teal)}
+#fig-crew .lbl{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:end}
+#fig-crew .val{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;fill:var(--ink);text-anchor:start}
+
+/* fig: decade-promotion-shift */
+#fig-decade .axis{stroke:#cdd6df;stroke-width:1.5}
+#fig-decade .b05{fill:var(--slate)}
+#fig-decade .b25{fill:var(--teal)}
+#fig-decade .lbl{font-family:'Space Mono',monospace;font-size:10.5px;fill:var(--ink-soft);text-anchor:end}
+#fig-decade .v05{font-family:'Space Mono',monospace;font-size:10px;fill:var(--slate);text-anchor:start}
+#fig-decade .v25{font-family:'Space Mono',monospace;font-size:10px;font-weight:700;fill:var(--ink);text-anchor:start}
+#fig-decade .lg-a{background:var(--slate)}#fig-decade .lg-b{background:var(--teal)}
+
+/* fig: ghg-rating-band */
+#fig-ghg .c{stroke:#fff;stroke-width:2}
+#fig-ghg .g{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;fill:#fff;text-anchor:middle}
+#fig-ghg .end{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft)}
+#fig-ghg .brace{fill:none;stroke:var(--ink-soft);stroke-width:1.5}
+#fig-ghg .lab{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:middle}
+
+/* fig: hapag-booking-share */
+#fig-hl .grid line{stroke:var(--line);stroke-width:1}
+#fig-hl .base{stroke:#cdd6df;stroke-width:1.5}
+#fig-hl .yl text{font-family:'Space Mono',monospace;font-size:11px;fill:var(--slate);text-anchor:end}
+#fig-hl .cat{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:middle}
+#fig-hl .val{font-family:'Space Mono',monospace;font-size:12px;font-weight:700;fill:var(--ink);text-anchor:middle}
+#fig-hl .b-prior{fill:var(--slate)}
+#fig-hl .b-now{fill:var(--teal)}
+#fig-hl .b-target{fill:none;stroke:var(--teal);stroke-width:2;stroke-dasharray:5 4}
+
+/* fig: maersk-msc-engagement */
+#fig-mmeng .grp{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.02em;fill:var(--ink);text-anchor:start}
+#fig-mmeng .axis{stroke:#cdd6df;stroke-width:1.5}
+#fig-mmeng .bar{fill:var(--teal)}
+#fig-mmeng .bar.s{fill:var(--slate)}
+#fig-mmeng .lbl{font-family:'Space Mono',monospace;font-size:10.5px;fill:var(--ink-soft);text-anchor:end}
+#fig-mmeng .val{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;fill:var(--ink);text-anchor:start}
+
+/* fig: maersk-social-followers */
+#fig-mfans .axis{stroke:#cdd6df;stroke-width:1.5}
+#fig-mfans .bar{fill:var(--teal)}
+#fig-mfans .bar.s{fill:var(--slate)}
+#fig-mfans .lbl{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:end}
+#fig-mfans .val{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;fill:var(--ink);text-anchor:start}
+
+/* fig: market-selection-models */
+#fig-msm .div{stroke:var(--line);stroke-width:1}
+#fig-msm .hd{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:14px;fill:var(--ink);text-anchor:middle}
+#fig-msm .seg{fill:#fff;stroke:var(--line);stroke-width:1.5}
+#fig-msm .seg.sel{fill:var(--teal);stroke:var(--teal)}
+#fig-msm .sl{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:middle}
+#fig-msm .sl.on{fill:#fff}
+#fig-msm .niche{fill:rgba(5,153,118,.07);stroke:var(--teal);stroke-width:1.5}
+#fig-msm .nlab{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.04em;fill:var(--teal-deep);text-anchor:middle}
+#fig-msm .need{fill:var(--teal)}
+#fig-msm .cap{font-family:'Space Mono',monospace;font-size:10.5px;fill:var(--ink-soft);text-anchor:middle}
+
+/* fig: marketing-deficit-departments */
+#fig-deficit .grid line{stroke:var(--line);stroke-width:1}
+#fig-deficit .base{stroke:#cdd6df;stroke-width:1.5}
+#fig-deficit .yl text{font-family:'Space Mono',monospace;font-size:11px;fill:var(--slate);text-anchor:end}
+#fig-deficit .cat{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.04em;fill:var(--ink-soft)}
+#fig-deficit .val{font-family:'Space Mono',monospace;font-size:12.5px;font-weight:700;fill:var(--ink)}
+#fig-deficit .zero{font-family:'Space Mono',monospace;font-size:11px;fill:var(--slate)}
+#fig-deficit .b05{fill:var(--slate)}
+#fig-deficit .b25{fill:var(--teal)}
+#fig-deficit .lg-a{background:var(--slate)}#fig-deficit .lg-b{background:var(--teal)}
+
+/* fig: perceived-value-emotion */
+#fig-pve .neutral{stroke:var(--line);stroke-width:1;stroke-dasharray:4 4}
+#fig-pve .ntxt{font-family:'Space Mono',monospace;font-size:9.5px;fill:var(--slate);text-anchor:start}
+#fig-pve .guides line{stroke:var(--line);stroke-width:1}
+#fig-pve .arc{fill:none;stroke:var(--teal);stroke-width:3;stroke-linecap:round}
+#fig-pve .dot{fill:var(--teal-deep)}
+#fig-pve .ph{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:middle}
+
+/* fig: port-content-engagement */
+#fig-portc .colhead text{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.02em;fill:var(--ink);text-anchor:start}
+#fig-portc .mid{stroke:var(--line);stroke-width:1}
+#fig-portc .chip text{font-family:'Hanken Grotesk',sans-serif;font-size:13px;fill:var(--ink)}
+#fig-portc .chip.pos rect{fill:rgba(5,153,118,.10);stroke:var(--teal);stroke-width:1.3}
+#fig-portc .chip.neg rect{fill:#f4f6f9;stroke:var(--line);stroke-width:1.3}
+#fig-portc .chip.neg text{fill:var(--ink-soft)}
+
+/* fig: port-generations-schematic */
+#fig-ports .base{stroke:#cdd6df;stroke-width:1.5}
+#fig-ports .g1{fill:#a7d4c6}
+#fig-ports .g2{fill:#5cae97}
+#fig-ports .g3{fill:var(--teal)}
+#fig-ports .g4{fill:var(--teal-deep)}
+#fig-ports .ord{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:16px;fill:#fff;text-anchor:middle}
+#fig-ports .era{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.04em;fill:var(--teal-deep);text-anchor:middle}
+#fig-ports .ds{font-family:'Hanken Grotesk',sans-serif;font-size:11px;fill:var(--ink-soft);text-anchor:middle}
+
+/* fig: regulatory-calendar-timeline */
+#fig-reg .ln{stroke:var(--line);stroke-width:2}
+#fig-reg .tick{stroke:#cdd6df;stroke-width:2}
+#fig-reg .dot{fill:var(--teal)}
+#fig-reg .yr{font-family:'Space Mono',monospace;font-size:13px;font-weight:700;fill:var(--teal-deep);text-anchor:start}
+#fig-reg .ti{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:15px;fill:var(--ink);text-anchor:start}
+#fig-reg .sub{font-family:'Hanken Grotesk',sans-serif;font-size:12.5px;fill:var(--ink-soft);text-anchor:start}
+
+/* fig: segment-orientation */
+#fig-seg .card rect{fill:#fff;stroke:var(--line);stroke-width:1.5}
+#fig-seg .seg text{font-family:'Space Mono',monospace;font-size:12px;fill:var(--ink-soft);text-anchor:middle}
+#fig-seg .ori text{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:24px;fill:var(--teal);text-anchor:middle}
+#fig-seg .rank text{font-family:'Space Mono',monospace;font-size:10.5px;fill:var(--slate);text-anchor:middle}
+
+/* fig: shared-claims */
+#fig-claims .link{stroke:var(--line);stroke-width:1.2}
+#fig-claims .out{stroke:var(--teal);stroke-width:1.6}
+#fig-claims .hub{fill:var(--teal-deep)}
+#fig-claims .co rect{fill:#fff;stroke:var(--line);stroke-width:1.5}
+#fig-claims .co text{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:middle}
+#fig-claims .claim rect{fill:var(--teal)}
+#fig-claims .claim text{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:13px;fill:#fff;text-anchor:middle}
+
+/* fig: shipbuilding-promotion-index */
+#fig-yard .axis{stroke:#cdd6df;stroke-width:1.5}
+#fig-yard .bar{fill:var(--teal)}
+#fig-yard .bar.s{fill:var(--slate)}
+#fig-yard .lbl{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:end}
+#fig-yard .val{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;fill:var(--ink);text-anchor:start}
+
+/* fig: social-content-mix */
+#fig-social .axis{stroke:#cdd6df;stroke-width:1.5}
+#fig-social .bar{fill:var(--teal)}
+#fig-social .zero{fill:var(--slate)}
+#fig-social .lbl{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:end}
+#fig-social .val{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;fill:var(--ink);text-anchor:start}
+#fig-social .vzero{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;fill:var(--slate);text-anchor:start}
+
+/* fig: sustainability-positioning */
+#fig-sustpos .ax{stroke:#cdd6df;stroke-width:1.5}
+#fig-sustpos .axl{font-family:'Space Mono',monospace;font-size:10.5px;fill:var(--ink-soft);text-anchor:middle}
+#fig-sustpos .dot circle{fill:var(--slate);opacity:.85}
+#fig-sustpos .pil{fill:var(--teal)}
+#fig-sustpos .pill{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:13px;fill:var(--ink);text-anchor:start}
+#fig-sustpos .pill.sub{font-family:'Space Mono',monospace;font-weight:400;font-size:10px;fill:var(--slate)}
+#fig-sustpos .cl{font-family:'Space Mono',monospace;font-size:10.5px;fill:var(--ink-soft);text-anchor:start}
+
+/* fig: tradeshow-lead-split */
+#fig-leads .a{fill:var(--teal-deep)}
+#fig-leads .b{fill:var(--teal)}
+#fig-leads .c{fill:var(--slate)}
+#fig-leads .d{fill:#cdd6df}
+#fig-leads .pct text{font-family:'Space Mono',monospace;font-size:12px;font-weight:700;fill:#fff;text-anchor:middle}
+#fig-leads .leg text{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:start}
+
+/* fig: tweet-engagement-nodes */
+#fig-nodes .axis{stroke:#cdd6df;stroke-width:1.5}
+#fig-nodes .bar{fill:var(--teal)}
+#fig-nodes .bar.s{fill:var(--slate)}
+#fig-nodes .lbl{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:end}
+#fig-nodes .val{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;fill:var(--ink);text-anchor:start}
+
+/* fig: what-smes-actually-spend-on-marketing */
+#fig-smespend .bar{fill:var(--slate)}
+#fig-smespend .bar.hi{fill:var(--teal)}
+#fig-smespend .lbl{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:end}
+#fig-smespend .val{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;fill:var(--ink);text-anchor:start}
+#fig-smespend .meanline{stroke:var(--gold);stroke-width:1.5;stroke-dasharray:3 3}
+#fig-smespend .mean{font-family:'Space Mono',monospace;font-size:10px;fill:var(--gold);font-weight:700;text-anchor:middle}
+
+/* fig: where-shipping-sales-are-actually-won */
+#fig-buyjourney .seg.a{fill:var(--teal)}
+#fig-buyjourney .seg.b{fill:#cdd6df}
+#fig-buyjourney .cap{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.02em;fill:var(--ink-soft);text-anchor:start}
+#fig-buyjourney .pin{font-family:'Space Mono',monospace;font-size:12px;font-weight:700;fill:#fff;text-anchor:middle}
+#fig-buyjourney .legb{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:start}
+#fig-buyjourney .lega{font-family:'Space Mono',monospace;font-size:11px;fill:var(--teal-deep);font-weight:700;text-anchor:end}
+#fig-buyjourney .rule{stroke:var(--line);stroke-width:1}
+#fig-buyjourney .big{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:40px;fill:var(--teal);text-anchor:start}
+#fig-buyjourney .sub{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:start}
+
+/* fig: the-website-most-firms-dont-need */
+#fig-pageweight .seg.img{fill:var(--teal-deep)}
+#fig-pageweight .seg.js{fill:var(--teal)}
+#fig-pageweight .seg.oth{fill:var(--slate)}
+#fig-pageweight .cap{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.02em;fill:var(--ink-soft);text-anchor:start}
+#fig-pageweight .in{font-family:'Space Mono',monospace;font-size:12px;font-weight:700;fill:#fff;text-anchor:middle}
+#fig-pageweight .leg rect.img{fill:var(--teal-deep)}
+#fig-pageweight .leg rect.js{fill:var(--teal)}
+#fig-pageweight .leg rect.oth{fill:var(--slate)}
+#fig-pageweight .leg text{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:start}
+#fig-pageweight .grow{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;fill:var(--ink);text-anchor:start}
+
+/* fig: the-carbon-cost-of-a-heavy-page */
+#fig-webcarbon .bar.med{fill:var(--teal)}
+#fig-webcarbon .bar.hvy{fill:var(--slate)}
+#fig-webcarbon .cap{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.02em;fill:var(--ink-soft);text-anchor:start}
+#fig-webcarbon .lbl{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:end}
+#fig-webcarbon .val{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;fill:var(--ink);text-anchor:start}
+#fig-webcarbon .valw{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;fill:#fff;text-anchor:end}
+
+/* fig: the-plugin-is-the-attack-surface */
+#fig-plugins .track{fill:var(--line)}
+#fig-plugins .bar{fill:var(--teal)}
+#fig-plugins .cap{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.02em;fill:var(--ink-soft);text-anchor:start}
+#fig-plugins .lbl{font-family:'Space Mono',monospace;font-size:11px;fill:var(--ink-soft);text-anchor:end}
+#fig-plugins .val{font-family:'Space Mono',monospace;font-size:12px;font-weight:700;fill:#fff;text-anchor:start}

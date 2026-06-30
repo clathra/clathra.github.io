@@ -1,0 +1,63 @@
+name: Deploy site to GitHub Pages
+
+# Why this exists:
+# With `future: false` in _config.yml, an Insights post only publishes once its
+# date (a Tuesday) has arrived. GitHub Pages rebuilds the site only when something
+# is pushed, so a future-dated post would otherwise never appear on its own. This
+# workflow rebuilds and redeploys once a day, which reveals each Tuesday's post on
+# schedule. It also deploys immediately on every push, and can be run by hand.
+
+on:
+  push:
+    branches: [main, master]
+  schedule:
+    # Daily at 07:00 UTC. The build runner is UTC and _config.yml pins
+    # `timezone: Etc/UTC`, so a post dated 2026-07-07 goes live at 2026-07-07
+    # 00:00 UTC and is picked up by that morning's run. Adjust the hour to taste.
+    - cron: "0 7 * * *"
+  workflow_dispatch: {}
+
+# Least-privilege permissions needed to publish to GitHub Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time; never cancel an in-flight publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version   # 3.3.5, matches local
+          bundler-cache: true
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,9 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A request flows through an instant-quote step and fans out to a wide grid of country dots, showing one quote engine scaled across many markets.">
+  <rect class="bg-navy" width="400" height="500"/>
+  <circle class="ln" cx="74" cy="372" r="8"/>
+  <path class="gds" d="M86 372 L150 372"/>
+  <path class="gd" d="M112 360 L104 374 L114 374 L106 388 L126 370 L116 370 Z"/>
+  <circle class="tlf" cx="166" cy="372" r="9"/>
+  <g class="ln-f"><line x1="176" y1="372" x2="236" y2="320"/><line x1="176" y1="372" x2="236" y2="372"/><line x1="176" y1="372" x2="236" y2="424"/></g>
+  <g class="dt"><circle cx="248" cy="316" r="3"/><circle cx="284" cy="316" r="3"/><circle cx="320" cy="316" r="3"/><circle cx="356" cy="316" r="3"/><circle cx="248" cy="348" r="3"/><circle cx="284" cy="348" r="3"/><circle cx="320" cy="348" r="3"/><circle cx="356" cy="348" r="3"/><circle cx="248" cy="380" r="3"/><circle cx="284" cy="380" r="3"/><circle cx="320" cy="380" r="3"/><circle cx="356" cy="380" r="3"/><circle cx="248" cy="412" r="3"/><circle cx="284" cy="412" r="3"/><circle cx="320" cy="412" r="3"/><circle cx="356" cy="412" r="3"/></g>
+</svg>

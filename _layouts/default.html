@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+{% include head.html %}
+</head>
+<body>
+<a class="skip" href="{{ page.skip | default: '#main' }}">Skip to content</a>
+{{ content }}
+{% include footer.html %}
+{% for j in page.scripts %}<script src="/assets/{{ j }}?v={{ site.time | date: '%s' }}" defer></script>
+{% endfor %}</body>
+</html>

@@ -1,0 +1,9 @@
+<svg class="art on-cream" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A grid of company cells, most left empty and a minority filled, showing that most shipping firms still run without a marketing function.">
+  <rect class="bg-cream" width="400" height="500"/>
+  <g class="ln">
+    <rect x="44" y="312" width="20" height="20"/><rect x="80" y="312" width="20" height="20"/><rect x="116" y="312" width="20" height="20" class="ln tlf"/><rect x="152" y="312" width="20" height="20"/><rect x="188" y="312" width="20" height="20"/><rect x="224" y="312" width="20" height="20" class="ln tlf"/><rect x="260" y="312" width="20" height="20"/><rect x="296" y="312" width="20" height="20"/><rect x="332" y="312" width="20" height="20"/>
+    <rect x="44" y="348" width="20" height="20"/><rect x="80" y="348" width="20" height="20" class="ln tlf"/><rect x="116" y="348" width="20" height="20"/><rect x="152" y="348" width="20" height="20"/><rect x="188" y="348" width="20" height="20"/><rect x="224" y="348" width="20" height="20"/><rect x="260" y="348" width="20" height="20" class="ln tlf"/><rect x="296" y="348" width="20" height="20"/><rect x="332" y="348" width="20" height="20"/>
+    <rect x="44" y="384" width="20" height="20"/><rect x="80" y="384" width="20" height="20"/><rect x="116" y="384" width="20" height="20"/><rect x="152" y="384" width="20" height="20" class="ln tlf"/><rect x="188" y="384" width="20" height="20"/><rect x="224" y="384" width="20" height="20"/><rect x="260" y="384" width="20" height="20"/><rect x="296" y="384" width="20" height="20" class="ln tlf"/><rect x="332" y="384" width="20" height="20"/>
+  </g>
+  <path class="gds" d="M300 440 L334 440 M334 440 L326 433 M334 440 L326 447"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A scatter of posts as circles; most are small, a few are large and highlighted, showing engagement rises with craft rather than volume.">
+  <rect class="bg-ink" width="400" height="500"/>
+  <g class="dt">
+    <circle cx="70" cy="330" r="3"/><circle cx="104" cy="378" r="3"/><circle cx="92" cy="430" r="3"/><circle cx="140" cy="408" r="3"/><circle cx="150" cy="320" r="3"/><circle cx="186" cy="356" r="3"/><circle cx="220" cy="420" r="3"/><circle cx="250" cy="332" r="3"/><circle cx="300" cy="430" r="3"/><circle cx="338" cy="356" r="3"/><circle cx="356" cy="408" r="3"/><circle cx="276" cy="392" r="3"/>
+  </g>
+  <circle class="tlf" cx="128" cy="356" r="13"/>
+  <circle class="tlf" cx="214" cy="384" r="18"/>
+  <circle class="tlf" cx="300" cy="344" r="11"/>
+</svg>

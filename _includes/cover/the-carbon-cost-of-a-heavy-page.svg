@@ -1,0 +1,8 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Three centred bars rising in height with a small plume above the tallest, an abstract motif for a light versus heavy page.">
+  <rect class="bg-tealdeep" width="400" height="500"/>
+  <line class="ln-f" x1="78" y1="436" x2="322" y2="436"/>
+  <rect class="tlf" x="98" y="400" width="44" height="36"/>
+  <rect class="ln" x="178" y="366" width="44" height="70"/>
+  <rect class="ln" x="258" y="302" width="44" height="134"/>
+  <g class="dt" fill="rgba(255,255,255,.35)"><circle cx="280" cy="290" r="2.4"/><circle cx="290" cy="278" r="2.4"/><circle cx="276" cy="272" r="2.4"/><circle cx="288" cy="262" r="2.4"/></g>
+</svg>

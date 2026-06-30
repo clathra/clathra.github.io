@@ -1,3 +1,7 @@
+---
+permalink: /llms.txt
+sitemap: false
+---
 # Clathra
 
 > Clathra is a marketing agency that works only with the shipping, maritime and offshore industries. We build websites, brand identities and marketing with the technical knowledge the sector requires.
@@ -18,6 +22,12 @@ Clathra is a small, focused agency. Rather than serving every industry, it conce
 - Caspian Offshore Marine Services · logo, website, print and digital marketing
 - Frelsea · logo, website, marketing, advertising
 - Lidmann · logo, website, digital marketing
+
+## Insights
+
+Reports, case studies and short notes on marketing for the shipping, maritime and offshore world. Institutional in voice, grounded in industry research, written to demonstrate domain authority.
+{% assign posts = site.posts | sort: "date" | reverse %}{% for post in posts %}
+- [{{ post.title }}]({{ post.url | absolute_url }}){% case post.type %}{% when 'report' %} (report){% when 'case' %} (case study){% when 'note' %} (note){% endcase %}: {{ post.description | default: post.excerpt | strip_html | strip_newlines | strip }}{% endfor %}
 
 ## Contact
 

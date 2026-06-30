@@ -1,0 +1,7 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A broad faint cloud of buyer dots with only a handful circled as named target accounts, one of them highlighted.">
+  <rect class="bg-teal" width="400" height="500"/>
+  <g class="dt" fill="rgba(255,255,255,.3)"><circle cx="70" cy="320" r="2.4"/><circle cx="110" cy="344" r="2.4"/><circle cx="92" cy="392" r="2.4"/><circle cx="150" cy="372" r="2.4"/><circle cx="134" cy="420" r="2.4"/><circle cx="188" cy="332" r="2.4"/><circle cx="210" cy="404" r="2.4"/><circle cx="248" cy="356" r="2.4"/><circle cx="286" cy="328" r="2.4"/><circle cx="300" cy="408" r="2.4"/><circle cx="338" cy="376" r="2.4"/><circle cx="356" cy="332" r="2.4"/><circle cx="262" cy="426" r="2.4"/><circle cx="176" cy="430" r="2.4"/><circle cx="324" cy="430" r="2.4"/></g>
+  <circle class="tl" cx="150" cy="372" r="10"/>
+  <circle class="tl" cx="248" cy="356" r="10"/>
+  <circle class="gds" cx="286" cy="328" r="10"/><circle class="gd" cx="286" cy="328" r="3"/>
+</svg>

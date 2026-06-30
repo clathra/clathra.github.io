@@ -1,0 +1,9 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A neat rational grid with a straight path that is pulled off course by a gold trust vector, showing decisions are not purely rational.">
+  <rect class="bg-ink" width="400" height="500"/>
+  <g class="dt" fill="rgba(255,255,255,.28)"><circle cx="64" cy="324" r="2"/><circle cx="104" cy="324" r="2"/><circle cx="144" cy="324" r="2"/><circle cx="184" cy="324" r="2"/><circle cx="224" cy="324" r="2"/><circle cx="264" cy="324" r="2"/><circle cx="304" cy="324" r="2"/><circle cx="344" cy="324" r="2"/>
+  <circle cx="64" cy="372" r="2"/><circle cx="104" cy="372" r="2"/><circle cx="144" cy="372" r="2"/><circle cx="184" cy="372" r="2"/><circle cx="224" cy="372" r="2"/><circle cx="264" cy="372" r="2"/><circle cx="304" cy="372" r="2"/><circle cx="344" cy="372" r="2"/>
+  <circle cx="64" cy="420" r="2"/><circle cx="104" cy="420" r="2"/><circle cx="144" cy="420" r="2"/><circle cx="184" cy="420" r="2"/><circle cx="224" cy="420" r="2"/><circle cx="264" cy="420" r="2"/><circle cx="304" cy="420" r="2"/><circle cx="344" cy="420" r="2"/></g>
+  <path class="tl" d="M64 420 L224 420"/>
+  <path class="gds" d="M224 420 L286 344 M286 344 L276 348 M286 344 L284 356"/>
+  <circle class="gd" cx="286" cy="344" r="5"/>
+</svg>

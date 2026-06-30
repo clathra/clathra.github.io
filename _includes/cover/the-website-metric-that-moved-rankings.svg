@@ -1,0 +1,6 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Three small paired-line panels; only one pair, bounce rate against ranking, moves together, while the other two diverge.">
+  <rect class="bg-navy" width="400" height="500"/>
+  <g class="tl"><path d="M56 392 L150 332"/><path d="M56 402 L150 344"/></g>
+  <g class="ln-f"><path d="M176 352 L270 352"/><path d="M176 396 L270 332"/></g>
+  <g class="ln-f"><path d="M296 340 L360 392"/><path d="M296 392 L360 344"/></g>
+</svg>

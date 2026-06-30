@@ -52,25 +52,57 @@ document.querySelectorAll('.frame.slides').forEach(function(box){
   var i=0,timer=null;
   function go(n){slides[i].classList.remove('on');if(dots[i])dots[i].classList.remove('on');i=n;slides[i].classList.add('on');if(dots[i])dots[i].classList.add('on');}
   function start(){timer=setInterval(function(){go((i+1)%slides.length);},2600);}
-  function stop(){clearInterval(timer);}
   start();
-  box.addEventListener('mouseenter',stop);
-  box.addEventListener('mouseleave',start);
 });
 
-document.getElementById('burger').addEventListener('click',function(){
-  const nl=document.querySelector('.nav-mid');const open=nl.style.display==='flex';
-  if(open)nl.style.display='';
-  else nl.style.cssText='display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:#fff;padding:24px 28px;gap:18px;border-bottom:1px solid var(--line)';
-  this.setAttribute('aria-expanded',String(!open));
+/* Website tile: auto scroll each page down then up, then swipe to the next.
+   A clone of the first slide is appended so the swipe keeps going forward and
+   loops back seamlessly (no rewind through the deck). */
+document.querySelectorAll('.frame.bw').forEach(function(box){
+  var deck=box.querySelector('.bw-deck'); if(!deck)return;
+  var slides=[].slice.call(deck.querySelectorAll('.bw-slide'));
+  if(slides.length<2)return;
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  deck.appendChild(slides[0].cloneNode(true));            // trailing clone of page 1
+  var all=[].slice.call(deck.querySelectorAll('.bw-slide'));
+  var n=all.length;                                        // real slides + 1 clone
+  deck.style.width=(n*100)+'%';
+  all.forEach(function(s){ s.style.flex='0 0 '+(100/n)+'%'; s.style.width=(100/n)+'%'; });
+  var i=0,step=0;
+  var SCROLL=2400,SWIPE=700,HOLD_TOP=900,HOLD_BOT=900,SETTLE=600;
+  function go(idx,animate){
+    deck.style.transition=animate?'':'none';
+    deck.style.transform='translateX(-'+(100/n*idx)+'%)';
+    if(!animate){ void deck.offsetWidth; deck.style.transition=''; }   // force reflow, restore transition
+  }
+  function tick(){
+    var img=all[i].querySelector('img');
+    if(step===0){            // scroll current page down
+      var over=img.offsetHeight-all[i].clientHeight;
+      img.style.transform=over>2?'translateY(-'+over+'px)':'translateY(0)';
+      step=1;setTimeout(tick,SCROLL+HOLD_BOT);
+    }else if(step===1){      // scroll back to top
+      img.style.transform='translateY(0)';
+      step=2;setTimeout(tick,SCROLL+SETTLE);
+    }else{                   // swipe forward to the next page
+      i++;go(i,true);
+      if(i===n-1){           // landed on the clone: hold, then snap back to the real page 1
+        setTimeout(function(){ go(0,false); i=0; step=0; tick(); },SWIPE+HOLD_TOP);
+      }else{ step=0;setTimeout(tick,SWIPE+HOLD_TOP); }
+    }
+  }
+  setTimeout(tick,1200);
 });
+
+/* nav: burger removed — nav is two persistent buttons (Insights, Contact) */
 
 /* =========================================================
    WAVE SWELLS: layered translucent, shaded ocean currents.
    Visible (not thin scribbles), still light & calm.
    ========================================================= */
 (function(){
-  const cv=document.getElementById('flow'),ctx=cv.getContext('2d');
+  const cv=document.getElementById('flow');if(!cv)return;
+  const ctx=cv.getContext('2d');
   let w,h,dpr,t=0;
   function resize(){dpr=Math.min(devicePixelRatio||1,2);w=cv.clientWidth;h=cv.clientHeight;cv.width=w*dpr;cv.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}
   resize();addEventListener('resize',resize);
@@ -121,4 +153,29 @@ document.getElementById('burger').addEventListener('click',function(){
 (function(){var g=document.querySelector('.sw-grid');if(!g)return;
   g.addEventListener('contextmenu',function(e){e.preventDefault();});
   g.addEventListener('dragstart',function(e){e.preventDefault();});
+})();
+
+/* Insights index: load-more pagination — show 3 rows at a time (3/6/9 by column count).
+   All cards stay in the DOM for SEO/AIO; JS only toggles visibility. */
+(function(){
+  var grid=document.querySelector('.igrid'); if(!grid) return;
+  var btn=document.querySelector('.ins-more'); if(!btn) return;
+  var cards=[].slice.call(grid.querySelectorAll('.icard'));
+  var ROWS=3;
+  function cols(){ return getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length || 1; }
+  var shown=cols()*ROWS;
+  function render(){
+    var c=cols();
+    shown=Math.min(Math.max(Math.ceil(shown/c)*c, c*ROWS), cards.length);  // align to full rows, min 3 rows
+    cards.forEach(function(card,idx){
+      if(idx>=shown){ card.classList.add('is-hidden'); }
+      else if(card.classList.contains('is-hidden')){
+        card.classList.remove('is-hidden'); requestAnimationFrame(function(){ card.classList.add('in'); });
+      }
+    });
+    btn.hidden = shown>=cards.length;
+  }
+  render();
+  btn.addEventListener('click',function(){ shown+=cols()*ROWS; render(); });
+  var rt; addEventListener('resize',function(){ clearTimeout(rt); rt=setTimeout(render,150); });
 })();

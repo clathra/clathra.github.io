@@ -1,0 +1,34 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "{{ page.url | absolute_url }}#article",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" },
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page.description | default: page.excerpt | strip_html | strip_newlines | strip | jsonify }},
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+      "articleSection": "{% case page.type %}{% when 'report' %}Report{% when 'case' %}Case study{% when 'note' %}Note{% else %}Insight{% endcase %}",
+      "image": "{{ page.image | default: '/images/og-image.png' | absolute_url }}",
+      "author": { "@type": "Organization", "name": "Clathra", "url": "{{ '/' | absolute_url }}" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Clathra",
+        "logo": { "@type": "ImageObject", "url": "{{ '/images/logo.svg' | absolute_url }}" }
+      },
+      "isPartOf": { "@type": "Blog", "@id": "{{ '/insights.html' | absolute_url }}#blog", "name": "Clathra Insights" },
+      "inLanguage": "{{ site.lang | default: 'en' }}"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ '/' | absolute_url }}" },
+        { "@type": "ListItem", "position": 2, "name": "Insights", "item": "{{ '/insights.html' | absolute_url }}" },
+        { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url }}" }
+      ]
+    }
+  ]
+}
+</script>

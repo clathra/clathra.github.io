@@ -1,0 +1,11 @@
+<svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Three streams from origin dots converge into an anchor node, an abstract motif for content building an employer brand.">
+  <rect class="bg-teal" width="400" height="500"/>
+  <circle class="dt" cx="86" cy="318" r="4"/>
+  <circle class="dt" cx="86" cy="372" r="4"/>
+  <circle class="dt" cx="86" cy="426" r="4"/>
+  <path class="ln-f" d="M90 318 C200 318 232 360 278 368"/>
+  <path class="ln-f" d="M90 372 C200 372 236 372 278 372"/>
+  <path class="ln-f" d="M90 426 C200 426 232 384 278 376"/>
+  <circle class="tl" cx="296" cy="372" r="22"/>
+  <path class="tl" d="M296 358 v22 M288 366 a8 8 0 0 0 16 0 M296 380 l-7 9 M296 380 l7 9"/>
+</svg>
